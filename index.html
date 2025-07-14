@@ -2028,26 +2028,14 @@
               </div>
             </div>
           </div>
-
-          <div class="text-center mt-12">
-            <div class="glass-effect rounded-xl p-6 max-w-2xl mx-auto">
-              <h3 class="text-2xl font-bold text-white mb-4">
-                Total Proyección de Ingresos 2028
-              </h3>
-              <div class="text-5xl font-black text-green-400 mb-2">
-                5.000.000€+
-              </div>
-              <p class="text-gray-400">
-                Un ecosistema integral que maximiza sinergias y oportunidades de
-                crecimiento
-              </p>
-            </div>
-          </div>
         </section>
       </div>
 
       <!-- Dynamic Tab Content Area -->
-      <div class="tab-content-wrapper min-h-[60vh] transition-all duration-300">
+      <div
+        class="tab-content-wrapper min-h-[60vh] transition-all duration-300 hidden"
+        id="tabContentWrapper"
+      >
         <div id="tab-content-area" class="tab-content"></div>
       </div>
     </main>
@@ -2123,6 +2111,14 @@
         mobileTabs.forEach((tab) => {
           tab.classList.remove("active");
         });
+
+        // Show/hide tab content wrapper based on tab
+        const tabContentWrapper = document.getElementById("tabContentWrapper");
+        if (tabName === "home") {
+          tabContentWrapper.classList.add("hidden");
+        } else {
+          tabContentWrapper.classList.remove("hidden");
+        }
 
         // Show loading state
         const tabContentArea = document.getElementById("tab-content-area");
