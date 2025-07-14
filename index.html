@@ -249,66 +249,6 @@
           margin-bottom: 1rem;
         }
 
-        /* Enhanced tab responsiveness */
-        .tab {
-          min-width: 140px;
-          font-size: 0.875rem;
-          padding: 12px 16px;
-          border-radius: 8px;
-        }
-
-        .nav-scroller {
-          padding: 0 1rem;
-          scroll-behavior: smooth;
-          -webkit-overflow-scrolling: touch;
-        }
-
-        /* Add scroll indicators */
-        .nav-container {
-          position: relative;
-        }
-
-        .nav-container::before,
-        .nav-container::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          width: 20px;
-          pointer-events: none;
-          z-index: 1;
-        }
-
-        .nav-container::before {
-          left: 0;
-          background: linear-gradient(
-            to right,
-            rgba(10, 10, 42, 1),
-            transparent
-          );
-        }
-
-        .nav-container::after {
-          right: 0;
-          background: linear-gradient(
-            to left,
-            rgba(10, 10, 42, 1),
-            transparent
-          );
-        }
-      }
-
-      @media (max-width: 480px) {
-        .tab {
-          min-width: 120px;
-          font-size: 0.8rem;
-          padding: 10px 12px;
-        }
-
-        .tab i {
-          font-size: 0.8rem;
-        }
-
         /* Business lines responsive adjustments */
         .business-line-grid {
           grid-template-columns: 1fr;
@@ -317,6 +257,165 @@
 
         .business-line-card {
           padding: 1.5rem;
+        }
+      }
+
+      /* Burger menu styles */
+      .burger-menu {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .burger-menu:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .burger-line {
+        width: 24px;
+        height: 3px;
+        background: white;
+        margin: 2px 0;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+      }
+
+      .burger-menu.active .burger-line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+
+      .burger-menu.active .burger-line:nth-child(2) {
+        opacity: 0;
+      }
+
+      .burger-menu.active .burger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+
+      /* Mobile menu dropdown */
+      .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(10, 10, 42, 0.98);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(79, 70, 229, 0.3);
+        border-top: none;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        animation: slideDown 0.3s ease-out;
+      }
+
+      .mobile-menu.active {
+        display: block;
+      }
+
+      .mobile-menu-item {
+        display: block;
+        padding: 16px 20px;
+        color: #e0e0e0;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .mobile-menu-item:hover,
+      .mobile-menu-item.active {
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        color: white;
+      }
+
+      .mobile-menu-item:last-child {
+        border-bottom: none;
+        border-radius: 0 0 12px 12px;
+      }
+
+      .mobile-menu-item i {
+        margin-right: 12px;
+        width: 20px;
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Hide mobile elements by default */
+      .burger-menu,
+      .nav-title,
+      .mobile-menu {
+        display: none;
+      }
+
+      /* Show desktop navigation by default */
+      .desktop-nav {
+        display: flex;
+      }
+
+      /* Responsive navigation - Mobile/Tablet */
+      @media (max-width: 1024px) {
+        /* Hide desktop navigation completely */
+        .desktop-nav {
+          display: none !important;
+        }
+
+        /* Show mobile navigation elements */
+        .burger-menu {
+          display: flex !important;
+        }
+
+        .nav-title {
+          display: block !important;
+          color: white;
+          font-weight: 600;
+          font-size: 1.1rem;
+          transition: all 0.3s ease;
+        }
+
+        .nav-container {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 12px 0;
+        }
+
+        /* Ensure nav-container doesn't have scroll behavior */
+        .nav-container::before,
+        .nav-container::after {
+          display: none;
+        }
+      }
+
+      /* Desktop navigation - ensure mobile elements are hidden */
+      @media (min-width: 1025px) {
+        .burger-menu,
+        .nav-title,
+        .mobile-menu {
+          display: none !important;
+        }
+
+        .desktop-nav {
+          display: flex !important;
+        }
+
+        .nav-container {
+          position: relative;
         }
       }
 
@@ -369,7 +468,8 @@
     <nav class="glass-effect border-b border-gray-700/50">
       <div class="container mx-auto px-4">
         <div class="nav-container">
-          <div class="flex overflow-x-auto nav-scroller -mb-px">
+          <!-- Desktop Navigation -->
+          <div class="desktop-nav flex overflow-x-auto nav-scroller -mb-px">
             <button
               class="tab active text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
               onclick="showTab('home')"
@@ -426,6 +526,62 @@
               <i class="fas fa-university mr-2"></i>
               skola.hub
             </button>
+          </div>
+
+          <!-- Mobile Navigation -->
+          <div class="nav-title" id="navTitle">Home</div>
+          <div class="burger-menu" onclick="toggleMobileMenu()">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
+
+          <!-- Mobile Menu Dropdown -->
+          <div class="mobile-menu" id="mobileMenu">
+            <div
+              class="mobile-menu-item active"
+              onclick="showTabMobile('home')"
+            >
+              <i class="fas fa-home"></i>
+              Home
+            </div>
+            <div class="mobile-menu-item" onclick="showTabMobile('ites-es')">
+              <i class="fas fa-graduation-cap"></i>
+              ites.es
+            </div>
+            <div
+              class="mobile-menu-item"
+              onclick="showTabMobile('ites-institute')"
+            >
+              <i class="fas fa-laptop"></i>
+              ites.institute
+            </div>
+            <div
+              class="mobile-menu-item"
+              onclick="showTabMobile('ites-studio')"
+            >
+              <i class="fas fa-video"></i>
+              ites.studio
+            </div>
+            <div
+              class="mobile-menu-item"
+              onclick="showTabMobile('ites-productions')"
+            >
+              <i class="fas fa-film"></i>
+              ites.productions
+            </div>
+            <div class="mobile-menu-item" onclick="showTabMobile('ites-works')">
+              <i class="fas fa-rocket"></i>
+              ites.works
+            </div>
+            <div class="mobile-menu-item" onclick="showTabMobile('ites-lab')">
+              <i class="fas fa-flask"></i>
+              ites.lab
+            </div>
+            <div class="mobile-menu-item" onclick="showTabMobile('skola-hub')">
+              <i class="fas fa-university"></i>
+              skola.hub
+            </div>
           </div>
         </div>
       </div>
@@ -1563,16 +1719,78 @@
           tab.classList.remove("active");
         });
 
+        // Desactivar todas las pestañas móviles
+        const mobileTabs = document.querySelectorAll(".mobile-menu-item");
+        mobileTabs.forEach((tab) => {
+          tab.classList.remove("active");
+        });
+
         // Mostrar el contenido de la pestaña seleccionada
         document.getElementById(tabName).classList.add("active");
 
-        // Activar la pestaña seleccionada
+        // Activar la pestaña seleccionada en desktop
         const activeTab = document.querySelector(
           `.tab[onclick="showTab('${tabName}')"]`
         );
         if (activeTab) {
           activeTab.classList.add("active");
         }
+
+        // Activar la pestaña seleccionada en mobile
+        const activeMobileTab = document.querySelector(
+          `.mobile-menu-item[onclick="showTabMobile('${tabName}')"]`
+        );
+        if (activeMobileTab) {
+          activeMobileTab.classList.add("active");
+        }
+
+        // Actualizar el título de navegación móvil
+        updateNavTitle(tabName);
+      }
+
+      function showTabMobile(tabName) {
+        // Usar la función showTab existente
+        showTab(tabName);
+
+        // Actualizar el título de navegación
+        updateNavTitle(tabName);
+
+        // Cerrar el menú móvil
+        closeMobileMenu();
+      }
+
+      function updateNavTitle(tabName) {
+        const navTitle = document.getElementById("navTitle");
+        const titles = {
+          home: "Home",
+          "ites-es": "ites.es",
+          "ites-institute": "ites.institute",
+          "ites-studio": "ites.studio",
+          "ites-productions": "ites.productions",
+          "ites-works": "ites.works",
+          "ites-lab": "ites.lab",
+          "skola-hub": "skola.hub",
+        };
+
+        if (navTitle && titles[tabName]) {
+          navTitle.textContent = titles[tabName];
+        }
+      }
+
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const burgerMenu = document.querySelector(".burger-menu");
+
+        mobileMenu.classList.toggle("active");
+        burgerMenu.classList.toggle("active");
+      }
+
+      function closeMobileMenu() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const burgerMenu = document.querySelector(".burger-menu");
+
+        mobileMenu.classList.remove("active");
+        burgerMenu.classList.remove("active");
       }
 
       function scrollToSection(sectionId) {
@@ -1582,10 +1800,38 @@
         }
       }
 
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const burgerMenu = document.querySelector(".burger-menu");
+        const navContainer = document.querySelector(".nav-container");
+
+        if (
+          !navContainer.contains(event.target) &&
+          mobileMenu.classList.contains("active")
+        ) {
+          closeMobileMenu();
+        }
+      });
+
       // Smooth scrolling functionality
       document.addEventListener("DOMContentLoaded", function () {
         // Scroll-based animations removed for better performance
         console.log("Page loaded - animations disabled for better performance");
+
+        // Set initial active state for mobile menu
+        const activeDesktopTab = document.querySelector(".tab.active");
+        if (activeDesktopTab) {
+          const tabName = activeDesktopTab
+            .getAttribute("onclick")
+            .match(/'([^']+)'/)[1];
+          const activeMobileTab = document.querySelector(
+            `.mobile-menu-item[onclick="showTabMobile('${tabName}')"]`
+          );
+          if (activeMobileTab) {
+            activeMobileTab.classList.add("active");
+          }
+        }
       });
     </script>
   </body>
