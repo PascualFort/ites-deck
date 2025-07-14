@@ -16,21 +16,13 @@
     <style>
       body {
         font-family: "Inter", sans-serif;
-        background: linear-gradient(
-          135deg,
-          #0a0a2a 0%,
-          #1a1a3a 50%,
-          #2a2a4a 100%
-        );
-        background-attachment: fixed;
+        background-color: #0a0a2a;
         color: #e0e0e0;
         overflow-x: hidden;
       }
 
       .animated-bg {
-        background: linear-gradient(-45deg, #0a0a2a, #1a1a3a, #2a2a4a, #3a3a5a);
-        background-size: 400% 400%;
-        /* Animation removed for better performance */
+        background-color: #0a0a2a;
       }
 
       .floating {
@@ -64,24 +56,11 @@
 
       .hero-bg {
         background: linear-gradient(
-            135deg,
-            rgba(10, 10, 42, 0.9) 0%,
-            rgba(79, 70, 229, 0.1) 50%,
-            rgba(10, 10, 42, 0.9) 100%
-          ),
-          radial-gradient(
-            circle at 30% 80%,
-            rgba(124, 58, 237, 0.3) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            circle at 80% 20%,
-            rgba(79, 70, 229, 0.3) 0%,
-            transparent 50%
-          ),
-          url("https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80");
-        background-size: cover;
-        background-position: center;
+          135deg,
+          rgba(10, 10, 42, 0.9) 0%,
+          rgba(79, 70, 229, 0.1) 50%,
+          rgba(10, 10, 42, 0.9) 100%
+        );
         position: relative;
         overflow: hidden;
       }
@@ -113,7 +92,6 @@
 
       .card {
         background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1);
         transition: all 0.3s ease;
         position: relative;
@@ -141,16 +119,14 @@
       }
 
       .card:hover {
-        transform: translateY(-5px) scale(1.01);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2),
-          0 0 10px rgba(79, 70, 229, 0.1);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         background: rgba(255, 255, 255, 0.1);
         border-color: rgba(79, 70, 229, 0.2);
       }
 
       .glass-effect {
         background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
 
@@ -198,7 +174,7 @@
       }
 
       .text-glow {
-        text-shadow: 0 0 10px rgba(79, 70, 229, 0.2);
+        /* Text shadow removed for better clarity */
       }
 
       .pulse-ring {
