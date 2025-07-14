@@ -6,128 +6,372 @@
     <title>ITES Hub Audiovisual</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <style>
       body {
         font-family: "Inter", sans-serif;
-        background-color: #0a0a2a;
+        background: linear-gradient(
+          135deg,
+          #0a0a2a 0%,
+          #1a1a3a 50%,
+          #2a2a4a 100%
+        );
+        background-attachment: fixed;
         color: #e0e0e0;
+        overflow-x: hidden;
       }
+
+      .animated-bg {
+        background: linear-gradient(-45deg, #0a0a2a, #1a1a3a, #2a2a4a, #3a3a5a);
+        background-size: 400% 400%;
+        /* Animation removed for better performance */
+      }
+
+      .floating {
+        /* Animation removed for better performance */
+      }
+
       .tab-content {
         display: none;
+        /* Animation removed for better performance */
       }
+
       .tab-content.active {
         display: block;
       }
+
       .tab.active {
-        background-color: #4f46e5;
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
         color: #ffffff;
         border-bottom-color: #4f46e5;
+        box-shadow: 0 4px 15px rgba(79, 70, 229, 0.15);
       }
+
       .nav-scroller {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
       }
+
       .nav-scroller::-webkit-scrollbar {
-        display: none; /* Chrome, Safari and Opera */
+        display: none;
       }
+
       .hero-bg {
-        background-image: linear-gradient(
-            rgba(10, 10, 42, 0.8),
-            rgba(10, 10, 42, 1)
+        background: linear-gradient(
+            135deg,
+            rgba(10, 10, 42, 0.9) 0%,
+            rgba(79, 70, 229, 0.1) 50%,
+            rgba(10, 10, 42, 0.9) 100%
           ),
-          url("https://placehold.co/1200x600/0a0a2a/e0e0e0?text=ITES+Plat%C3%B3");
+          radial-gradient(
+            circle at 30% 80%,
+            rgba(124, 58, 237, 0.3) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(79, 70, 229, 0.3) 0%,
+            transparent 50%
+          ),
+          url("https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80");
         background-size: cover;
         background-position: center;
+        position: relative;
+        overflow: hidden;
       }
+
+      .hero-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          45deg,
+          transparent 30%,
+          rgba(79, 70, 229, 0.05) 70%
+        );
+        /* Animation removed for better performance */
+      }
+
+      .subtle-hero-bg {
+        background: linear-gradient(
+          135deg,
+          rgba(79, 70, 229, 0.05) 0%,
+          rgba(124, 58, 237, 0.05) 50%,
+          rgba(79, 70, 229, 0.05) 100%
+        );
+        border: 1px solid rgba(79, 70, 229, 0.1);
+      }
+
       .card {
-        background-color: rgba(255, 255, 255, 0.05);
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
       }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.04),
+          transparent
+        );
+        transition: left 0.8s ease;
+      }
+
+      .card:hover::before {
+        left: 100%;
+      }
+
       .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px) scale(1.01);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2),
+          0 0 10px rgba(79, 70, 229, 0.1);
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(79, 70, 229, 0.2);
+      }
+
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-primary::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.4s ease, height 0.4s ease;
+      }
+
+      .btn-primary:hover::before {
+        width: 300px;
+        height: 300px;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(79, 70, 229, 0.2);
+      }
+
+      .stat-card {
+        background: linear-gradient(
+          135deg,
+          rgba(79, 70, 229, 0.1) 0%,
+          rgba(124, 58, 237, 0.1) 100%
+        );
+        border: 1px solid rgba(79, 70, 229, 0.2);
+      }
+
+      .icon-float {
+        /* Animation removed for better performance */
+      }
+
+      .text-glow {
+        text-shadow: 0 0 10px rgba(79, 70, 229, 0.2);
+      }
+
+      .pulse-ring {
+        animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      }
+
+      @keyframes pulse-ring {
+        0% {
+          transform: scale(0.33);
+          opacity: 1;
+        }
+        80%,
+        100% {
+          transform: scale(1);
+          opacity: 0;
+        }
+      }
+
+      .section-divider {
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(79, 70, 229, 0.5),
+          transparent
+        );
+        margin: 3rem 0;
+      }
+
+      .feature-icon {
+        background: linear-gradient(
+          135deg,
+          rgba(79, 70, 229, 0.2) 0%,
+          rgba(124, 58, 237, 0.2) 100%
+        );
+        border: 1px solid rgba(79, 70, 229, 0.3);
+      }
+
+      .revenue-highlight {
+        background: linear-gradient(
+          135deg,
+          rgba(34, 197, 94, 0.1) 0%,
+          rgba(16, 185, 129, 0.1) 100%
+        );
+        border: 1px solid rgba(34, 197, 94, 0.3);
+      }
+
+      .crisis-highlight {
+        background: linear-gradient(
+          135deg,
+          rgba(239, 68, 68, 0.1) 0%,
+          rgba(220, 38, 38, 0.1) 100%
+        );
+        border: 1px solid rgba(239, 68, 68, 0.3);
+      }
+
+      .opportunity-highlight {
+        background: linear-gradient(
+          135deg,
+          rgba(34, 197, 94, 0.1) 0%,
+          rgba(16, 185, 129, 0.1) 100%
+        );
+        border: 1px solid rgba(34, 197, 94, 0.3);
+      }
+
+      @media (max-width: 768px) {
+        .hero-bg {
+          min-height: 40vh;
+        }
+
+        .card {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .scroll-indicator {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        /* Animation removed for better performance */
       }
     </style>
   </head>
-  <body>
+  <body class="animated-bg">
     <!-- Header -->
     <header
-      class="bg-gray-900/50 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-indigo-500/10"
+      class="glass-effect sticky top-0 z-50 shadow-lg shadow-indigo-500/10"
     >
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-between py-4">
           <div class="text-2xl font-bold text-white">
-            <span class="text-indigo-400">ITES</span> Hub Audiovisual
+            <span class="text-glow">
+              <span class="text-indigo-400">ITES</span> Hub Audiovisual
+            </span>
           </div>
-          <div class="hidden md:flex items-center space-x-2">
+          <div class="hidden md:flex items-center space-x-4">
+            <div class="flex items-center space-x-2 text-sm text-gray-300">
+              <i class="fas fa-map-marker-alt text-indigo-400"></i>
+              <span>Barcelona, España</span>
+            </div>
             <a
               href="mailto:dcodina@ites.es"
-              class="text-sm bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300"
-              >Contactar</a
+              class="btn-primary text-sm text-white font-semibold py-2 px-6 rounded-lg relative z-10"
             >
+              <i class="fas fa-envelope mr-2"></i>
+              Contactar
+            </a>
           </div>
         </div>
       </div>
     </header>
 
     <!-- Navigation Tabs -->
-    <nav class="bg-gray-800/30">
+    <nav class="glass-effect border-b border-gray-700/50">
       <div class="container mx-auto px-4">
-        <div class="border-b border-gray-700">
-          <div class="flex overflow-x-auto nav-scroller -mb-px">
-            <button
-              class="tab active text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
-              onclick="showTab('home')"
-            >
-              Home
-            </button>
-            <button
-              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
-              onclick="showTab('ites-es')"
-            >
-              ites.es
-            </button>
-            <button
-              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
-              onclick="showTab('ites-institute')"
-            >
-              ites.institute
-            </button>
-            <button
-              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
-              onclick="showTab('ites-studio')"
-            >
-              ites.studio
-            </button>
-            <button
-              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
-              onclick="showTab('ites-productions')"
-            >
-              ites.productions
-            </button>
-            <button
-              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
-              onclick="showTab('ites-works')"
-            >
-              ites.works
-            </button>
-            <button
-              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
-              onclick="showTab('ites-lab')"
-            >
-              ites.lab
-            </button>
-            <button
-              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
-              onclick="showTab('skola-hub')"
-            >
-              skola.hub
-            </button>
-          </div>
+        <div class="flex overflow-x-auto nav-scroller -mb-px">
+          <button
+            class="tab active text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+            onclick="showTab('home')"
+          >
+            <i class="fas fa-home mr-2"></i>
+            Home
+          </button>
+          <button
+            class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+            onclick="showTab('ites-es')"
+          >
+            <i class="fas fa-graduation-cap mr-2"></i>
+            ites.es
+          </button>
+          <button
+            class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+            onclick="showTab('ites-institute')"
+          >
+            <i class="fas fa-laptop mr-2"></i>
+            ites.institute
+          </button>
+          <button
+            class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+            onclick="showTab('ites-studio')"
+          >
+            <i class="fas fa-video mr-2"></i>
+            ites.studio
+          </button>
+          <button
+            class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+            onclick="showTab('ites-productions')"
+          >
+            <i class="fas fa-film mr-2"></i>
+            ites.productions
+          </button>
+          <button
+            class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+            onclick="showTab('ites-works')"
+          >
+            <i class="fas fa-rocket mr-2"></i>
+            ites.works
+          </button>
+          <button
+            class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+            onclick="showTab('ites-lab')"
+          >
+            <i class="fas fa-flask mr-2"></i>
+            ites.lab
+          </button>
+          <button
+            class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+            onclick="showTab('skola-hub')"
+          >
+            <i class="fas fa-network-wired mr-2"></i>
+            skola.hub
+          </button>
         </div>
       </div>
     </nav>
@@ -137,102 +381,192 @@
       <!-- Home Tab -->
       <div id="home" class="tab-content active">
         <section
-          class="hero-bg rounded-xl p-8 md:p-16 mb-12 text-center text-white flex flex-col items-center justify-center min-h-[50vh]"
+          class="subtle-hero-bg rounded-2xl p-8 md:p-16 mb-16 text-center text-white flex flex-col items-center justify-center min-h-[60vh] relative"
         >
-          <h1
-            class="text-4xl md:text-6xl font-bold mb-4 leading-tight shadow-text"
-          >
-            Bienvenidos a ITES Hub Audiovisual
-          </h1>
-          <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-200">
-            El epicentro de la formación y producción audiovisual en Barcelona,
-            con 50 años de experiencia y 3.000 m² de instalaciones de
-            vanguardia.
-          </p>
+          <div class="floating">
+            <h1
+              class="text-5xl md:text-7xl font-black mb-6 leading-tight text-glow"
+            >
+              Bienvenidos a <span class="text-indigo-400">ITES</span>
+              <br /><span class="text-purple-400">Hub Audiovisual</span>
+            </h1>
+            <p
+              class="text-xl md:text-2xl max-w-4xl mx-auto text-gray-200 font-light mb-8"
+            >
+              El epicentro de la formación y producción audiovisual en
+              Barcelona, con
+              <span class="font-bold text-indigo-400">50 años</span> de
+              experiencia y
+              <span class="font-bold text-purple-400">3.000 m²</span> de
+              instalaciones de vanguardia.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="mailto:dcodina@ites.es"
+                class="btn-primary text-lg font-semibold py-4 px-8 rounded-xl relative z-10"
+              >
+                <i class="fas fa-envelope mr-3"></i>
+                Contactar Ahora
+              </a>
+              <button
+                onclick="scrollToSection('investment')"
+                class="glass-effect text-lg font-semibold py-4 px-8 rounded-xl text-white hover:bg-white/10 transition-all duration-300"
+              >
+                <i class="fas fa-chart-line mr-3"></i>
+                Ver Oportunidad
+              </button>
+            </div>
+          </div>
+          <div class="scroll-indicator">
+            <i class="fas fa-chevron-down text-white/70 text-xl"></i>
+          </div>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-3xl font-bold mb-6 text-indigo-300 text-center">
-            Oportunidad de Inversión Estratégica
-          </h2>
-          <p class="text-lg text-gray-400 mb-8 text-center max-w-3xl mx-auto">
-            Una invitación para revitalizar un activo histórico y capitalizar el
-            auge del sector audiovisual en España.
-          </p>
-
-          <div
-            class="card rounded-lg p-8 mb-8 bg-indigo-900/20 border-indigo-500"
-          >
-            <h3 class="text-2xl font-bold text-white mb-4 text-center">
-              Propuesta: Adquisición del 49% de ITES por
-              <span class="text-green-400">900.000€</span>
-            </h3>
-            <p class="text-gray-300 text-center max-w-4xl mx-auto">
-              Buscamos un socio estratégico para ejecutar un plan de negocio que
-              transformará ITES en el Hub Audiovisual 360° de referencia en
-              Barcelona.
+        <section id="investment" class="mb-16">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-black mb-4 text-glow">
+              <span class="text-indigo-400">Oportunidad</span> de Inversión
+              Estratégica
+            </h2>
+            <p class="text-xl text-gray-400 max-w-4xl mx-auto">
+              Una invitación para revitalizar un activo histórico y capitalizar
+              el
+              <span class="font-bold text-green-400"
+                >auge del sector audiovisual</span
+              >
+              en España.
             </p>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-            <div class="card p-6">
-              <h3 class="text-xl font-bold text-red-400 mb-2">
-                Diagnóstico: Crisis de Liquidez, Potencial Intacto
+          <div
+            class="revenue-highlight card rounded-2xl p-8 md:p-12 mb-12 text-center"
+          >
+            <div class="flex items-center justify-center mb-6">
+              <div
+                class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-handshake text-2xl text-indigo-400"></i>
+              </div>
+              <h3 class="text-3xl md:text-4xl font-black text-white">
+                Propuesta de Inversión
               </h3>
-              <p class="text-gray-400">
-                ITES enfrenta una deuda de casi
-                <span class="font-semibold">900.000€</span> y una crítica
-                subutilización de su capacidad: solo un
-                <span class="font-semibold">19% de ocupación presencial</span>.
-                Esta situación, junto a la obsolescencia de parte del equipo, ha
-                erosionado la rentabilidad.
-              </p>
             </div>
-            <div class="card p-6">
-              <h3 class="text-xl font-bold text-green-400 mb-2">
-                La Oportunidad: Activos Valiosos y Mercado en Auge
-              </h3>
-              <p class="text-gray-400">
-                A pesar de los desafíos, ITES posee activos de inmenso valor:
-                una marca con 50 años de historia, 3.000 m² en el centro de
-                Barcelona y licencias para más de
-                <span class="font-semibold">3.150 alumnos</span>. El mercado
-                audiovisual español, en plena expansión, demanda masivamente los
-                profesionales que ITES puede formar.
+            <div class="text-center">
+              <p class="text-xl text-gray-300 mb-4">
+                Adquisición del
+                <span class="font-bold text-indigo-400">49% de ITES</span> por
+              </p>
+              <p class="text-5xl md:text-6xl font-black text-green-400 mb-6">
+                900.000€
+              </p>
+              <p class="text-lg text-gray-300 max-w-4xl mx-auto">
+                Buscamos un socio estratégico para ejecutar un plan de negocio
+                que transformará ITES en el
+                <span class="font-bold text-indigo-400"
+                  >Hub Audiovisual 360°</span
+                >
+                de referencia en Barcelona.
               </p>
             </div>
           </div>
 
-          <div class="card rounded-lg p-8 mb-8">
-            <h3 class="text-2xl font-bold text-white mb-4 text-center">
-              Plan de Revitalización en 3 Pilares
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div class="crisis-highlight card p-8 rounded-2xl">
+              <div class="flex items-center mb-4">
+                <div
+                  class="feature-icon w-12 h-12 rounded-full flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-exclamation-triangle text-red-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-red-400">
+                  Diagnóstico: Crisis de Liquidez
+                </h3>
+              </div>
+              <p class="text-gray-300 leading-relaxed">
+                ITES enfrenta una deuda de casi
+                <span class="font-bold text-red-400">900.000€</span> y una
+                crítica subutilización de su capacidad: solo un
+                <span class="font-bold text-red-400"
+                  >19% de ocupación presencial</span
+                >. Esta situación, junto a la obsolescencia de parte del equipo,
+                ha erosionado la rentabilidad.
+              </p>
+            </div>
+            <div class="opportunity-highlight card p-8 rounded-2xl">
+              <div class="flex items-center mb-4">
+                <div
+                  class="feature-icon w-12 h-12 rounded-full flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-gem text-green-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-green-400">
+                  La Oportunidad: Potencial Intacto
+                </h3>
+              </div>
+              <p class="text-gray-300 leading-relaxed">
+                A pesar de los desafíos, ITES posee activos de inmenso valor:
+                una marca con
+                <span class="font-bold text-green-400">50 años</span> de
+                historia,
+                <span class="font-bold text-green-400">3.000 m²</span> en el
+                centro de Barcelona y licencias para más de
+                <span class="font-bold text-green-400">3.150 alumnos</span>.
+              </p>
+            </div>
+          </div>
+
+          <div class="card rounded-2xl p-8 md:p-12 mb-12">
+            <h3
+              class="text-3xl md:text-4xl font-black text-white mb-8 text-center text-glow"
+            >
+              Plan de Revitalización en
+              <span class="text-indigo-400">3 Pilares</span>
             </h3>
-            <div class="grid md:grid-cols-3 gap-6 text-center">
-              <div>
-                <h4 class="text-xl font-semibold text-indigo-300">
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="text-center">
+                <div
+                  class="feature-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <i
+                    class="fas fa-chart-line text-3xl text-indigo-400 icon-float"
+                  ></i>
+                </div>
+                <h4 class="text-xl font-bold text-indigo-300 mb-3">
                   1. Saneamiento Financiero
                 </h4>
-                <p class="text-gray-400 mt-2">
+                <p class="text-gray-400 leading-relaxed">
                   Liquidación de deudas críticas (nóminas, alquileres,
                   proveedores) para liberar el flujo de caja y restaurar la
                   estabilidad operativa.
                 </p>
               </div>
-              <div>
-                <h4 class="text-xl font-semibold text-indigo-300">
+              <div class="text-center">
+                <div
+                  class="feature-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <i
+                    class="fas fa-rocket text-3xl text-purple-400 icon-float"
+                  ></i>
+                </div>
+                <h4 class="text-xl font-bold text-purple-300 mb-3">
                   2. Crecimiento Comercial
                 </h4>
-                <p class="text-gray-400 mt-2">
+                <p class="text-gray-400 leading-relaxed">
                   Lanzamiento de una agresiva campaña de marketing para
                   triplicar la ocupación presencial y activar la oferta online a
                   escala nacional.
                 </p>
               </div>
-              <div>
-                <h4 class="text-xl font-semibold text-indigo-300">
-                  3. Modernización e Integración
+              <div class="text-center">
+                <div
+                  class="feature-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <i class="fas fa-cogs text-3xl text-green-400 icon-float"></i>
+                </div>
+                <h4 class="text-xl font-bold text-green-300 mb-3">
+                  3. Modernización
                 </h4>
-                <p class="text-gray-400 mt-2">
+                <p class="text-gray-400 leading-relaxed">
                   Renovación de equipos tecnológicos clave y fusión de las
                   unidades de negocio para crear un ecosistema audiovisual 360°
                   sinérgico.
@@ -242,61 +576,103 @@
           </div>
         </section>
 
+        <div class="section-divider"></div>
+
         <section>
-          <h2 class="text-3xl font-bold text-center mb-8 text-indigo-300">
-            Un Ecosistema Único
+          <h2
+            class="text-4xl md:text-5xl font-black text-center mb-12 text-glow"
+          >
+            Un Ecosistema <span class="text-indigo-400">Único</span>
           </h2>
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="card rounded-lg p-6 text-center">
-              <h3 class="text-xl font-bold mb-2 text-white">
+            <div class="card rounded-2xl p-8 text-center group">
+              <div
+                class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i
+                  class="fas fa-history text-2xl text-indigo-400 icon-float"
+                ></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4 text-white">
                 50 Años de Historia
               </h3>
-              <p class="text-gray-400">
+              <p class="text-gray-400 leading-relaxed">
                 Pioneros en España en formación profesional audiovisual con
                 titulación oficial desde 1975.
               </p>
             </div>
-            <div class="card rounded-lg p-6 text-center">
-              <h3 class="text-xl font-bold mb-2 text-white">
+            <div class="card rounded-2xl p-8 text-center group">
+              <div
+                class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i
+                  class="fas fa-building text-2xl text-purple-400 icon-float"
+                ></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4 text-white">
                 Infraestructura Premium
               </h3>
-              <p class="text-gray-400">
+              <p class="text-gray-400 leading-relaxed">
                 Casi 3.000 m² con platós de TV, estudios de sonido, radio,
                 fotografía y teatro en el corazón de Barcelona.
               </p>
             </div>
-            <div class="card rounded-lg p-6 text-center">
-              <h3 class="text-xl font-bold mb-2 text-white">
+            <div class="card rounded-2xl p-8 text-center group">
+              <div
+                class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i class="fas fa-tools text-2xl text-green-400 icon-float"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4 text-white">
                 Equipo de Vanguardia
               </h3>
-              <p class="text-gray-400">
+              <p class="text-gray-400 leading-relaxed">
                 Más de 6.105 activos audiovisuales valorados en 1,98 M€ con
                 tecnología de última generación.
               </p>
             </div>
-            <div class="card rounded-lg p-6 text-center">
-              <h3 class="text-xl font-bold mb-2 text-white">
+            <div class="card rounded-2xl p-8 text-center group">
+              <div
+                class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i
+                  class="fas fa-certificate text-2xl text-yellow-400 icon-float"
+                ></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4 text-white">
                 Reconocimiento Oficial
               </h3>
-              <p class="text-gray-400">
+              <p class="text-gray-400 leading-relaxed">
                 Titulaciones avaladas por el Gobierno de España y la Generalitat
                 de Catalunya.
               </p>
             </div>
-            <div class="card rounded-lg p-6 text-center">
-              <h3 class="text-xl font-bold mb-2 text-white">
+            <div class="card rounded-2xl p-8 text-center group">
+              <div
+                class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i
+                  class="fas fa-handshake text-2xl text-blue-400 icon-float"
+                ></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4 text-white">
                 Alianzas Estratégicas
               </h3>
-              <p class="text-gray-400">
+              <p class="text-gray-400 leading-relaxed">
                 Colaboraciones con líderes de la industria como ESCAC, Inditex,
                 Crowdy y Filmo.io.
               </p>
             </div>
-            <div class="card rounded-lg p-6 text-center">
-              <h3 class="text-xl font-bold mb-2 text-white">
+            <div class="card rounded-2xl p-8 text-center group">
+              <div
+                class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i class="fas fa-brain text-2xl text-pink-400 icon-float"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4 text-white">
                 Innovación y Futuro
               </h3>
-              <p class="text-gray-400">
+              <p class="text-gray-400 leading-relaxed">
                 Integramos IA, videojuegos y narrativas emergentes para liderar
                 el futuro del sector.
               </p>
@@ -307,51 +683,97 @@
 
       <!-- ites.es Tab -->
       <div id="ites-es" class="tab-content">
-        <h2 class="text-3xl font-bold mb-2 text-indigo-300">ites.es</h2>
-        <p class="text-lg text-gray-400 mb-6">Formación Profesional Oficial</p>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="card rounded-lg p-6">
-            <h3 class="text-xl font-bold mb-2 text-white">
-              Formación Audiovisual Reglada
-            </h3>
-            <p class="text-gray-400">
+        <div class="text-center mb-12">
+          <div
+            class="feature-icon w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+          >
+            <i class="fas fa-graduation-cap text-3xl text-indigo-400"></i>
+          </div>
+          <h2 class="text-4xl font-bold mb-4 text-indigo-300 text-glow">
+            ites.es
+          </h2>
+          <p class="text-xl text-gray-400">Formación Profesional Oficial</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <div class="card rounded-2xl p-8">
+            <div class="flex items-center mb-4">
+              <div
+                class="feature-icon w-12 h-12 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-school text-indigo-400"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white">
+                Formación Audiovisual Reglada
+              </h3>
+            </div>
+            <p class="text-gray-400 leading-relaxed">
               Ofrecemos titulaciones oficiales en el ámbito audiovisual, siendo
               el centro privado pionero en España. Nuestro objetivo es
-              garantizar el 100% de empleabilidad para nuestros alumnos.
+              garantizar el
+              <span class="font-bold text-green-400"
+                >100% de empleabilidad</span
+              >
+              para nuestros alumnos.
             </p>
           </div>
-          <div class="card rounded-lg p-6">
-            <h3 class="text-xl font-bold mb-2 text-white">
-              Capacidad y Ocupación
-            </h3>
-            <ul class="text-gray-400 space-y-2">
-              <li>
-                <span class="font-semibold text-indigo-400"
-                  >720 Plazas presenciales:</span
-                >
-                Actualmente con una ocupación del 19% (137 alumnos), presentando
-                un gran potencial de crecimiento.
-              </li>
-              <li>
-                <span class="font-semibold text-indigo-400"
-                  >2.430 Plazas online:</span
-                >
-                Con una inminente campaña de lanzamiento para expandir nuestra
-                oferta formativa a nivel global.
-              </li>
-            </ul>
+          <div class="card rounded-2xl p-8">
+            <div class="flex items-center mb-4">
+              <div
+                class="feature-icon w-12 h-12 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-users text-purple-400"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white">
+                Capacidad y Ocupación
+              </h3>
+            </div>
+            <div class="space-y-4">
+              <div class="stat-card rounded-lg p-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-indigo-400 font-semibold"
+                    >720 Plazas presenciales</span
+                  >
+                  <span class="text-2xl font-bold text-white">19%</span>
+                </div>
+                <p class="text-sm text-gray-400 mt-2">
+                  Ocupación actual (137 alumnos)
+                </p>
+              </div>
+              <div class="stat-card rounded-lg p-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-purple-400 font-semibold"
+                    >2.430 Plazas online</span
+                  >
+                  <span class="text-2xl font-bold text-green-400">Listo</span>
+                </div>
+                <p class="text-sm text-gray-400 mt-2">
+                  Campaña de lanzamiento global
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="card rounded-lg p-6 md:col-span-2">
-            <h3 class="text-xl font-bold mb-2 text-white">
-              Proyección Financiera
-            </h3>
-            <p class="text-gray-400">
-              Esta es nuestra principal línea de negocio, con una proyección de
-              ingresos de
-              <span class="font-bold text-green-400">3.152.580€</span> para
-              2026, representando el 63.1% del objetivo total.
-            </p>
+        </div>
+
+        <div class="revenue-highlight card rounded-2xl p-8 text-center">
+          <div class="flex items-center justify-center mb-6">
+            <div
+              class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mr-4"
+            >
+              <i class="fas fa-chart-line text-2xl text-green-400"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Proyección Financiera</h3>
           </div>
+          <p class="text-gray-400 mb-4">
+            Esta es nuestra principal línea de negocio, con una proyección de
+            ingresos de
+          </p>
+          <p class="text-4xl font-bold text-green-400 mb-2">3.152.580€</p>
+          <p class="text-lg text-gray-400">
+            para 2026, representando el
+            <span class="font-bold text-indigo-400">63.1%</span> del objetivo
+            total.
+          </p>
         </div>
       </div>
 
@@ -661,22 +1083,49 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900/50 mt-12">
-      <div class="container mx-auto py-6 px-4 text-center text-gray-400">
-        <p>&copy; 2025 ITES Hub Audiovisual. Todos los derechos reservados.</p>
-        <p class="text-sm mt-2">Plaça de Tetuan, Barcelona, España</p>
-        <div class="mt-4">
-          <a
-            href="mailto:dcodina@ites.es"
-            class="text-indigo-400 hover:text-indigo-300"
-            >dcodina@ites.es</a
-          >
-          <span class="mx-2">|</span>
-          <a
-            href="mailto:kmejia@ites.es"
-            class="text-indigo-400 hover:text-indigo-300"
-            >kmejia@ites.es</a
-          >
+    <footer class="glass-effect mt-20 border-t border-gray-700/50">
+      <div class="container mx-auto py-12 px-4">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-bold text-white mb-4">
+              <span class="text-indigo-400">ITES</span> Hub Audiovisual
+            </h3>
+            <p class="text-gray-400">
+              50 años de excelencia en formación y producción audiovisual
+            </p>
+          </div>
+          <div class="text-center">
+            <h4 class="text-lg font-semibold text-white mb-4">Ubicación</h4>
+            <p class="text-gray-400">
+              <i class="fas fa-map-marker-alt text-indigo-400 mr-2"></i>
+              Plaça de Tetuan, Barcelona, España
+            </p>
+          </div>
+          <div class="text-center md:text-right">
+            <h4 class="text-lg font-semibold text-white mb-4">Contacto</h4>
+            <div class="space-y-2">
+              <a
+                href="mailto:dcodina@ites.es"
+                class="block text-indigo-400 hover:text-indigo-300 transition-colors"
+              >
+                <i class="fas fa-envelope mr-2"></i>
+                dcodina@ites.es
+              </a>
+              <a
+                href="mailto:kmejia@ites.es"
+                class="block text-indigo-400 hover:text-indigo-300 transition-colors"
+              >
+                <i class="fas fa-envelope mr-2"></i>
+                kmejia@ites.es
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="section-divider"></div>
+        <div class="text-center text-gray-400">
+          <p>
+            &copy; 2025 ITES Hub Audiovisual. Todos los derechos reservados.
+          </p>
         </div>
       </div>
     </footer>
@@ -699,7 +1148,6 @@
         document.getElementById(tabName).classList.add("active");
 
         // Activar la pestaña seleccionada
-        // Hacemos esto buscando el botón que tiene el onclick correspondiente
         const activeTab = document.querySelector(
           `.tab[onclick="showTab('${tabName}')"]`
         );
@@ -707,6 +1155,19 @@
           activeTab.classList.add("active");
         }
       }
+
+      function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      // Smooth scrolling functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        // Scroll-based animations removed for better performance
+        console.log("Page loaded - animations disabled for better performance");
+      });
     </script>
   </body>
 </html>
