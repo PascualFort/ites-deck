@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITES Hub Audiovisual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #0a0a2a;
+        color: #e0e0e0;
+      }
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      .tab.active {
+        background-color: #4f46e5;
+        color: #ffffff;
+        border-bottom-color: #4f46e5;
+      }
+      .nav-scroller {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+      .nav-scroller::-webkit-scrollbar {
+        display: none; /* Chrome, Safari and Opera */
+      }
+      .hero-bg {
+        background-image: linear-gradient(
+            rgba(10, 10, 42, 0.8),
+            rgba(10, 10, 42, 1)
+          ),
+          url("https://placehold.co/1200x600/0a0a2a/e0e0e0?text=ITES+Plat%C3%B3");
+        background-size: cover;
+        background-position: center;
+      }
+      .card {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="bg-gray-900/50 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-indigo-500/10"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between py-4">
+          <div class="text-2xl font-bold text-white">
+            <span class="text-indigo-400">ITES</span> Hub Audiovisual
+          </div>
+          <div class="hidden md:flex items-center space-x-2">
+            <a
+              href="mailto:dcodina@ites.es"
+              class="text-sm bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300"
+              >Contactar</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="bg-gray-800/30">
+      <div class="container mx-auto px-4">
+        <div class="border-b border-gray-700">
+          <div class="flex overflow-x-auto nav-scroller -mb-px">
+            <button
+              class="tab active text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
+              onclick="showTab('home')"
+            >
+              Home
+            </button>
+            <button
+              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
+              onclick="showTab('inversores')"
+            >
+              Inversores
+            </button>
+            <button
+              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
+              onclick="showTab('ites-es')"
+            >
+              ites.es
+            </button>
+            <button
+              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
+              onclick="showTab('ites-institute')"
+            >
+              ites.institute
+            </button>
+            <button
+              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
+              onclick="showTab('ites-studio')"
+            >
+              ites.studio
+            </button>
+            <button
+              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
+              onclick="showTab('ites-productions')"
+            >
+              ites.productions
+            </button>
+            <button
+              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
+              onclick="showTab('ites-works')"
+            >
+              ites.works
+            </button>
+            <button
+              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
+              onclick="showTab('ites-lab')"
+            >
+              ites.lab
+            </button>
+            <button
+              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-3 px-4 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none"
+              onclick="showTab('skola-hub')"
+            >
+              skola.hub
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 md:p-8">
+      <!-- Home Tab -->
+      <div id="home" class="tab-content active">
+        <section
+          class="hero-bg rounded-xl p-8 md:p-16 mb-12 text-center text-white flex flex-col items-center justify-center min-h-[50vh]"
+        >
+          <h1
+            class="text-4xl md:text-6xl font-bold mb-4 leading-tight shadow-text"
+          >
+            Bienvenidos a ITES Hub Audiovisual
+          </h1>
+          <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-200">
+            El epicentro de la formación y producción audiovisual en Barcelona,
+            con 50 años de experiencia y 3.000 m² de instalaciones de
+            vanguardia.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-3xl font-bold text-center mb-8 text-indigo-300">
+            Un Ecosistema Único
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="card rounded-lg p-6 text-center">
+              <h3 class="text-xl font-bold mb-2 text-white">
+                50 Años de Historia
+              </h3>
+              <p class="text-gray-400">
+                Pioneros en España en formación profesional audiovisual con
+                titulación oficial desde 1975.
+              </p>
+            </div>
+            <div class="card rounded-lg p-6 text-center">
+              <h3 class="text-xl font-bold mb-2 text-white">
+                Infraestructura Premium
+              </h3>
+              <p class="text-gray-400">
+                Casi 3.000 m² con platós de TV, estudios de sonido, radio,
+                fotografía y teatro en el corazón de Barcelona.
+              </p>
+            </div>
+            <div class="card rounded-lg p-6 text-center">
+              <h3 class="text-xl font-bold mb-2 text-white">
+                Equipo de Vanguardia
+              </h3>
+              <p class="text-gray-400">
+                Más de 6.105 activos audiovisuales valorados en 1,98 M€ con
+                tecnología de última generación.
+              </p>
+            </div>
+            <div class="card rounded-lg p-6 text-center">
+              <h3 class="text-xl font-bold mb-2 text-white">
+                Reconocimiento Oficial
+              </h3>
+              <p class="text-gray-400">
+                Titulaciones avaladas por el Gobierno de España y la Generalitat
+                de Catalunya.
+              </p>
+            </div>
+            <div class="card rounded-lg p-6 text-center">
+              <h3 class="text-xl font-bold mb-2 text-white">
+                Alianzas Estratégicas
+              </h3>
+              <p class="text-gray-400">
+                Colaboraciones con líderes de la industria como ESCAC, Inditex,
+                Crowdy y Filmo.io.
+              </p>
+            </div>
+            <div class="card rounded-lg p-6 text-center">
+              <h3 class="text-xl font-bold mb-2 text-white">
+                Innovación y Futuro
+              </h3>
+              <p class="text-gray-400">
+                Integramos IA, videojuegos y narrativas emergentes para liderar
+                el futuro del sector.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Inversores Tab -->
+      <div id="inversores" class="tab-content">
+        <h2 class="text-3xl font-bold mb-6 text-indigo-300">
+          Oportunidad de Inversión
+        </h2>
+        <p class="text-lg text-gray-400 mb-8">
+          Una invitación para formar parte de un proyecto con 50 años de
+          historia y un futuro de crecimiento exponencial.
+        </p>
+
+        <div
+          class="card rounded-lg p-8 mb-8 bg-indigo-900/20 border-indigo-500"
+        >
+          <h3 class="text-2xl font-bold text-white mb-4">
+            Adquisición del 49% de ITES por
+            <span class="text-green-400">900.000€</span>
+          </h3>
+          <p class="text-gray-300">
+            Buscamos un socio estratégico para impulsar nuestro crecimiento y
+            alcanzar nuevos horizontes en la industria audiovisual.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card rounded-lg p-6 lg:col-span-2">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Objetivo Estratégico
+            </h3>
+            <p class="text-gray-400">
+              Incrementar los ingresos de 2M€ a
+              <span class="font-bold text-green-400">5M€</span> en 2 ejercicios
+              fiscales (18-24 meses), maximizando la ocupación de la Formación
+              Profesional y desarrollando sinergias con las nuevas líneas de
+              negocio.
+            </p>
+          </div>
+
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Valoración de la Compañía
+            </h3>
+            <p class="text-gray-400">
+              Valor real de la empresa estimado en
+              <span class="font-bold text-green-400">1.472.000€</span>. La
+              propuesta de inversión ofrece una entrada estratégica con un
+              importante potencial de revalorización.
+            </p>
+          </div>
+
+          <div class="card rounded-lg p-6 lg:col-span-3">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Estructura de la Inversión en 2 Fases
+            </h3>
+            <div class="grid md:grid-cols-2 gap-6 mt-4">
+              <div>
+                <h4 class="font-semibold text-indigo-300">
+                  1ª Fase (Firma de acuerdo - 15 de Julio)
+                </h4>
+                <p class="text-gray-400">
+                  <span class="font-bold text-white">525.000€</span> por el
+                  34,3% de la compañía. Proponemos un préstamo participativo o
+                  convertible debido a la necesidad de tesorería inmediata.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-indigo-300">
+                  2ª Fase (1 de Septiembre)
+                </h4>
+                <p class="text-gray-400">
+                  <span class="font-bold text-white">225.000€</span> con un
+                  compromiso contractual para alcanzar el objetivo de 5M€ en
+                  Diciembre de 2026.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">Acceso a Talento</h3>
+            <p class="text-gray-400">
+              Acceso directo a una cantera de talento técnico joven, formado y
+              listo para incorporarse a producciones reales.
+            </p>
+          </div>
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Optimización de Recursos
+            </h3>
+            <p class="text-gray-400">
+              Uso de infraestructuras y equipos de primer nivel, optimizando
+              costes de producción y preproducción.
+            </p>
+          </div>
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">Posicionamiento</h3>
+            <p class="text-gray-400">
+              Asociación con una marca educativa de prestigio, reforzando el
+              compromiso con el sector y la formación.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ites.es Tab -->
+      <div id="ites-es" class="tab-content">
+        <h2 class="text-3xl font-bold mb-2 text-indigo-300">ites.es</h2>
+        <p class="text-lg text-gray-400 mb-6">Formación Profesional Oficial</p>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Formación Audiovisual Reglada
+            </h3>
+            <p class="text-gray-400">
+              Ofrecemos titulaciones oficiales en el ámbito audiovisual, siendo
+              el centro privado pionero en España. Nuestro objetivo es
+              garantizar el 100% de empleabilidad para nuestros alumnos.
+            </p>
+          </div>
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Capacidad y Ocupación
+            </h3>
+            <ul class="text-gray-400 space-y-2">
+              <li>
+                <span class="font-semibold text-indigo-400"
+                  >720 Plazas presenciales:</span
+                >
+                Actualmente con una ocupación del 19% (137 alumnos), presentando
+                un gran potencial de crecimiento.
+              </li>
+              <li>
+                <span class="font-semibold text-indigo-400"
+                  >2.430 Plazas online:</span
+                >
+                Con una inminente campaña de lanzamiento para expandir nuestra
+                oferta formativa a nivel global.
+              </li>
+            </ul>
+          </div>
+          <div class="card rounded-lg p-6 md:col-span-2">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Proyección Financiera
+            </h3>
+            <p class="text-gray-400">
+              Esta es nuestra principal línea de negocio, con una proyección de
+              ingresos de
+              <span class="font-bold text-green-400">3.152.580€</span> para
+              2026, representando el 63.1% del objetivo total.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ites.institute Tab -->
+      <div id="ites-institute" class="tab-content">
+        <h2 class="text-3xl font-bold mb-2 text-indigo-300">ites.institute</h2>
+        <p class="text-lg text-gray-400 mb-6">
+          Cursos Online y Formación Continua
+        </p>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">Expansión Digital</h3>
+            <p class="text-gray-400">
+              Plataforma dedicada a cursos online y formación especializada para
+              profesionales del sector. Buscamos llegar a un público global y
+              ofrecer formación flexible y de alta calidad.
+            </p>
+            <p class="text-gray-400 mt-4">
+              Estamos en conversaciones con varias universidades para ampliar
+              nuestras colaboraciones y titulaciones.
+            </p>
+          </div>
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Proyección Financiera
+            </h3>
+            <p class="text-gray-400">
+              Se proyecta que ites.institute genere
+              <span class="font-bold text-green-400">585.000€</span> en ingresos
+              para 2026, lo que equivale al 11.7% de la facturación total
+              esperada.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ites.studio Tab -->
+      <div id="ites-studio" class="tab-content">
+        <h2 class="text-3xl font-bold mb-2 text-indigo-300">ites.studio</h2>
+        <p class="text-lg text-gray-400 mb-6">Alquiler de Espacios y Equipos</p>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Infraestructura para la Industria
+            </h3>
+            <p class="text-gray-400">
+              Monetizamos nuestros 3.000 m² de instalaciones y nuestro extenso
+              inventario de equipos. Ofrecemos platós, estudios de sonido, salas
+              de postproducción y material técnico para productoras y
+              profesionales.
+            </p>
+          </div>
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Acuerdo con Filmo.io
+            </h3>
+            <p class="text-gray-400">
+              Hemos implementado un sistema integral de gestión de inventarios y
+              reservas con Filmo.io para ofrecer un servicio ágil y accesible,
+              optimizando el uso de nuestros más de 6.000 activos.
+            </p>
+          </div>
+          <div class="card rounded-lg p-6 md:col-span-2">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Proyección Financiera
+            </h3>
+            <p class="text-gray-400">
+              El alquiler de espacios y equipos tiene una proyección de ingresos
+              de <span class="font-bold text-green-400">456.000€</span> anuales
+              (9.1% del total para 2026).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ites.productions Tab -->
+      <div id="ites-productions" class="tab-content">
+        <h2 class="text-3xl font-bold mb-2 text-indigo-300">
+          ites.productions
+        </h2>
+        <p class="text-lg text-gray-400 mb-6">Productora Audiovisual</p>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Creación de Contenido
+            </h3>
+            <p class="text-gray-400">
+              Nuestra propia productora audiovisual, diseñada para crear
+              contenido original y ofrecer servicios de producción a terceros,
+              involucrando a nuestro alumnado en proyectos reales.
+            </p>
+          </div>
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Acuerdo con ÉxitoTV
+            </h3>
+            <p class="text-gray-400">
+              Ya participamos en nuestra primera producción audiovisual en
+              colaboración con la reconocida productora ÉxitoTV, fortaleciendo
+              nuestra división de producción.
+            </p>
+          </div>
+          <div class="card rounded-lg p-6 md:col-span-2">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Proyección Financiera
+            </h3>
+            <p class="text-gray-400">
+              Proyectamos ingresos de
+              <span class="font-bold text-green-400">120.000€</span> en el
+              primer año, con un crecimiento previsto de hasta cinco veces para
+              2025.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ites.works Tab -->
+      <div id="ites-works" class="tab-content">
+        <h2 class="text-3xl font-bold mb-2 text-indigo-300">ites.works</h2>
+        <p class="text-lg text-gray-400 mb-6">Incubadora de Empresas</p>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Impulsando el Talento
+            </h3>
+            <p class="text-gray-400">
+              Una incubadora de negocios audiovisuales que ofrece servicios de
+              incubación y networking para startups y proyectos emergentes del
+              sector.
+            </p>
+          </div>
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Acuerdo con Crowdy.xyz
+            </h3>
+            <p class="text-gray-400">
+              Hemos firmado un acuerdo pionero con Crowdy, la primera plataforma
+              de networking para la industria audiovisual, para conectar
+              profesionales y gestionar proyectos de forma eficiente.
+            </p>
+          </div>
+          <div class="card rounded-lg p-6 md:col-span-2">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Proyección Financiera
+            </h3>
+            <p class="text-gray-400">
+              Se espera que esta línea de negocio genere
+              <span class="font-bold text-green-400">456.000€</span> para 2026
+              (originalmente 90.000€, actualizado según gráfico), representando
+              el 1.8% del objetivo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ites.lab Tab -->
+      <div id="ites-lab" class="tab-content">
+        <h2 class="text-3xl font-bold mb-2 text-indigo-300">ites.lab</h2>
+        <p class="text-lg text-gray-400 mb-6">
+          Laboratorio de Innovación y Servicios
+        </p>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              A la Vanguardia de la Tecnología
+            </h3>
+            <p class="text-gray-400">
+              Nuestro laboratorio de I+D donde exploramos la integración de la
+              Inteligencia Artificial y otras tecnologías emergentes en los
+              procesos audiovisuales y formativos.
+            </p>
+          </div>
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">Equipo Experto</h3>
+            <p class="text-gray-400">
+              Contamos con un equipo de expertos en IA aplicada, postproducción,
+              sonido y dirección, liderando la investigación para mantenernos a
+              la vanguardia del sector.
+            </p>
+          </div>
+          <div class="card rounded-lg p-6 md:col-span-2">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Proyección Financiera
+            </h3>
+            <p class="text-gray-400">
+              Esta línea de servicios e innovación tiene una proyección de
+              ingresos de
+              <span class="font-bold text-green-400">25.000€</span> para 2026.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- skola.hub Tab -->
+      <div id="skola-hub" class="tab-content">
+        <h2 class="text-3xl font-bold mb-2 text-indigo-300">
+          Skola Hub: El Sistema Operativo para la Educación Conectada
+        </h2>
+        <p class="text-lg text-gray-400 mb-6">
+          Una colaboración estratégica con
+          <span class="font-semibold text-indigo-400">Parallax Solutions</span>
+          para revolucionar el ecosistema educativo.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- La Oportunidad -->
+          <div class="card rounded-lg p-6 lg:col-span-3">
+            <h3 class="text-xl font-bold mb-3 text-white">
+              La Oportunidad: Un Mercado Preparado para la Disrupción
+            </h3>
+            <p class="text-gray-400 mb-4">
+              Skola Hub responde a desafíos críticos del sistema educativo
+              catalán, convirtiendo problemas estructurales en una oportunidad
+              de mercado sin precedentes.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+              <div>
+                <p class="text-2xl font-bold text-indigo-300">30.000+</p>
+                <p class="text-sm text-gray-400">
+                  Alumnos sin plaza de FP asignada
+                </p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-indigo-300">+19%</p>
+                <p class="text-sm text-gray-400">
+                  Mayor inserción laboral en FP Dual
+                </p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-indigo-300">Manual</p>
+                <p class="text-sm text-gray-400">
+                  Procesos administrativos costosos
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- La Solución -->
+          <div class="card rounded-lg p-6 lg:col-span-3">
+            <h3 class="text-xl font-bold mb-3 text-white">
+              La Solución: Un Ecosistema Conectado
+            </h3>
+            <p class="text-gray-400 mb-4">
+              Una infraestructura estratégica que crea un ecosistema sin
+              fricción para centros, estudiantes y empresas a través de módulos
+              interconectados como:
+            </p>
+            <ul class="list-disc list-inside text-gray-400 space-y-2">
+              <li>
+                <span class="font-semibold text-indigo-400"
+                  >Alianzas e Itinerarios:</span
+                >
+                Creación de programas multi-institucionales.
+              </li>
+              <li>
+                <span class="font-semibold text-indigo-400"
+                  >Registrar y ValidaCredit:</span
+                >
+                Automatización de matrículas y transferencia de créditos.
+              </li>
+              <li>
+                <span class="font-semibold text-indigo-400">Proyecta HUB:</span>
+                Conexión de estudiantes con retos empresariales reales.
+              </li>
+              <li>
+                <span class="font-semibold text-indigo-400">Talento FP:</span>
+                Conexión directa entre empresas y talento cualificado.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Proyecciones y Mercado -->
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Mercado Direccionable
+            </h3>
+            <p class="text-gray-400">
+              Objetivo a 3 años (SOM):
+              <span class="font-bold text-green-400">400+</span> instituciones
+              clientes para 2026, dominando el mercado potencial de Cataluña.
+            </p>
+          </div>
+          <div class="card rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Proyección Financiera
+            </h3>
+            <p class="text-gray-400">
+              Objetivo de ingresos trimestrales superior a
+              <span class="font-bold text-green-400">570.300€</span> para Q4
+              2026, validado por métricas SaaS excepcionales.
+            </p>
+          </div>
+          <div
+            class="card rounded-lg p-6 flex flex-col justify-center items-center"
+          >
+            <a
+              href="https://skola-hub-deck.parallaxsolutions.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 w-full"
+            >
+              Ver Presentación para Inversores
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/50 mt-12">
+      <div class="container mx-auto py-6 px-4 text-center text-gray-400">
+        <p>&copy; 2025 ITES Hub Audiovisual. Todos los derechos reservados.</p>
+        <p class="text-sm mt-2">Plaça de Tetuan, Barcelona, España</p>
+        <div class="mt-4">
+          <a
+            href="mailto:dcodina@ites.es"
+            class="text-indigo-400 hover:text-indigo-300"
+            >dcodina@ites.es</a
+          >
+          <span class="mx-2">|</span>
+          <a
+            href="mailto:kmejia@ites.es"
+            class="text-indigo-400 hover:text-indigo-300"
+            >kmejia@ites.es</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function showTab(tabName) {
+        // Ocultar todos los contenidos de las pestañas
+        const tabContents = document.querySelectorAll(".tab-content");
+        tabContents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        // Desactivar todas las pestañas
+        const tabs = document.querySelectorAll(".tab");
+        tabs.forEach((tab) => {
+          tab.classList.remove("active");
+        });
+
+        // Mostrar el contenido de la pestaña seleccionada
+        document.getElementById(tabName).classList.add("active");
+
+        // Activar la pestaña seleccionada
+        // Hacemos esto buscando el botón que tiene el onclick correspondiente
+        const activeTab = document.querySelector(
+          `.tab[onclick="showTab('${tabName}')"]`
+        );
+        if (activeTab) {
+          activeTab.classList.add("active");
+        }
+      }
+    </script>
+  </body>
+</html>
