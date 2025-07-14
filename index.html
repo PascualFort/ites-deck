@@ -48,6 +48,10 @@
       .nav-scroller {
         -ms-overflow-style: none;
         scrollbar-width: none;
+        padding-right: 3rem;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        min-width: 100%;
       }
 
       .nav-scroller::-webkit-scrollbar {
@@ -367,8 +371,27 @@
         display: flex;
       }
 
+      /* Enhanced desktop navigation */
+      @media (min-width: 1400px) {
+        .nav-scroller {
+          padding-right: 1rem;
+        }
+
+        .tab {
+          min-width: 140px;
+        }
+      }
+
+      /* Ensure tabs maintain minimum size on all desktop views */
+      @media (min-width: 1400px) {
+        .desktop-nav .tab {
+          flex-shrink: 0;
+          min-width: max-content;
+        }
+      }
+
       /* Responsive navigation - Mobile/Tablet */
-      @media (max-width: 1024px) {
+      @media (max-width: 1399px) {
         /* Hide desktop navigation completely */
         .desktop-nav {
           display: none !important;
@@ -403,7 +426,7 @@
       }
 
       /* Desktop navigation - ensure mobile elements are hidden */
-      @media (min-width: 1025px) {
+      @media (min-width: 1400px) {
         .burger-menu,
         .nav-title,
         .mobile-menu {
