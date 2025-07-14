@@ -248,6 +248,83 @@
         .card {
           margin-bottom: 1rem;
         }
+
+        /* Enhanced tab responsiveness */
+        .tab {
+          min-width: 140px;
+          font-size: 0.875rem;
+          padding: 12px 16px;
+          border-radius: 8px;
+        }
+
+        .nav-scroller {
+          padding: 0 1rem;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        /* Add scroll indicators */
+        .nav-container {
+          position: relative;
+        }
+
+        .nav-container::before,
+        .nav-container::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 20px;
+          pointer-events: none;
+          z-index: 1;
+        }
+
+        .nav-container::before {
+          left: 0;
+          background: linear-gradient(
+            to right,
+            rgba(10, 10, 42, 1),
+            transparent
+          );
+        }
+
+        .nav-container::after {
+          right: 0;
+          background: linear-gradient(
+            to left,
+            rgba(10, 10, 42, 1),
+            transparent
+          );
+        }
+      }
+
+      @media (max-width: 480px) {
+        .tab {
+          min-width: 120px;
+          font-size: 0.8rem;
+          padding: 10px 12px;
+        }
+
+        .tab i {
+          font-size: 0.8rem;
+        }
+
+        /* Business lines responsive adjustments */
+        .business-line-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .business-line-card {
+          padding: 1.5rem;
+        }
+      }
+
+      /* Additional responsive enhancements */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .business-line-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
 
       .scroll-indicator {
@@ -291,63 +368,65 @@
     <!-- Navigation Tabs -->
     <nav class="glass-effect border-b border-gray-700/50">
       <div class="container mx-auto px-4">
-        <div class="flex overflow-x-auto nav-scroller -mb-px">
-          <button
-            class="tab active text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
-            onclick="showTab('home')"
-          >
-            <i class="fas fa-home mr-2"></i>
-            Home
-          </button>
-          <button
-            class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
-            onclick="showTab('ites-es')"
-          >
-            <i class="fas fa-graduation-cap mr-2"></i>
-            ites.es
-          </button>
-          <button
-            class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
-            onclick="showTab('ites-institute')"
-          >
-            <i class="fas fa-laptop mr-2"></i>
-            ites.institute
-          </button>
-          <button
-            class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
-            onclick="showTab('ites-studio')"
-          >
-            <i class="fas fa-video mr-2"></i>
-            ites.studio
-          </button>
-          <button
-            class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
-            onclick="showTab('ites-productions')"
-          >
-            <i class="fas fa-film mr-2"></i>
-            ites.productions
-          </button>
-          <button
-            class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
-            onclick="showTab('ites-works')"
-          >
-            <i class="fas fa-rocket mr-2"></i>
-            ites.works
-          </button>
-          <button
-            class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
-            onclick="showTab('ites-lab')"
-          >
-            <i class="fas fa-flask mr-2"></i>
-            ites.lab
-          </button>
-          <button
-            class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
-            onclick="showTab('skola-hub')"
-          >
-            <i class="fas fa-university mr-2"></i>
-            skola.hub
-          </button>
+        <div class="nav-container">
+          <div class="flex overflow-x-auto nav-scroller -mb-px">
+            <button
+              class="tab active text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+              onclick="showTab('home')"
+            >
+              <i class="fas fa-home mr-2"></i>
+              Home
+            </button>
+            <button
+              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+              onclick="showTab('ites-es')"
+            >
+              <i class="fas fa-graduation-cap mr-2"></i>
+              ites.es
+            </button>
+            <button
+              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+              onclick="showTab('ites-institute')"
+            >
+              <i class="fas fa-laptop mr-2"></i>
+              ites.institute
+            </button>
+            <button
+              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+              onclick="showTab('ites-studio')"
+            >
+              <i class="fas fa-video mr-2"></i>
+              ites.studio
+            </button>
+            <button
+              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+              onclick="showTab('ites-productions')"
+            >
+              <i class="fas fa-film mr-2"></i>
+              ites.productions
+            </button>
+            <button
+              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+              onclick="showTab('ites-works')"
+            >
+              <i class="fas fa-rocket mr-2"></i>
+              ites.works
+            </button>
+            <button
+              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+              onclick="showTab('ites-lab')"
+            >
+              <i class="fas fa-flask mr-2"></i>
+              ites.lab
+            </button>
+            <button
+              class="tab text-sm font-medium text-gray-300 hover:text-white whitespace-nowrap py-4 px-6 border-b-2 border-transparent hover:border-indigo-400 focus:outline-none transition-all duration-300 rounded-t-lg"
+              onclick="showTab('skola-hub')"
+            >
+              <i class="fas fa-university mr-2"></i>
+              skola.hub
+            </button>
+          </div>
         </div>
       </div>
     </nav>
@@ -651,6 +730,227 @@
               <p class="text-gray-400 leading-relaxed">
                 Integramos IA, videojuegos y narrativas emergentes para liderar
                 el futuro del sector.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Business Lines Section -->
+        <section class="mb-16">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-black mb-4 text-glow">
+              Nuestras <span class="text-indigo-400">Líneas de Negocio</span>
+            </h2>
+            <p class="text-xl text-gray-400 max-w-4xl mx-auto">
+              Descubre cada una de nuestras divisiones especializadas y explora
+              las oportunidades que ofrecemos
+            </p>
+          </div>
+
+          <div
+            class="business-line-grid grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            <!-- ites.es Card -->
+            <div
+              class="business-line-card card rounded-2xl p-6 text-center group cursor-pointer transition-all duration-300 hover:scale-105"
+              onclick="showTab('ites-es')"
+            >
+              <div
+                class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i
+                  class="fas fa-graduation-cap text-2xl text-indigo-400 icon-float"
+                ></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4 text-white">ites.es</h3>
+              <p class="text-gray-400 leading-relaxed mb-4">
+                Formación Profesional Oficial. El centro privado pionero en
+                España con titulaciones audiovisuales avaladas.
+              </p>
+              <div class="text-green-400 font-bold text-lg mb-2">
+                3.152.580€
+              </div>
+              <div class="text-sm text-gray-500">Proyección 2026 (63.1%)</div>
+              <div
+                class="mt-4 btn-primary inline-flex items-center text-sm font-semibold py-2 px-4 rounded-lg relative z-10"
+              >
+                <span>Explorar</span>
+                <i class="fas fa-arrow-right ml-2"></i>
+              </div>
+            </div>
+
+            <!-- ites.institute Card -->
+            <div
+              class="business-line-card card rounded-2xl p-6 text-center group cursor-pointer transition-all duration-300 hover:scale-105"
+              onclick="showTab('ites-institute')"
+            >
+              <div
+                class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i
+                  class="fas fa-laptop text-2xl text-indigo-400 icon-float"
+                ></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4 text-white">ites.institute</h3>
+              <p class="text-gray-400 leading-relaxed mb-4">
+                Cursos Online y Formación Continua. Plataforma global para
+                profesionales del sector audiovisual.
+              </p>
+              <div class="text-green-400 font-bold text-lg mb-2">585.000€</div>
+              <div class="text-sm text-gray-500">Proyección 2026 (11.7%)</div>
+              <div
+                class="mt-4 btn-primary inline-flex items-center text-sm font-semibold py-2 px-4 rounded-lg relative z-10"
+              >
+                <span>Explorar</span>
+                <i class="fas fa-arrow-right ml-2"></i>
+              </div>
+            </div>
+
+            <!-- ites.studio Card -->
+            <div
+              class="business-line-card card rounded-2xl p-6 text-center group cursor-pointer transition-all duration-300 hover:scale-105"
+              onclick="showTab('ites-studio')"
+            >
+              <div
+                class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i class="fas fa-video text-2xl text-indigo-400 icon-float"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4 text-white">ites.studio</h3>
+              <p class="text-gray-400 leading-relaxed mb-4">
+                Alquiler de Espacios y Equipos. 3.000 m² de instalaciones
+                premium y más de 6.000 activos audiovisuales.
+              </p>
+              <div class="text-green-400 font-bold text-lg mb-2">456.000€</div>
+              <div class="text-sm text-gray-500">Proyección 2026 (9.1%)</div>
+              <div
+                class="mt-4 btn-primary inline-flex items-center text-sm font-semibold py-2 px-4 rounded-lg relative z-10"
+              >
+                <span>Explorar</span>
+                <i class="fas fa-arrow-right ml-2"></i>
+              </div>
+            </div>
+
+            <!-- ites.productions Card -->
+            <div
+              class="business-line-card card rounded-2xl p-6 text-center group cursor-pointer transition-all duration-300 hover:scale-105"
+              onclick="showTab('ites-productions')"
+            >
+              <div
+                class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i class="fas fa-film text-2xl text-indigo-400 icon-float"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4 text-white">
+                ites.productions
+              </h3>
+              <p class="text-gray-400 leading-relaxed mb-4">
+                Productora Audiovisual. Creación de contenido original e
+                involucramiento del alumnado en proyectos reales.
+              </p>
+              <div class="text-green-400 font-bold text-lg mb-2">120.000€</div>
+              <div class="text-sm text-gray-500">Primer año</div>
+              <div
+                class="mt-4 btn-primary inline-flex items-center text-sm font-semibold py-2 px-4 rounded-lg relative z-10"
+              >
+                <span>Explorar</span>
+                <i class="fas fa-arrow-right ml-2"></i>
+              </div>
+            </div>
+
+            <!-- ites.works Card -->
+            <div
+              class="business-line-card card rounded-2xl p-6 text-center group cursor-pointer transition-all duration-300 hover:scale-105"
+              onclick="showTab('ites-works')"
+            >
+              <div
+                class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i
+                  class="fas fa-rocket text-2xl text-indigo-400 icon-float"
+                ></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4 text-white">ites.works</h3>
+              <p class="text-gray-400 leading-relaxed mb-4">
+                Incubadora de Empresas. Networking y servicios de incubación
+                para startups audiovisuales.
+              </p>
+              <div class="text-green-400 font-bold text-lg mb-2">456.000€</div>
+              <div class="text-sm text-gray-500">Proyección 2026 (1.8%)</div>
+              <div
+                class="mt-4 btn-primary inline-flex items-center text-sm font-semibold py-2 px-4 rounded-lg relative z-10"
+              >
+                <span>Explorar</span>
+                <i class="fas fa-arrow-right ml-2"></i>
+              </div>
+            </div>
+
+            <!-- ites.lab Card -->
+            <div
+              class="business-line-card card rounded-2xl p-6 text-center group cursor-pointer transition-all duration-300 hover:scale-105"
+              onclick="showTab('ites-lab')"
+            >
+              <div
+                class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i class="fas fa-flask text-2xl text-indigo-400 icon-float"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4 text-white">ites.lab</h3>
+              <p class="text-gray-400 leading-relaxed mb-4">
+                Laboratorio de Innovación. I+D en IA y tecnologías emergentes
+                para el sector audiovisual.
+              </p>
+              <div class="text-green-400 font-bold text-lg mb-2">25.000€</div>
+              <div class="text-sm text-gray-500">Proyección 2026</div>
+              <div
+                class="mt-4 btn-primary inline-flex items-center text-sm font-semibold py-2 px-4 rounded-lg relative z-10"
+              >
+                <span>Explorar</span>
+                <i class="fas fa-arrow-right ml-2"></i>
+              </div>
+            </div>
+
+            <!-- skola.hub Card -->
+            <div
+              class="business-line-card card rounded-2xl p-6 text-center group cursor-pointer transition-all duration-300 hover:scale-105 md:col-span-2 lg:col-span-1"
+              onclick="showTab('skola-hub')"
+            >
+              <div
+                class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i
+                  class="fas fa-university text-2xl text-indigo-400 icon-float"
+                ></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4 text-white">skola.hub</h3>
+              <p class="text-gray-400 leading-relaxed mb-4">
+                Sistema Operativo Educativo. Colaboración con Parallax Solutions
+                para revolucionar el ecosistema educativo.
+              </p>
+              <div class="text-green-400 font-bold text-lg mb-2">570.300€</div>
+              <div class="text-sm text-gray-500">Q4 2026 (trimestral)</div>
+              <div
+                class="mt-4 btn-primary inline-flex items-center text-sm font-semibold py-2 px-4 rounded-lg relative z-10"
+              >
+                <span>Explorar</span>
+                <i class="fas fa-arrow-right ml-2"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-12">
+            <div class="glass-effect rounded-xl p-6 max-w-2xl mx-auto">
+              <h3 class="text-2xl font-bold text-white mb-4">
+                Total Proyección de Ingresos 2026
+              </h3>
+              <div class="text-5xl font-black text-green-400 mb-2">
+                5.000.000€+
+              </div>
+              <p class="text-gray-400">
+                Un ecosistema integral que maximiza sinergias y oportunidades de
+                crecimiento
               </p>
             </div>
           </div>
