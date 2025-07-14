@@ -619,16 +619,18 @@
       <!-- Home Tab -->
       <div id="home" class="tab-content active">
         <section
-          class="subtle-hero-bg rounded-2xl p-8 md:p-16 mb-16 text-center text-white flex flex-col items-center justify-center min-h-[60vh] relative"
+          class="rounded-2xl p-8 md:p-16 mb-16 text-center text-white flex flex-col items-center justify-center min-h-[60vh] relative overflow-hidden"
+          style="
+            background-image: url('assets/ITES-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          "
         >
-          <div class="floating">
-            <div class="mb-8">
-              <img
-                src="assets/ITES-banner.jpg"
-                alt="ITES Hub Audiovisual Banner"
-                class="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl"
-              />
-            </div>
+          <!-- Dark overlay for text readability -->
+          <div class="absolute inset-0 bg-black/75 rounded-2xl"></div>
+
+          <div class="floating relative z-10">
             <h1
               class="text-5xl md:text-7xl font-black mb-6 leading-tight text-glow"
             >
