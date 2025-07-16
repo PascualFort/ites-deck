@@ -57,7 +57,6 @@
     <meta name="theme-color" content="#4f46e5" />
     <link rel="canonical" href="https://deck.ites.es" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -2353,11 +2352,12 @@
         }
       });
 
-      // EmailJS and Modal functionality
-      document.addEventListener("DOMContentLoaded", function () {
-        // Initialize EmailJS
-        emailjs.init("gy7MkR7OLXUPSlOfv"); // Replace with your EmailJS public key
+      // Web3Forms configuration
+      const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+      const WEB3FORMS_ACCESS_KEY = "1a84e45f-7427-47e3-9104-f7697b574a2c"; // You'll get this from web3forms.com
 
+      // Contact Modal functionality
+      document.addEventListener("DOMContentLoaded", function () {
         let currentRecipient = "dcodina@ites.es"; // Default recipient
 
         // Modal elements
@@ -2443,49 +2443,50 @@
         contactForm.addEventListener("submit", function (e) {
           e.preventDefault();
 
-          // Show loading state
           submitBtn.innerHTML =
             '<i class="fas fa-spinner fa-spin mr-2"></i>Enviando...';
           submitBtn.disabled = true;
 
           const formData = new FormData(contactForm);
-          const userEmail = formData.get("user_email");
-          const userName = formData.get("user_name");
+          formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+          formData.append(
+            "subject",
+            "Solicitud de información ITES Hub Audiovisual"
+          );
+          formData.append("from_name", formData.get("user_name"));
+          formData.append("replyto", formData.get("user_email"));
+          formData.append(
+            "message",
+            `Solicitud de información de ${formData.get(
+              "user_email"
+            )}. Nombre: ${formData.get("user_name")}`
+          );
 
-          // Auto-generate message in Spanish
-          const autoMessage = `Solicitud de información de ${userEmail}. Nombre: ${userName}`;
-
-          const templateParams = {
-            user_name: userName,
-            user_email: userEmail,
-            message: autoMessage,
-            to_email: currentRecipient,
-          };
-
-          // Replace with your EmailJS service ID and template ID
-          emailjs
-            .send("parallax-website", "template_3y9jjid", templateParams)
-            .then(function (response) {
-              // Show success state
-              submitBtn.innerHTML =
-                '<i class="fas fa-check mr-2"></i>¡Enviado!';
-              submitBtn.classList.remove("from-indigo-600", "to-purple-600");
-              submitBtn.classList.add("from-green-600", "to-green-700");
-
-              // Close modal after 1.5 seconds
-              setTimeout(() => {
-                closeContactModal();
-              }, 1500);
+          fetch(WEB3FORMS_ENDPOINT, {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.success) {
+                submitBtn.innerHTML =
+                  '<i class="fas fa-check mr-2"></i>¡Enviado!';
+                submitBtn.classList.remove("from-indigo-600", "to-purple-600");
+                submitBtn.classList.add("from-green-600", "to-green-700");
+                setTimeout(() => {
+                  closeContactModal();
+                }, 1500);
+              } else {
+                throw new Error("Form submission failed");
+              }
             })
             .catch(function (error) {
-              // Show error state
+              console.error("Web3Forms error:", error);
               submitBtn.innerHTML =
                 '<i class="fas fa-exclamation-triangle mr-2"></i>Error - Reintentar';
               submitBtn.classList.remove("from-indigo-600", "to-purple-600");
               submitBtn.classList.add("from-red-600", "to-red-700");
               submitBtn.disabled = false;
-
-              // Reset button after 3 seconds
               setTimeout(() => {
                 submitBtn.innerHTML = "Enviar Solicitud";
                 submitBtn.classList.remove("from-red-600", "to-red-700");
