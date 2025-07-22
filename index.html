@@ -2349,9 +2349,6 @@
 
       // Smooth scrolling functionality
       document.addEventListener("DOMContentLoaded", function () {
-        // Scroll-based animations removed for better performance
-        console.log("Page loaded - animations disabled for better performance");
-
         // Set initial active state for mobile menu
         const activeDesktopTab = document.querySelector(".tab.active");
         if (activeDesktopTab) {
@@ -2426,7 +2423,6 @@
 
         // Event listeners for opening modal
         const contactTriggers = document.querySelectorAll(".contact-trigger");
-        console.log("Found contact triggers:", contactTriggers.length);
 
         contactTriggers.forEach((button) => {
           button.addEventListener("click", function (e) {
