@@ -540,7 +540,10 @@
     </style>
     <script>
       if (localStorage.getItem("loggedIn") !== "true") {
-        window.location.href = "login.html";
+        var redirect = encodeURIComponent(
+          window.location.pathname.replace(/^\//, "")
+        );
+        window.location.href = "login.html?redirect=" + redirect;
       }
     </script>
   </head>

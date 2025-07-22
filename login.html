@@ -83,7 +83,9 @@
         const pwd = document.getElementById("password").value;
         if (pwd === CORRECT_PASSWORD) {
           localStorage.setItem("loggedIn", "true");
-          window.location.href = "index.html";
+          const params = new URLSearchParams(window.location.search);
+          const redirect = params.get("redirect") || "index.html";
+          window.location.href = redirect;
         } else {
           errorMsg.textContent = "Contraseña incorrecta.";
           errorMsg.style.display = "block";
