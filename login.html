@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - ITES Deck</title>
+    <style>
+      body {
+        background: #18181b;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+      .login-card {
+        background: #27272a;
+        padding: 2rem 2.5rem;
+        border-radius: 1.5rem;
+        box-shadow: 0 4px 32px rgba(0, 0, 0, 0.2);
+        min-width: 320px;
+        text-align: center;
+      }
+      .login-card h2 {
+        margin-bottom: 1.5rem;
+        color: #a5b4fc;
+      }
+      .login-card input[type="password"] {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        border: none;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        background: #18181b;
+        color: #fff;
+      }
+      .login-card button {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        border: none;
+        background: #6366f1;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .login-card button:hover {
+        background: #4f46e5;
+      }
+      .error {
+        color: #f87171;
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-card">
+      <h2>Acceso ITES Deck</h2>
+      <form id="loginForm">
+        <div id="errorMsg" class="error" style="display: none"></div>
+        <input
+          type="password"
+          id="password"
+          placeholder="Contraseña"
+          required
+          autocomplete="current-password"
+        />
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+    <script>
+      const CORRECT_PASSWORD = "ites-deck-2025"; // Hardcoded password
+      const form = document.getElementById("loginForm");
+      const errorMsg = document.getElementById("errorMsg");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const pwd = document.getElementById("password").value;
+        if (pwd === CORRECT_PASSWORD) {
+          localStorage.setItem("loggedIn", "true");
+          window.location.href = "index.html";
+        } else {
+          errorMsg.textContent = "Contraseña incorrecta.";
+          errorMsg.style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>

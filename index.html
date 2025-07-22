@@ -538,6 +538,11 @@
         /* Animation removed for better performance */
       }
     </style>
+    <script>
+      if (localStorage.getItem("loggedIn") !== "true") {
+        window.location.href = "login.html";
+      }
+    </script>
   </head>
   <body class="animated-bg">
     <!-- Header -->
