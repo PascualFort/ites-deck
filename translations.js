@@ -342,6 +342,87 @@ const translations = {
     "ites-studio-financial-projection-desc":
       "El alquiler de espacios y equipos tiene una proyección de ingresos de 456.000€ anuales (9.1% del total para 2027).",
 
+    // ites.productions
+    "ites-productions-title": "ites.productions",
+    "ites-productions-subtitle":
+      "Productora audiovisual especializada en contenido original y servicios de producción. Involucramos a nuestro alumnado en proyectos reales, conectando formación con la industria profesional.",
+    "ites-productions-audiovisual-producer": "Productora audiovisual",
+    "ites-productions-original-content": "contenido original",
+    "ites-productions-real-projects": "proyectos reales",
+    "ites-productions-content-creation": "Creación de contenido",
+    "ites-productions-content-creation-desc":
+      "Nuestra propia productora audiovisual, diseñada para crear contenido original y ofrecer servicios de producción a terceros, involucrando a nuestro alumnado en proyectos reales.",
+    "ites-productions-exito-agreement": "Acuerdo con ÉxitoTV",
+    "ites-productions-exito-agreement-desc":
+      "Colaboración estratégica con ÉxitoTV, reconocida productora audiovisual. Esta alianza fortalece nuestra división de producción y permite el acceso del alumnado a proyectos profesionales reales, conectando la formación con la industria.",
+    "ites-productions-financial-projection": "Proyección Financiera",
+    "ites-productions-financial-projection-desc":
+      "Proyectamos ingresos de 120.000€ para 2027, estableciendo las bases para el crecimiento futuro de esta línea de negocio.",
+
+    // ites.works
+    "ites-works-title": "ites.works",
+    "ites-works-subtitle":
+      "Bolsa de trabajo online para conectar estudiantes con proyectos. Servicios de incubación y networking para startups audiovisuales.",
+    "ites-works-job-board": "Bolsa de trabajo online",
+    "ites-works-connect-students": "conectar estudiantes con proyectos",
+    "ites-works-incubation-services": "Servicios de incubación y networking",
+    "ites-works-audiovisual-startups": "startups audiovisuales",
+    "ites-works-employment-platform": "Plataforma de empleo",
+    "ites-works-employment-platform-desc":
+      "Plataforma online que conecta a nuestros estudiantes y graduados con proyectos reales y oportunidades laborales en el sector audiovisual.",
+    "ites-works-crowdy-agreement": "Acuerdo con Crowdy.xyz",
+    "ites-works-crowdy-agreement-desc":
+      "Alianza estratégica con Crowdy.xyz, plataforma de networking profesional. Esta colaboración mejora nuestros servicios de empleo y proporciona a los estudiantes acceso a una red profesional más amplia.",
+    "ites-works-financial-projection": "Proyección Financiera",
+    "ites-works-financial-projection-desc":
+      "Proyectamos ingresos de 90.000€ para 2027, apoyando el crecimiento de nuestros servicios de empleo y networking.",
+
+    // ites.lab
+    "ites-lab-title": "ites.lab",
+    "ites-lab-subtitle":
+      "Laboratorio de innovación enfocado en I+D en IA y tecnologías emergentes para el sector audiovisual.",
+    "ites-lab-innovation-laboratory": "Laboratorio de innovación",
+    "ites-lab-ai-research": "I+D en IA y tecnologías emergentes",
+    "ites-lab-audiovisual-sector": "sector audiovisual",
+    "ites-lab-research-development": "Investigación y Desarrollo",
+    "ites-lab-research-development-desc":
+      "Laboratorio de innovación enfocado en investigación y desarrollo en inteligencia artificial y tecnologías emergentes aplicadas al sector audiovisual.",
+    "ites-lab-ai-focus": "IA y Tecnologías Emergentes",
+    "ites-lab-ai-focus-desc":
+      "Desarrollo de soluciones de vanguardia en inteligencia artificial, realidad virtual y otras tecnologías emergentes para la industria audiovisual.",
+    "ites-lab-financial-projection": "Proyección Financiera",
+    "ites-lab-financial-projection-desc":
+      "Proyectamos ingresos de 25.000€ para 2027, estableciendo la base para futuros proyectos de innovación.",
+
+    // skola.hub
+    "skola-hub-title": "skola.hub",
+    "skola-hub-subtitle":
+      "Sistema operativo educativo en colaboración con Parallax Solutions para revolucionar el ecosistema educativo.",
+    "skola-hub-educational-os": "Sistema operativo educativo",
+    "skola-hub-parallax-collaboration": "colaboración con Parallax Solutions",
+    "skola-hub-revolutionize-education": "revolucionar el ecosistema educativo",
+    "skola-hub-educational-platform": "Plataforma educativa",
+    "skola-hub-educational-platform-desc":
+      "Sistema operativo educativo integral diseñado para revolucionar la experiencia de aprendizaje a través de tecnología y metodologías innovadoras.",
+    "skola-hub-parallax-partnership": "Alianza con Parallax Solutions",
+    "skola-hub-parallax-partnership-desc":
+      "Alianza estratégica con Parallax Solutions para desarrollar e implementar tecnologías y metodologías educativas de vanguardia.",
+    "skola-hub-financial-projection": "Proyección Financiera",
+    "skola-hub-financial-projection-desc":
+      "Proyectamos ingresos de 570.300€ para 2027, estableciendo un nuevo estándar en tecnología educativa.",
+
+    // Download page
+    "download-page-title": "Descargar Documento - ITES Hub Audiovisual",
+    "download-back-home": "Volver al inicio",
+    "download-presentation-investors": "Presentación para Inversores",
+    "download-request-sent": "¡Solicitud enviada!",
+    "download-request-info": "Solicitar información",
+    "download-error-loading": "Error al cargar la presentación",
+    "download-error-desc":
+      "No se pudo cargar la presentación en el navegador. Esto puede deberse a:",
+    "download-google-slides": "Presentación Google Slides",
+    "download-investment-doc": "Documento de inversión ITES Hub Audiovisual",
+
     // Business Line Cards
     "ites-studio-card-desc":
       "Alquiler de Espacios y Equipos. 3.000 m² de instalaciones premium y más de 6.000 activos audiovisuales.",
@@ -704,6 +785,88 @@ const translations = {
     "ites-studio-financial-projection": "Financial Projection",
     "ites-studio-financial-projection-desc":
       "The rental of spaces and equipment has a revenue projection of €456,000 annually (9.1% of the total for 2027).",
+
+    // ites.productions
+    "ites-productions-title": "ites.productions",
+    "ites-productions-subtitle":
+      "Audiovisual production company specialized in original content and production services. We involve our students in real projects, connecting training with the professional industry.",
+    "ites-productions-audiovisual-producer": "Audiovisual production company",
+    "ites-productions-original-content": "original content",
+    "ites-productions-real-projects": "real projects",
+    "ites-productions-content-creation": "Content creation",
+    "ites-productions-content-creation-desc":
+      "Our own audiovisual production company, designed to create original content and offer production services to third parties, involving our students in real projects.",
+    "ites-productions-exito-agreement": "Agreement with ÉxitoTV",
+    "ites-productions-exito-agreement-desc":
+      "Strategic collaboration with ÉxitoTV, a recognized audiovisual production company. This alliance strengthens our production division and allows students access to real professional projects, connecting training with the industry.",
+    "ites-productions-financial-projection": "Financial Projection",
+    "ites-productions-financial-projection-desc":
+      "We project revenue of €120,000 for 2027, establishing the foundations for the future growth of this business line.",
+
+    // ites.works
+    "ites-works-title": "ites.works",
+    "ites-works-subtitle":
+      "Online job board to connect students with projects. Incubation and networking services for audiovisual startups.",
+    "ites-works-job-board": "Online job board",
+    "ites-works-connect-students": "connect students with projects",
+    "ites-works-incubation-services": "Incubation and networking services",
+    "ites-works-audiovisual-startups": "audiovisual startups",
+    "ites-works-employment-platform": "Employment platform",
+    "ites-works-employment-platform-desc":
+      "Online platform that connects our students and graduates with real projects and job opportunities in the audiovisual sector.",
+    "ites-works-crowdy-agreement": "Agreement with Crowdy.xyz",
+    "ites-works-crowdy-agreement-desc":
+      "Strategic alliance with Crowdy.xyz, a professional networking platform. This collaboration enhances our employment services and provides students with access to a broader professional network.",
+    "ites-works-financial-projection": "Financial Projection",
+    "ites-works-financial-projection-desc":
+      "We project revenue of €90,000 for 2027, supporting the growth of our employment and networking services.",
+
+    // ites.lab
+    "ites-lab-title": "ites.lab",
+    "ites-lab-subtitle":
+      "Innovation laboratory focused on R&D in AI and emerging technologies for the audiovisual sector.",
+    "ites-lab-innovation-laboratory": "Innovation laboratory",
+    "ites-lab-ai-research": "R&D in AI and emerging technologies",
+    "ites-lab-audiovisual-sector": "audiovisual sector",
+    "ites-lab-research-development": "Research and Development",
+    "ites-lab-research-development-desc":
+      "Innovation laboratory focused on research and development in artificial intelligence and emerging technologies applied to the audiovisual sector.",
+    "ites-lab-ai-focus": "AI and Emerging Technologies",
+    "ites-lab-ai-focus-desc":
+      "Development of cutting-edge solutions in artificial intelligence, virtual reality, and other emerging technologies for the audiovisual industry.",
+    "ites-lab-financial-projection": "Financial Projection",
+    "ites-lab-financial-projection-desc":
+      "We project revenue of €25,000 for 2027, establishing the foundation for future innovation projects.",
+
+    // skola.hub
+    "skola-hub-title": "skola.hub",
+    "skola-hub-subtitle":
+      "Educational operating system in collaboration with Parallax Solutions to revolutionize the educational ecosystem.",
+    "skola-hub-educational-os": "Educational operating system",
+    "skola-hub-parallax-collaboration": "collaboration with Parallax Solutions",
+    "skola-hub-revolutionize-education":
+      "revolutionize the educational ecosystem",
+    "skola-hub-educational-platform": "Educational platform",
+    "skola-hub-educational-platform-desc":
+      "Comprehensive educational operating system designed to revolutionize the learning experience through innovative technology and methodologies.",
+    "skola-hub-parallax-partnership": "Partnership with Parallax Solutions",
+    "skola-hub-parallax-partnership-desc":
+      "Strategic partnership with Parallax Solutions to develop and implement cutting-edge educational technologies and methodologies.",
+    "skola-hub-financial-projection": "Financial Projection",
+    "skola-hub-financial-projection-desc":
+      "We project revenue of €570,300 for 2027, establishing a new standard in educational technology.",
+
+    // Download page
+    "download-page-title": "Download Document - ITES Hub Audiovisual",
+    "download-back-home": "Back to Home",
+    "download-presentation-investors": "Presentation for Investors",
+    "download-request-sent": "Request sent!",
+    "download-request-info": "Request information",
+    "download-error-loading": "Error loading presentation",
+    "download-error-desc":
+      "The presentation could not be loaded in the browser. This may be due to:",
+    "download-google-slides": "Google Slides Presentation",
+    "download-investment-doc": "ITES Hub Audiovisual Investment Document",
 
     // Business Line Cards
     "ites-studio-card-desc":

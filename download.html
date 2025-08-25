@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Descargar Documento - ITES Hub Audiovisual</title>
+    <title data-translate="download-page-title">
+      Descargar Documento - ITES Hub Audiovisual
+    </title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="translations.js"></script>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
@@ -61,6 +64,30 @@
         height: 600px;
         width: 100%;
       }
+
+      /* Language Switcher Styles */
+      .language-switcher {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 4px;
+      }
+
+      .language-btn {
+        background: transparent;
+        color: #9ca3af;
+        border: none;
+        cursor: pointer;
+      }
+
+      .language-btn:hover {
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .language-btn.active {
+        background: rgba(79, 70, 229, 0.8);
+        color: #ffffff;
+      }
     </style>
   </head>
   <body>
@@ -88,12 +115,32 @@
               <span class="text-white font-semibold">ITES Hub Audiovisual</span>
             </a>
           </div>
-          <a
-            href="index.html"
-            class="text-gray-300 hover:text-white transition-colors"
-          >
-            <i class="fas fa-arrow-left mr-2"></i>Volver al inicio
-          </a>
+          <div class="flex items-center space-x-4">
+            <!-- Language Switcher -->
+            <div class="language-switcher flex items-center space-x-2">
+              <button
+                onclick="updateLanguage('es')"
+                class="language-btn px-3 py-1 rounded text-sm font-medium transition-colors"
+                data-lang="es"
+              >
+                ES
+              </button>
+              <button
+                onclick="updateLanguage('en')"
+                class="language-btn px-3 py-1 rounded text-sm font-medium transition-colors"
+                data-lang="en"
+              >
+                EN
+              </button>
+            </div>
+            <a
+              href="index.html"
+              class="text-gray-300 hover:text-white transition-colors"
+            >
+              <i class="fas fa-arrow-left mr-2"></i
+              ><span data-translate="download-back-home">Volver al inicio</span>
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -104,7 +151,12 @@
         <!-- Hero Section -->
         <div class="text-center mb-12">
           <h1 class="text-4xl md:text-5xl font-black mb-4">
-            <span class="text-indigo-400">Presentación</span> para Inversores
+            <span
+              class="text-indigo-400"
+              data-translate="download-presentation-investors"
+              >Presentación</span
+            >
+            para Inversores
           </h1>
           <p class="text-xl text-gray-400 max-w-3xl mx-auto">
             Visualiza y descarga la presentación completa de la oportunidad de
@@ -734,6 +786,32 @@ Documentos disponibles:
             !successModal.classList.contains("hidden")
           ) {
             closeSuccessModal();
+          }
+        });
+
+        // Initialize translations and language switcher
+        updateLanguage(currentLang);
+
+        // Update language button states
+        document.querySelectorAll(".language-btn").forEach((btn) => {
+          if (btn.getAttribute("data-lang") === currentLang) {
+            btn.classList.add("active");
+          } else {
+            btn.classList.remove("active");
+          }
+        });
+
+        // Add event listeners for language buttons
+        document.addEventListener("click", function (e) {
+          if (e.target.classList.contains("language-btn")) {
+            const lang = e.target.getAttribute("data-lang");
+            updateLanguage(lang);
+
+            // Update button states
+            document.querySelectorAll(".language-btn").forEach((btn) => {
+              btn.classList.remove("active");
+            });
+            e.target.classList.add("active");
           }
         });
       });
