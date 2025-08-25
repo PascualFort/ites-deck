@@ -283,6 +283,12 @@ const translations = {
     "ites-es-title": "ites.es",
     "ites-es-subtitle":
       "Centro privado pionero en España para formación profesional audiovisual oficialmente certificada. 50 años de experiencia liderando la innovación educativa en Barcelona.",
+    "ites-es-pioneer-spain": "Centro privado pionero en España",
+    "ites-es-professional-training": "formación profesional audiovisual",
+    "ites-es-50-years-experience": "50 años de experiencia",
+    "ites-es-3000-meters": "3.000 metros cuadrados",
+    "ites-es-100-employability": "100% de empleabilidad",
+    "ites-es-63-1-percent": "63.1%",
     "ites-es-card-desc":
       "Centro privado pionero en España para formación profesional audiovisual oficialmente certificada, con 50 años de experiencia y 3.000 m² de infraestructura especializada.",
     "regulated-training": "Formación audiovisual reglada",
@@ -303,17 +309,38 @@ const translations = {
     "ites-institute-title": "ites.institute",
     "ites-institute-subtitle":
       "Plataforma estratégica para el lanzamiento de nuevos cursos online. Formación especializada dirigida a profesionales globales del sector audiovisual con alcance internacional.",
+    "ites-institute-strategic-platform": "Plataforma estratégica",
+    "ites-institute-online-courses": "lanzamiento de nuevos cursos online",
+    "ites-institute-specialized-training": "Formación especializada",
+    "ites-institute-global-professionals": "profesionales globales",
+    "ites-institute-digital-expansion": "Expansión digital",
+    "ites-institute-digital-expansion-desc":
+      "Plataforma estratégica para el lanzamiento de nuevos cursos online y formación especializada dirigida a profesionales del sector audiovisual. Diseñada para llegar a un público global ofreciendo formación flexible, accesible y de alta calidad.",
+    "ites-institute-university-collaborations":
+      "Estamos en conversaciones con varias universidades para ampliar nuestras colaboraciones y titulaciones.",
+    "ites-institute-financial-projection": "Proyección financiera",
+    "ites-institute-financial-projection-desc":
+      "Se proyecta que ites.institute genere 585.000€ en ingresos para 2027, lo que equivale al 11.7% de la facturación total esperada.",
     "ites-institute-card-desc":
       "Plataforma estratégica para el lanzamiento de nuevos cursos online. Formación especializada dirigida a profesionales globales del sector audiovisual.",
     "ites-institute-revenue": "585.000€",
-    "digital-expansion": "Expansión digital",
-    "digital-expansion-desc":
-      "Plataforma estratégica para el lanzamiento de nuevos cursos online y formación especializada dirigida a profesionales del sector audiovisual. Diseñada para llegar a un público global ofreciendo formación flexible, accesible y de alta calidad.",
-    "university-collaborations":
-      "Estamos en conversaciones con varias universidades para ampliar nuestras colaboraciones y titulaciones.",
-    "institute-projection": "Proyección financiera",
-    "institute-projection-desc":
-      "Se proyecta que ites.institute genere 585.000€ en ingresos para 2027, lo que equivale al 11.7% de la facturación total esperada.",
+
+    // ites.studio
+    "ites-studio-title": "ites.studio",
+    "ites-studio-subtitle":
+      "3.000 m² de instalaciones premium y más de 6.000 activos audiovisuales. Platós profesionales, estudios de sonido y equipos de última generación para productoras y profesionales del sector.",
+    "ites-studio-3000-premium": "3.000 m² de instalaciones premium",
+    "ites-studio-6000-assets": "6.000 activos audiovisuales",
+    "ites-studio-professionals": "productoras y profesionales",
+    "ites-studio-infrastructure": "Infraestructura para la industria",
+    "ites-studio-infrastructure-desc":
+      "Monetizamos nuestros 3.000 m² de instalaciones y nuestro extenso inventario de equipos. Ofrecemos platós, estudios de sonido, salas de postproducción y material técnico para productoras y profesionales.",
+    "ites-studio-filmo-agreement": "Acuerdo con Filmo.io",
+    "ites-studio-filmo-agreement-desc":
+      "Alianza tecnológica con Filmo.io para implementar un sistema integral de gestión de inventarios y reservas. Esta plataforma permite ofrecer un servicio ágil y accesible, optimizando el uso de nuestros más de 6.000 activos audiovisuales valorados en 1,98 M€.",
+    "ites-studio-financial-projection": "Proyección Financiera",
+    "ites-studio-financial-projection-desc":
+      "El alquiler de espacios y equipos tiene una proyección de ingresos de 456.000€ anuales (9.1% del total para 2027).",
 
     // Business Line Cards
     "ites-studio-card-desc":
@@ -358,7 +385,6 @@ const translations = {
     // Contact Modal
     "contact-modal-title": "Solicitar información",
     "contact-modal-subtitle": "Enviar mensaje a:",
-    "contact-modal-send-message": "Enviar mensaje a:",
     "contact-name": "Nombre *",
     "contact-name-placeholder": "Tu nombre",
     "contact-email": "Email *",
@@ -439,8 +465,8 @@ const translations = {
     "investment-phase2-amount": "Phase 2: €370,656",
     "investment-occupancy": "19% occupancy in training places",
     "investment-50-years": "50 years",
-    "investment-3000-m2": "3.000 m²",
-    "investment-3150-students": "3.150 students",
+    "investment-3000-m2": "3,000 m²",
+    "investment-3150-students": "3,150 students",
     "investment-3-pillars": "3 pillars",
 
     // Investment Phases
@@ -513,16 +539,9 @@ const translations = {
     consolidation: "Consolidation",
     "pre-objective": "Pre-objective",
     "objective-reached": "Objective reached",
-    "year-2026": "2026",
-    "year-2028": "2028",
-    "year-2029": "2029",
-    "revenue-2026": "€3,147,648",
-    "revenue-2028": "€6,148,524",
-    "revenue-2029": "€7,486,538",
 
     // Company Valuation
     "company-valuation": "Company valuation",
-    "company-valuation-title": "Company valuation",
     "estimated-value": "Estimated real value",
     "valuation-amount": "€1,872,000",
     "valuation-desc":
@@ -530,7 +549,6 @@ const translations = {
 
     // Debt Breakdown
     "debt-breakdown": "Debt breakdown",
-    "debt-breakdown-title": "Debt breakdown",
     "rent-debt": "Rent debt",
     "salary-debt": "Overdue salaries",
     "total-debt": "Total debt",
@@ -540,7 +558,6 @@ const translations = {
 
     // Growth Strategy
     "growth-strategy": "Growth strategy",
-    "growth-strategy-title": "Growth strategy",
     "maximize-fp": "Maximize FP Places",
     "maximize-fp-desc":
       "Increase on-site occupancy from current 19% to 80%, plus complete activation of 2,430 online places. Target: €3.2M of total €5M.",
@@ -555,48 +572,29 @@ const translations = {
 
     // Unique Ecosystem
     "unique-ecosystem": "A unique ecosystem",
-    "unique-ecosystem-title": "A unique ecosystem",
-    "unique-ecosystem-unique": "unique",
     "50-years": "50 years of history",
-    "50-years-desc":
-      "Pioneers in Spain in officially certified audiovisual professional training since 1975.",
     "premium-infrastructure": "Premium infrastructure",
-    "premium-infrastructure-desc":
-      "Nearly 3,000 m² with TV studios, sound and radio studios, photography studios and theater spaces in the heart of Barcelona.",
     "cutting-edge-equipment": "Cutting-edge equipment",
-    "cutting-edge-equipment-desc":
-      "More than 6,105 audiovisual assets valued at €1.98M with state-of-the-art technology.",
     "official-recognition": "Official recognition",
-    "official-recognition-desc":
-      "Qualifications endorsed by the Government of Spain and the Generalitat de Catalunya.",
     "strategic-alliances": "Strategic alliances",
-    "strategic-alliances-desc":
-      "Key collaborations with industry leaders that enhance our ecosystem:",
     escac: "ESCAC: Academic collaboration",
     "exito-tv": "ÉxitoTV: Audiovisual production",
     crowdy: "Crowdy.xyz: Professional networking",
     filmo: "Filmo.io: Inventory management",
     "innovation-future": "Innovation and future",
-    "innovation-future-desc":
-      "We integrate AI, video games and emerging narratives to lead the future of the sector.",
 
     // About ITES
     "about-ites": "About ITES Hub Audiovisual",
     "about-subtitle": "Half a century leading audiovisual training in Spain",
-    "about-ites-title": "About ITES Hub Audiovisual",
     "about-ites-ites": "ITES",
     "about-ites-1975": "1975",
     "about-ites-50-years": "50 years",
     "about-ites-barcelona-center": "center of Barcelona",
     "about-ites-3000-m2": "nearly 3,000 square meters",
     "pioneers-spain": "Pioneers in Spain",
-    "pioneers-desc":
-      "Pioneering private center in Spain for officially certified audiovisual professional training since 1975. Our 50-year legacy positions us as undisputed references in the sector.",
     "spain-government": "Qualifications endorsed by the Government of Spain",
     "catalonia-government": "Recognition from the Generalitat de Catalunya",
     "strategic-location": "Strategic location",
-    "strategic-location-desc":
-      "Located in the center of Barcelona, we have nearly 3,000 square meters of specialized infrastructure designed specifically for audiovisual training and production.",
     "tv-studios": "Professional TV studios",
     "sound-studios": "Sound and radio studios",
     "photo-studios": "Photography studios",
@@ -604,54 +602,42 @@ const translations = {
 
     // Capacity and Assets
     "capacity-assets": "Capacity and assets",
-    "capacity-assets-title": "Capacity and assets",
     "student-licenses": "Student licenses",
-    "student-licenses-desc": "(720 on-site + 2,430 online)",
     "audiovisual-assets": "Audiovisual assets",
     "assets-value": "Valued at €1.98M",
     "square-meters": "Square meters",
     "specialized-infrastructure": "Specialized infrastructure",
     "years-experience": "Years of experience",
     "since-1975": "Since 1975",
-    "capacity-3150-plus": "3.150+",
-    "capacity-6105": "6.105",
-    "capacity-3000": "3.000",
-    "capacity-1-98m": "1,98 M€",
+    "capacity-3150-plus": "3,150+",
+    "capacity-6105": "6,105",
+    "capacity-3000": "3,000",
+    "capacity-1-98m": "€1.98M",
 
     // Management Team
     "management-team": "Our management team",
     "team-subtitle":
       "Professionals with decades of experience leading audiovisual transformation",
-    "management-team-title": "Our management team",
     "management-team-team": "team",
     "director-team": "Management team",
     "daniel-25-years": "25 years of experience",
     "daniel-codina": "Daniel Codina",
     "daniel-role": "Business Developer",
-    "daniel-desc":
-      "Digital marketing specialist with 25 years of experience in applications, performance and e-commerce. Founder and director of several companies and Fin Proptech consultancy. Also founder of Verus Finance, ING franchise, and BHF-Bank representative.",
     "karen-mejia": "Karen Mejía",
     "karen-role": "People Motivator",
-    "karen-desc":
-      "After starting her career in Social Integration and Third Sector, she moved to real estate, insurance and financial sectors holding executive positions. She has led operations at VERUS, consultancy specialized in Blockchain and Proptech Marketing, and currently directs ITES.es Hub Audiovisual.",
     "paco-martin": "Paco Martín",
     "paco-role": "Education Innovator",
-    "paco-desc":
-      "University professor, journalist and independent producer. Former vice-rector and degree coordinator at UAB, he has led inter-university projects between Spain and Latin America. Winner of the Ondas Award for his work at TVE.",
     "paco-ondas-award": "Winner of the Ondas Award",
     "judith-garrigo": "Judith Garrigó",
     "judith-role": "Method Implementer",
-    "judith-desc":
-      "Graduate in Audiovisual Communication from UPF and Master in Cinematography from ESCAC. Currently teaches in the Higher Vocational Training programs in Direction and Cinematography at ITES Barcelona.",
 
     // Business Lines
     "business-lines": "Our business lines",
     "business-lines-subtitle":
       "Discover each of our specialized divisions and explore the opportunities we offer",
-    "business-lines-title": "Our business lines",
     "business-lines-business-lines": "business lines",
     "business-lines-50-years": "50 years of experience",
-    "business-lines-3000-m2": "3.000 m²",
+    "business-lines-3000-m2": "3,000 m²",
     explore: "Explore",
     "projection-2027": "Projection 2027",
     quarterly: "Q4 2026 (quarterly)",
@@ -660,6 +646,12 @@ const translations = {
     "ites-es-title": "ites.es",
     "ites-es-subtitle":
       "Pioneering private center in Spain for officially certified audiovisual professional training. 50 years of experience leading educational innovation in Barcelona.",
+    "ites-es-pioneer-spain": "Pioneering private center in Spain",
+    "ites-es-professional-training": "professional audiovisual training",
+    "ites-es-50-years-experience": "50 years of experience",
+    "ites-es-3000-meters": "3,000 m²",
+    "ites-es-100-employability": "100% employability",
+    "ites-es-63-1-percent": "63.1%",
     "ites-es-card-desc":
       "Pioneering private center in Spain for officially certified audiovisual professional training, with 50 years of experience and 3,000 m² of specialized infrastructure.",
     "regulated-training": "Regulated audiovisual training",
@@ -680,17 +672,38 @@ const translations = {
     "ites-institute-title": "ites.institute",
     "ites-institute-subtitle":
       "Strategic platform for launching new online courses. Specialized training aimed at global professionals in the audiovisual sector with international reach.",
+    "ites-institute-strategic-platform": "Strategic platform",
+    "ites-institute-online-courses": "launching new online courses",
+    "ites-institute-specialized-training": "Specialized training",
+    "ites-institute-global-professionals": "global professionals",
+    "ites-institute-digital-expansion": "Digital expansion",
+    "ites-institute-digital-expansion-desc":
+      "Strategic platform for launching new online courses and specialized training aimed at audiovisual sector professionals. Designed to reach a global audience offering flexible, accessible and high-quality training.",
+    "ites-institute-university-collaborations":
+      "We are in talks with several universities to expand our collaborations and qualifications.",
+    "ites-institute-financial-projection": "Financial projection",
+    "ites-institute-financial-projection-desc":
+      "It is projected that ites.institute will generate €585,000 in revenue for 2027, equivalent to 11.7% of total expected turnover.",
     "ites-institute-card-desc":
       "Strategic platform for launching new online courses. Specialized training aimed at global professionals in the audiovisual sector.",
     "ites-institute-revenue": "€585,000",
-    "digital-expansion": "Digital expansion",
-    "digital-expansion-desc":
-      "Strategic platform for launching new online courses and specialized training aimed at audiovisual sector professionals. Designed to reach a global audience offering flexible, accessible and high-quality training.",
-    "university-collaborations":
-      "We are in talks with several universities to expand our collaborations and qualifications.",
-    "institute-projection": "Financial projection",
-    "institute-projection-desc":
-      "It is projected that ites.institute will generate €585,000 in revenue for 2027, equivalent to 11.7% of total expected turnover.",
+
+    // ites.studio
+    "ites-studio-title": "ites.studio",
+    "ites-studio-subtitle":
+      "3,000 m² of premium facilities and more than 6,000 audiovisual assets. Professional studios, sound studios and state-of-the-art equipment for production companies and sector professionals.",
+    "ites-studio-3000-premium": "3,000 m² of premium facilities",
+    "ites-studio-6000-assets": "6,000 audiovisual assets",
+    "ites-studio-professionals": "production companies and professionals",
+    "ites-studio-infrastructure": "Infrastructure for the industry",
+    "ites-studio-infrastructure-desc":
+      "We monetize our 3,000 m² of facilities and our extensive equipment inventory. We offer studios, sound studios, post-production rooms and technical material for production companies and professionals.",
+    "ites-studio-filmo-agreement": "Agreement with Filmo.io",
+    "ites-studio-filmo-agreement-desc":
+      "Technological alliance with Filmo.io to implement a comprehensive inventory and reservation management system. This platform allows us to offer an agile and accessible service, optimizing the use of our more than 6,000 audiovisual assets valued at €1.98M.",
+    "ites-studio-financial-projection": "Financial Projection",
+    "ites-studio-financial-projection-desc":
+      "The rental of spaces and equipment has a revenue projection of €456,000 annually (9.1% of the total for 2027).",
 
     // Business Line Cards
     "ites-studio-card-desc":
@@ -708,11 +721,6 @@ const translations = {
     "skola-hub-card-desc":
       "Educational Operating System. Collaboration with Parallax Solutions to revolutionize the educational ecosystem.",
     "skola-hub-revenue": "€570,300",
-    "q4-2026": "Q4 2026 (quarterly)",
-
-    // ites.es (English)
-    "regulated-training-desc":
-      "Pioneering private center in Spain for officially certified audiovisual professional training, with 50 years of experience. Located in the center of Barcelona with nearly 3,000 square meters of specialized infrastructure. Our goal is to guarantee 100% employability for our students.",
 
     // Download Section
     "download-title": "View the investor presentation",
