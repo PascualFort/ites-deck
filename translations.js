@@ -1,6 +1,9 @@
 // Comprehensive translations for ITES Hub Audiovisual website
 const translations = {
   es: {
+    // Page Title
+    "page-title": "ITES Hub Audiovisual",
+
     // Navigation
     "nav-home": "Home",
     "nav-ites-es": "ites.es",
@@ -26,6 +29,9 @@ const translations = {
       "Centro privado pionero en España para formación profesional audiovisual oficialmente certificada. El epicentro de la innovación educativa en Barcelona, con 50 años de experiencia y 3.000 m² de instalaciones de vanguardia.",
     "hero-contact": "Contactar Ahora",
     "hero-view-opportunity": "Ver Oportunidad",
+    "hero-pioneer-spain": "Centro privado pionero en España",
+    "hero-50-years": "50 años de experiencia",
+    "hero-3000-m2": "3.000 m²",
 
     // Investment Section
     "investment-title": "Oportunidad de inversión estratégica",
@@ -39,6 +45,24 @@ const translations = {
     "investment-goal":
       "5 millones de euros de ingresos en 30 meses maximizando las plazas de Formación Profesional (3,2M€) y desarrollando las otras líneas de negocio en sinergia con la productora asociada (1,8M€).",
     "investment-phases-title": "Inversión del 49,5% en dos fases",
+    "investment-49-5-percent": "49,5% de ITES",
+    "investment-5-million": "5 millones de euros",
+    "investment-30-months": "30 meses",
+    "investment-fp-target": "3,2M€",
+    "investment-business-target": "1,8M€",
+    "investment-objective-label": "Objetivo:",
+    "investment-60-percent": "60% del total:",
+    "investment-40-percent": "40% del total:",
+    "investment-phase1-complete": "1ª fase completa",
+    "investment-july-dates": "miércoles 16 y jueves 17 de julio",
+    "investment-phase1-amount": "1ª Fase: 555.984€",
+    "investment-phase1-equity": "29,7% equity",
+    "investment-phase2-amount": "2ª Fase: 370.656€",
+    "investment-occupancy": "19% de ocupación en las plazas de formación",
+    "investment-50-years": "50 años",
+    "investment-3000-m2": "3.000 m²",
+    "investment-3150-students": "3.150 alumnos",
+    "investment-3-pillars": "3 pilares",
 
     // Investment Phases
     "phase-1": "1ª Fase",
@@ -94,6 +118,7 @@ const translations = {
     "financial-title": "Proyecciones financieras y valoración",
     "financial-subtitle":
       "Plan estratégico para alcanzar €5M en ingresos en 30 meses",
+    "financial-financial": "financieras",
     "revenue-evolution": "Evolución de ingresos proyectada",
     "year-2025": "2025",
     "year-2026": "2026",
@@ -147,10 +172,13 @@ const translations = {
     "ecosystem-synergy": "Sinergia de Ecosistema",
     "ecosystem-synergy-desc":
       "Integración de todas las divisiones en un Hub Audiovisual 360° que maximice las oportunidades cruzadas",
+    "growth-objective-3-2m": "Objetivo: 3,2M€",
+    "growth-objective-1-8m": "Objetivo: 1,8M€",
 
     // Unique Ecosystem
     "unique-ecosystem": "Un ecosistema único",
     "unique-ecosystem-title": "Un ecosistema único",
+    "unique-ecosystem-unique": "único",
     "50-years": "50 años de historia",
     "50-years-desc":
       "Pioneros en España en formación profesional audiovisual con titulación oficial desde 1975.",
@@ -179,6 +207,11 @@ const translations = {
     "about-subtitle":
       "Medio siglo liderando la formación audiovisual en España",
     "about-ites-title": "Sobre ITES Hub Audiovisual",
+    "about-ites-ites": "ITES",
+    "about-ites-1975": "1975",
+    "about-ites-50-years": "50 años",
+    "about-ites-barcelona-center": "centro de Barcelona",
+    "about-ites-3000-m2": "casi 3.000 metros cuadrados",
     "pioneers-spain": "Pioneros en España",
     "pioneers-desc":
       "Centro privado pionero en España para formación profesional audiovisual oficialmente certificada desde 1975. Nuestro legado de 50 años nos posiciona como referentes indiscutibles del sector.",
@@ -203,13 +236,19 @@ const translations = {
     "specialized-infrastructure": "Infraestructura especializada",
     "years-experience": "Años de experiencia",
     "since-1975": "Desde 1975",
+    "capacity-3150-plus": "3.150+",
+    "capacity-6105": "6.105",
+    "capacity-3000": "3.000",
+    "capacity-1-98m": "1,98 M€",
 
     // Management Team
     "management-team": "Nuestro equipo directivo",
     "team-subtitle":
       "Profesionales con décadas de experiencia liderando la transformación audiovisual",
     "management-team-title": "Nuestro equipo directivo",
+    "management-team-team": "equipo",
     "director-team": "Equipo de dirección",
+    "daniel-25-years": "25 años de experiencia",
     "daniel-codina": "Daniel Codina",
     "daniel-role": "Business Developer",
     "daniel-desc":
@@ -222,6 +261,7 @@ const translations = {
     "paco-role": "Education Innovator",
     "paco-desc":
       "Profesor universitario, periodista y productor independiente. Ex-vicerrector y coordinador de grado en la UAB, ha liderado proyectos interuniversitarios entre España y Latinoamérica. Ganador del Premio Ondas por su trabajo en TVE.",
+    "paco-ondas-award": "Ganador del Premio Ondas",
     "judith-garrigo": "Judith Garrigó",
     "judith-role": "Method Implementer",
     "judith-desc":
@@ -232,6 +272,9 @@ const translations = {
     "business-lines-subtitle":
       "Descubre cada una de nuestras divisiones especializadas y explora las oportunidades que ofrecemos",
     "business-lines-title": "Nuestras líneas de negocio",
+    "business-lines-business-lines": "líneas de negocio",
+    "business-lines-50-years": "50 años de experiencia",
+    "business-lines-3000-m2": "3.000 m²",
     explore: "Explorar",
     "projection-2027": "Proyección 2027",
     quarterly: "Q4 2026 (trimestral)",
@@ -315,6 +358,7 @@ const translations = {
     // Contact Modal
     "contact-modal-title": "Solicitar información",
     "contact-modal-subtitle": "Enviar mensaje a:",
+    "contact-modal-send-message": "Enviar mensaje a:",
     "contact-name": "Nombre *",
     "contact-name-placeholder": "Tu nombre",
     "contact-email": "Email *",
@@ -336,6 +380,9 @@ const translations = {
   },
 
   en: {
+    // Page Title
+    "page-title": "ITES Hub Audiovisual",
+
     // Navigation
     "nav-home": "Home",
     "nav-ites-es": "ites.es",
@@ -361,6 +408,9 @@ const translations = {
       "Pioneering private center in Spain for officially certified audiovisual professional training. The epicenter of educational innovation in Barcelona, with 50 years of experience and 3,000 m² of cutting-edge facilities.",
     "hero-contact": "Contact Now",
     "hero-view-opportunity": "View Opportunity",
+    "hero-pioneer-spain": "Pioneering private center in Spain",
+    "hero-50-years": "50 years of experience",
+    "hero-3000-m2": "3,000 m²",
 
     // Investment Section
     "investment-title": "Strategic investment opportunity",
@@ -374,6 +424,24 @@ const translations = {
     "investment-goal":
       "€5 million in revenue in 30 months by maximizing Vocational Training places (€3.2M) and developing other business lines in synergy with the associated production company (€1.8M).",
     "investment-phases-title": "49.5% investment in two phases",
+    "investment-49-5-percent": "49.5% of ITES",
+    "investment-5-million": "5 million euros",
+    "investment-30-months": "30 months",
+    "investment-fp-target": "€3.2M",
+    "investment-business-target": "€1.8M",
+    "investment-objective-label": "Objective:",
+    "investment-60-percent": "60% of total:",
+    "investment-40-percent": "40% of total:",
+    "investment-phase1-complete": "Phase 1 complete",
+    "investment-july-dates": "Wednesday 16th and Thursday 17th July",
+    "investment-phase1-amount": "Phase 1: €555,984",
+    "investment-phase1-equity": "29.7% equity",
+    "investment-phase2-amount": "Phase 2: €370,656",
+    "investment-occupancy": "19% occupancy in training places",
+    "investment-50-years": "50 years",
+    "investment-3000-m2": "3.000 m²",
+    "investment-3150-students": "3.150 students",
+    "investment-3-pillars": "3 pillars",
 
     // Investment Phases
     "phase-1": "Phase 1",
@@ -428,6 +496,7 @@ const translations = {
     // Financial Projections
     "financial-title": "Financial projections and valuation",
     "financial-subtitle": "Strategic plan to reach €5M in revenue in 30 months",
+    "financial-financial": "financial",
     "revenue-evolution": "Projected revenue evolution",
     "year-2025": "2025",
     "year-2026": "2026",
@@ -481,10 +550,13 @@ const translations = {
     "ecosystem-synergy": "Ecosystem Synergy",
     "ecosystem-synergy-desc":
       "Integration of all divisions into a 360° Audiovisual Hub that maximizes cross-opportunities",
+    "growth-objective-3-2m": "Objective: €3.2M",
+    "growth-objective-1-8m": "Objective: €1.8M",
 
     // Unique Ecosystem
     "unique-ecosystem": "A unique ecosystem",
     "unique-ecosystem-title": "A unique ecosystem",
+    "unique-ecosystem-unique": "unique",
     "50-years": "50 years of history",
     "50-years-desc":
       "Pioneers in Spain in officially certified audiovisual professional training since 1975.",
@@ -512,6 +584,11 @@ const translations = {
     "about-ites": "About ITES Hub Audiovisual",
     "about-subtitle": "Half a century leading audiovisual training in Spain",
     "about-ites-title": "About ITES Hub Audiovisual",
+    "about-ites-ites": "ITES",
+    "about-ites-1975": "1975",
+    "about-ites-50-years": "50 years",
+    "about-ites-barcelona-center": "center of Barcelona",
+    "about-ites-3000-m2": "nearly 3,000 square meters",
     "pioneers-spain": "Pioneers in Spain",
     "pioneers-desc":
       "Pioneering private center in Spain for officially certified audiovisual professional training since 1975. Our 50-year legacy positions us as undisputed references in the sector.",
@@ -536,13 +613,19 @@ const translations = {
     "specialized-infrastructure": "Specialized infrastructure",
     "years-experience": "Years of experience",
     "since-1975": "Since 1975",
+    "capacity-3150-plus": "3.150+",
+    "capacity-6105": "6.105",
+    "capacity-3000": "3.000",
+    "capacity-1-98m": "1,98 M€",
 
     // Management Team
     "management-team": "Our management team",
     "team-subtitle":
       "Professionals with decades of experience leading audiovisual transformation",
     "management-team-title": "Our management team",
+    "management-team-team": "team",
     "director-team": "Management team",
+    "daniel-25-years": "25 years of experience",
     "daniel-codina": "Daniel Codina",
     "daniel-role": "Business Developer",
     "daniel-desc":
@@ -555,6 +638,7 @@ const translations = {
     "paco-role": "Education Innovator",
     "paco-desc":
       "University professor, journalist and independent producer. Former vice-rector and degree coordinator at UAB, he has led inter-university projects between Spain and Latin America. Winner of the Ondas Award for his work at TVE.",
+    "paco-ondas-award": "Winner of the Ondas Award",
     "judith-garrigo": "Judith Garrigó",
     "judith-role": "Method Implementer",
     "judith-desc":
@@ -565,6 +649,9 @@ const translations = {
     "business-lines-subtitle":
       "Discover each of our specialized divisions and explore the opportunities we offer",
     "business-lines-title": "Our business lines",
+    "business-lines-business-lines": "business lines",
+    "business-lines-50-years": "50 years of experience",
+    "business-lines-3000-m2": "3.000 m²",
     explore: "Explore",
     "projection-2027": "Projection 2027",
     quarterly: "Q4 2026 (quarterly)",
