@@ -1,4 +1,177 @@
 // Comprehensive translations for ITES Hub Audiovisual website
+// This file combines all translations from individual tab files and main page
+
+// Import individual tab translations
+const itesProductionsTranslations = {
+  es: {
+    "ites-productions-title": "ites.productions",
+    "ites-productions-subtitle":
+      "Productora audiovisual especializada en contenido original y servicios de producción. Involucramos a nuestro alumnado en proyectos reales, conectando formación con la industria profesional.",
+    "ites-productions-audiovisual-producer": "Productora audiovisual",
+    "ites-productions-original-content": "contenido original",
+    "ites-productions-real-projects": "proyectos reales",
+    "ites-productions-content-creation": "Creación de contenido",
+    "ites-productions-content-creation-desc":
+      "Nuestra propia productora audiovisual, diseñada para crear contenido original y ofrecer servicios de producción a terceros, involucrando a nuestro alumnado en proyectos reales.",
+    "ites-productions-exito-agreement": "Acuerdo con ÉxitoTV",
+    "ites-productions-exito-agreement-desc":
+      "Colaboración estratégica con ÉxitoTV, reconocida productora audiovisual. Esta alianza fortalece nuestra división de producción y permite el acceso del alumnado a proyectos profesionales reales, conectando la formación con la industria.",
+    "ites-productions-financial-projection": "Proyección Financiera",
+    "ites-productions-financial-projection-desc":
+      "Proyectamos ingresos de 120.000€ para 2027, estableciendo las bases para el crecimiento futuro de esta línea de negocio.",
+  },
+  en: {
+    "ites-productions-title": "ites.productions",
+    "ites-productions-subtitle":
+      "Audiovisual production company specialized in original content and production services. We involve our students in real projects, connecting training with the professional industry.",
+    "ites-productions-audiovisual-producer": "Audiovisual production company",
+    "ites-productions-original-content": "original content",
+    "ites-productions-real-projects": "real projects",
+    "ites-productions-content-creation": "Content creation",
+    "ites-productions-content-creation-desc":
+      "Our own audiovisual production company, designed to create original content and offer production services to third parties, involving our students in real projects.",
+    "ites-productions-exito-agreement": "Agreement with ÉxitoTV",
+    "ites-productions-exito-agreement-desc":
+      "Strategic collaboration with ÉxitoTV, a recognized audiovisual production company. This alliance strengthens our production division and allows students access to real professional projects, connecting training with the industry.",
+    "ites-productions-financial-projection": "Financial Projection",
+    "ites-productions-financial-projection-desc":
+      "We project revenue of €120,000 for 2027, establishing the foundations for the future growth of this business line.",
+  },
+};
+
+const itesWorksTranslations = {
+  es: {
+    "ites-works-title": "ites.works",
+    "ites-works-subtitle":
+      "Bolsa de trabajo online para conectar estudiantes con proyectos. Servicios de incubación y networking para startups audiovisuales.",
+    "ites-works-job-board": "Bolsa de trabajo online",
+    "ites-works-connect-students": "conectar estudiantes con proyectos",
+    "ites-works-incubation-services": "Servicios de incubación y networking",
+    "ites-works-audiovisual-startups": "startups audiovisuales",
+    "ites-works-employment-platform": "Plataforma de empleo",
+    "ites-works-employment-platform-desc":
+      "Una bolsa de trabajo online y tablón de anuncios para conectar estudiantes con proyectos, combinada con servicios de incubación y networking para startups y proyectos emergentes del sector audiovisual.",
+    "ites-works-crowdy-agreement": "Acuerdo con Crowdy.xyz",
+    "ites-works-crowdy-agreement-desc":
+      "Acuerdo estratégico con Crowdy.xyz, la primera plataforma de networking especializada en la industria audiovisual. Esta alianza permite conectar profesionales, gestionar proyectos de forma eficiente y crear una red robusta de contactos para estudiantes y empresas del sector.",
+    "ites-works-financial-projection": "Proyección Financiera",
+    "ites-works-financial-projection-desc":
+      "Se espera que esta línea de negocio genere 90.000€ para 2027, representando el 1.8% del objetivo.",
+  },
+  en: {
+    "ites-works-title": "ites.works",
+    "ites-works-subtitle":
+      "Online job board to connect students with projects. Incubation and networking services for audiovisual startups.",
+    "ites-works-job-board": "Online job board",
+    "ites-works-connect-students": "connect students with projects",
+    "ites-works-incubation-services": "Incubation and networking services",
+    "ites-works-audiovisual-startups": "audiovisual startups",
+    "ites-works-employment-platform": "Employment platform",
+    "ites-works-employment-platform-desc":
+      "An online job board and bulletin board to connect students with projects, combined with incubation and networking services for startups and emerging projects in the audiovisual sector.",
+    "ites-works-crowdy-agreement": "Agreement with Crowdy.xyz",
+    "ites-works-crowdy-agreement-desc":
+      "Strategic agreement with Crowdy.xyz, the first networking platform specialized in the audiovisual industry. This alliance allows us to connect professionals, manage projects efficiently and create a robust network of contacts for students and companies in the sector.",
+    "ites-works-financial-projection": "Financial Projection",
+    "ites-works-financial-projection-desc":
+      "This business line is expected to generate €90,000 for 2027, representing 1.8% of the objective.",
+  },
+};
+
+const itesLabTranslations = {
+  es: {
+    "ites-lab-title": "ites.lab",
+    "ites-lab-subtitle":
+      "Laboratorio de innovación enfocado en I+D en IA y tecnologías emergentes para el sector audiovisual.",
+    "ites-lab-innovation-laboratory": "Laboratorio de innovación",
+    "ites-lab-ai-research": "I+D en IA y tecnologías emergentes",
+    "ites-lab-audiovisual-sector": "sector audiovisual",
+    "ites-lab-research-development": "Investigación y Desarrollo",
+    "ites-lab-research-development-desc":
+      "Nuestro laboratorio de I+D donde exploramos la integración de la Inteligencia Artificial y otras tecnologías emergentes en los procesos audiovisuales y formativos.",
+    "ites-lab-ai-focus": "IA y Tecnologías Emergentes",
+    "ites-lab-ai-focus-desc":
+      "Desarrollo de soluciones de vanguardia en inteligencia artificial, realidad virtual y otras tecnologías emergentes para la industria audiovisual.",
+    "ites-lab-financial-projection": "Proyección financiera",
+    "ites-lab-financial-projection-desc":
+      "Esta línea de servicios e innovación tiene una proyección de ingresos de 25.000€ para 2027.",
+    "ites-lab-team-title": "Nuestro Equipo de Expertos",
+    "ites-lab-javi-name": "Javi Araguz",
+    "ites-lab-javi-role": "Director de Innovación y IA Aplicada al Audiovisual",
+    "ites-lab-javi-desc":
+      "Escritor, cineasta, diseñador y cofundador de Alidra Creative. Se especializa en la intersección entre creatividad e inteligencia artificial.",
+    "ites-lab-juanan-name": "Juanan Platas",
+    "ites-lab-juanan-role": "Profesor de Imagen y Postproducción",
+    "ites-lab-juanan-desc":
+      "Profesional audiovisual con más de 20 años de experiencia en postproducción y educación. Fundador de Pepperpotts y editor de vídeo en Deluxe Spain.",
+    "ites-lab-nicola-name": "Nicola Colusso",
+    "ites-lab-nicola-role": "Profesor de Sonido y Postproducción",
+    "ites-lab-nicola-desc":
+      "Especialista en sonido para medios audiovisuales. Desde enero de 2015 trabaja como diseñador de sonido freelance y productor musical.",
+    "ites-lab-julia-name": "Julia Planas",
+    "ites-lab-julia-role": "Profesora de Dirección y Producción",
+    "ites-lab-julia-desc":
+      "Cineasta y profesora con base en Barcelona, especializada en dirección cinematográfica, guionismo y producción.",
+  },
+  en: {
+    "ites-lab-title": "ites.lab",
+    "ites-lab-subtitle":
+      "Innovation laboratory focused on R&D in AI and emerging technologies for the audiovisual sector.",
+    "ites-lab-innovation-laboratory": "Innovation laboratory",
+    "ites-lab-ai-research": "R&D in AI and emerging technologies",
+    "ites-lab-audiovisual-sector": "audiovisual sector",
+    "ites-lab-research-development": "Research and Development",
+    "ites-lab-research-development-desc":
+      "Our R&D laboratory where we explore the integration of Artificial Intelligence and other emerging technologies in audiovisual and training processes.",
+    "ites-lab-ai-focus": "AI and Emerging Technologies",
+    "ites-lab-ai-focus-desc":
+      "Development of cutting-edge solutions in artificial intelligence, virtual reality and other emerging technologies for the audiovisual industry.",
+    "ites-lab-financial-projection": "Financial projection",
+    "ites-lab-financial-projection-desc":
+      "This line of services and innovation has a revenue projection of €25,000 for 2027.",
+  },
+};
+
+const skolaHubTranslations = {
+  es: {
+    "skola-hub-title": "skola.hub",
+    "skola-hub-subtitle":
+      "Sistema operativo educativo en colaboración con Parallax Solutions para revolucionar el ecosistema educativo.",
+    "skola-hub-educational-os":
+      "El sistema operativo para la educación conectada",
+    "skola-hub-parallax-collaboration": "colaboración estratégica",
+    "skola-hub-revolutionize-education": "revolucionar el ecosistema educativo",
+    "skola-hub-educational-platform": "Plataforma educativa",
+    "skola-hub-educational-platform-desc":
+      "Sistema operativo educativo integral diseñado para revolucionar la experiencia de aprendizaje a través de tecnología y metodologías innovadoras.",
+    "skola-hub-parallax-partnership": "Alianza con Parallax Solutions",
+    "skola-hub-parallax-partnership-desc":
+      "Alianza estratégica con Parallax Solutions para desarrollar e implementar tecnologías y metodologías educativas de vanguardia.",
+    "skola-hub-financial-projection": "Proyección Financiera",
+    "skola-hub-financial-projection-desc":
+      "Proyectamos ingresos de 570.300€ para 2027, estableciendo un nuevo estándar en tecnología educativa.",
+  },
+  en: {
+    "skola-hub-title": "skola.hub",
+    "skola-hub-subtitle":
+      "Educational operating system in collaboration with Parallax Solutions to revolutionize the educational ecosystem.",
+    "skola-hub-educational-os": "The operating system for connected education",
+    "skola-hub-parallax-collaboration": "strategic collaboration",
+    "skola-hub-revolutionize-education":
+      "revolutionize the educational ecosystem",
+    "skola-hub-educational-platform": "Educational platform",
+    "skola-hub-educational-platform-desc":
+      "Comprehensive educational operating system designed to revolutionize the learning experience through innovative technology and methodologies.",
+    "skola-hub-parallax-partnership": "Partnership with Parallax Solutions",
+    "skola-hub-parallax-partnership-desc":
+      "Strategic partnership with Parallax Solutions to develop and implement cutting-edge educational technologies and methodologies.",
+    "skola-hub-financial-projection": "Financial Projection",
+    "skola-hub-financial-projection-desc":
+      "We project revenue of €570,300 for 2027, establishing a new standard in educational technology.",
+  },
+};
+
+// Main translations object combining everything
 const translations = {
   es: {
     // Page Title
@@ -32,6 +205,16 @@ const translations = {
     "hero-pioneer-spain": "Centro privado pionero en España",
     "hero-50-years": "50 años de experiencia",
     "hero-3000-m2": "3.000 m²",
+
+    // Loading
+    loading: "Cargando...",
+    "error-loading": "Error loading content",
+
+    // Login
+    title: "Acceso ITES Deck",
+    "password-placeholder": "Contraseña",
+    submit: "Entrar",
+    "error-incorrect": "Contraseña incorrecta.",
 
     // Investment Section
     "investment-title": "Oportunidad de inversión estratégica",
@@ -135,12 +318,6 @@ const translations = {
     consolidation: "Consolidación",
     "pre-objective": "Pre-objetivo",
     "objective-reached": "Objetivo alcanzado",
-    "year-2026": "2026",
-    "year-2028": "2028",
-    "year-2029": "2029",
-    "revenue-2026": "3.147.648€",
-    "revenue-2028": "6.148.524€",
-    "revenue-2029": "7.486.538€",
 
     // Company Valuation
     "company-valuation": "Valoración de la empresa",
@@ -198,23 +375,17 @@ const translations = {
     "exito-tv": "ÉxitoTV: Producción audiovisual",
     crowdy: "Crowdy.xyz: Networking profesional",
     filmo: "Filmo.io: Gestión de inventarios",
-    "innovation-future": "Innovación y futuro",
-    "innovation-future-desc":
-      "Integramos IA, videojuegos y narrativas emergentes para liderar el futuro del sector.",
 
     // About ITES
     "about-ites": "Sobre ITES Hub Audiovisual",
     "about-subtitle":
       "Medio siglo liderando la formación audiovisual en España",
-    "about-ites-title": "Sobre ITES Hub Audiovisual",
     "about-ites-ites": "ITES",
     "about-ites-1975": "1975",
     "about-ites-50-years": "50 años",
     "about-ites-barcelona-center": "centro de Barcelona",
     "about-ites-3000-m2": "casi 3.000 metros cuadrados",
     "pioneers-spain": "Pioneros en España",
-    "pioneers-desc":
-      "Centro privado pionero en España para formación profesional audiovisual oficialmente certificada desde 1975. Nuestro legado de 50 años nos posiciona como referentes indiscutibles del sector.",
     "spain-government": "Titulaciones avaladas por el Gobierno de España",
     "catalonia-government": "Reconocimiento de la Generalitat de Catalunya",
     "strategic-location": "Ubicación estratégica",
@@ -227,9 +398,7 @@ const translations = {
 
     // Capacity and Assets
     "capacity-assets": "Capacidad y activos",
-    "capacity-assets-title": "Capacidad y activos",
     "student-licenses": "Licencias para alumnos",
-    "student-licenses-desc": "(720 presencial + 2.430 online)",
     "audiovisual-assets": "Activos audiovisuales",
     "assets-value": "Valorados en 1,98 M€",
     "square-meters": "Metros cuadrados",
@@ -342,75 +511,6 @@ const translations = {
     "ites-studio-financial-projection-desc":
       "El alquiler de espacios y equipos tiene una proyección de ingresos de 456.000€ anuales (9.1% del total para 2027).",
 
-    // ites.productions
-    "ites-productions-title": "ites.productions",
-    "ites-productions-subtitle":
-      "Productora audiovisual especializada en contenido original y servicios de producción. Involucramos a nuestro alumnado en proyectos reales, conectando formación con la industria profesional.",
-    "ites-productions-audiovisual-producer": "Productora audiovisual",
-    "ites-productions-original-content": "contenido original",
-    "ites-productions-real-projects": "proyectos reales",
-    "ites-productions-content-creation": "Creación de contenido",
-    "ites-productions-content-creation-desc":
-      "Nuestra propia productora audiovisual, diseñada para crear contenido original y ofrecer servicios de producción a terceros, involucrando a nuestro alumnado en proyectos reales.",
-    "ites-productions-exito-agreement": "Acuerdo con ÉxitoTV",
-    "ites-productions-exito-agreement-desc":
-      "Colaboración estratégica con ÉxitoTV, reconocida productora audiovisual. Esta alianza fortalece nuestra división de producción y permite el acceso del alumnado a proyectos profesionales reales, conectando la formación con la industria.",
-    "ites-productions-financial-projection": "Proyección Financiera",
-    "ites-productions-financial-projection-desc":
-      "Proyectamos ingresos de 120.000€ para 2027, estableciendo las bases para el crecimiento futuro de esta línea de negocio.",
-
-    // ites.works
-    "ites-works-title": "ites.works",
-    "ites-works-subtitle":
-      "Bolsa de trabajo online para conectar estudiantes con proyectos. Servicios de incubación y networking para startups audiovisuales.",
-    "ites-works-job-board": "Bolsa de trabajo online",
-    "ites-works-connect-students": "conectar estudiantes con proyectos",
-    "ites-works-incubation-services": "Servicios de incubación y networking",
-    "ites-works-audiovisual-startups": "startups audiovisuales",
-    "ites-works-employment-platform": "Plataforma de empleo",
-    "ites-works-employment-platform-desc":
-      "Plataforma online que conecta a nuestros estudiantes y graduados con proyectos reales y oportunidades laborales en el sector audiovisual.",
-    "ites-works-crowdy-agreement": "Acuerdo con Crowdy.xyz",
-    "ites-works-crowdy-agreement-desc":
-      "Alianza estratégica con Crowdy.xyz, plataforma de networking profesional. Esta colaboración mejora nuestros servicios de empleo y proporciona a los estudiantes acceso a una red profesional más amplia.",
-    "ites-works-financial-projection": "Proyección Financiera",
-    "ites-works-financial-projection-desc":
-      "Proyectamos ingresos de 90.000€ para 2027, apoyando el crecimiento de nuestros servicios de empleo y networking.",
-
-    // ites.lab
-    "ites-lab-title": "ites.lab",
-    "ites-lab-subtitle":
-      "Laboratorio de innovación enfocado en I+D en IA y tecnologías emergentes para el sector audiovisual.",
-    "ites-lab-innovation-laboratory": "Laboratorio de innovación",
-    "ites-lab-ai-research": "I+D en IA y tecnologías emergentes",
-    "ites-lab-audiovisual-sector": "sector audiovisual",
-    "ites-lab-research-development": "Investigación y Desarrollo",
-    "ites-lab-research-development-desc":
-      "Laboratorio de innovación enfocado en investigación y desarrollo en inteligencia artificial y tecnologías emergentes aplicadas al sector audiovisual.",
-    "ites-lab-ai-focus": "IA y Tecnologías Emergentes",
-    "ites-lab-ai-focus-desc":
-      "Desarrollo de soluciones de vanguardia en inteligencia artificial, realidad virtual y otras tecnologías emergentes para la industria audiovisual.",
-    "ites-lab-financial-projection": "Proyección Financiera",
-    "ites-lab-financial-projection-desc":
-      "Proyectamos ingresos de 25.000€ para 2027, estableciendo la base para futuros proyectos de innovación.",
-
-    // skola.hub
-    "skola-hub-title": "skola.hub",
-    "skola-hub-subtitle":
-      "Sistema operativo educativo en colaboración con Parallax Solutions para revolucionar el ecosistema educativo.",
-    "skola-hub-educational-os": "Sistema operativo educativo",
-    "skola-hub-parallax-collaboration": "colaboración con Parallax Solutions",
-    "skola-hub-revolutionize-education": "revolucionar el ecosistema educativo",
-    "skola-hub-educational-platform": "Plataforma educativa",
-    "skola-hub-educational-platform-desc":
-      "Sistema operativo educativo integral diseñado para revolucionar la experiencia de aprendizaje a través de tecnología y metodologías innovadoras.",
-    "skola-hub-parallax-partnership": "Alianza con Parallax Solutions",
-    "skola-hub-parallax-partnership-desc":
-      "Alianza estratégica con Parallax Solutions para desarrollar e implementar tecnologías y metodologías educativas de vanguardia.",
-    "skola-hub-financial-projection": "Proyección Financiera",
-    "skola-hub-financial-projection-desc":
-      "Proyectamos ingresos de 570.300€ para 2027, estableciendo un nuevo estándar en tecnología educativa.",
-
     // Download page
     "download-page-title": "Descargar Documento - ITES Hub Audiovisual",
     "download-back-home": "Volver al inicio",
@@ -422,6 +522,23 @@ const translations = {
       "No se pudo cargar la presentación en el navegador. Esto puede deberse a:",
     "download-google-slides": "Presentación Google Slides",
     "download-investment-doc": "Documento de inversión ITES Hub Audiovisual",
+    "download-hero-subtitle":
+      "Visualiza y descarga la presentación completa de la oportunidad de inversión en el sector audiovisual.",
+    "download-document-title": "Descargar Documento",
+    "download-document-desc":
+      "Descarga el documento de inversión en el formato que prefieras.",
+    "download-pdf": "Descargar PDF",
+    "download-powerpoint": "Descargar PowerPoint",
+    "download-questions-title": "¿Tienes preguntas?",
+    "download-questions-desc":
+      "Nuestro equipo está disponible para resolver cualquier duda sobre la oportunidad de inversión",
+    "download-contact-team": "Contactar con el equipo",
+    "download-success-title": "¡Solicitud enviada!",
+    "download-success-desc":
+      "Hemos enviado los documentos a tu email. Revisa tu bandeja de entrada y la carpeta de spam. También hemos notificado a nuestro equipo.",
+    "download-understood": "Entendido",
+    "download-request-info-modal": "Solicitar información",
+    "download-send-message": "Enviar mensaje a:",
 
     // Business Line Cards
     "ites-studio-card-desc":
@@ -466,24 +583,52 @@ const translations = {
     // Contact Modal
     "contact-modal-title": "Solicitar información",
     "contact-modal-subtitle": "Enviar mensaje a:",
-    "contact-name": "Nombre *",
-    "contact-name-placeholder": "Tu nombre",
+    "contact-name": "Name *",
+    "contact-name-placeholder": "Your name",
     "contact-email": "Email *",
-    "contact-email-placeholder": "tu@email.com",
-    "contact-send": "Enviar Solicitud",
-    "contact-sending": "Enviando...",
-    "contact-sent": "¡Enviado!",
-    "contact-error": "Error - Reintentar",
+    "contact-email-placeholder": "your@email.com",
+    "contact-send": "Send Request",
+    "contact-sending": "Sending...",
+    "contact-sent": "Sent!",
+    "contact-error": "Error - Retry",
 
-    // Loading
-    loading: "Cargando...",
-    "error-loading": "Error loading content",
+    // ites.lab Team Members
+    "ites-lab-team-title": "Nuestro Equipo de Expertos",
+    "ites-lab-javi-name": "Javi Araguz",
+    "ites-lab-javi-role": "Director de Innovación y IA Aplicada al Audiovisual",
+    "ites-lab-javi-desc":
+      "Escritor, cineasta, diseñador y cofundador de Alidra Creative. Se especializa en la intersección entre creatividad e inteligencia artificial.",
+    "ites-lab-juanan-name": "Juanan Platas",
+    "ites-lab-juanan-role": "Profesor de Imagen y Postproducción",
+    "ites-lab-juanan-desc":
+      "Profesional audiovisual con más de 20 años de experiencia en postproducción y educación. Fundador de Pepperpotts y editor de vídeo en Deluxe Spain.",
+    "ites-lab-nicola-name": "Nicola Colusso",
+    "ites-lab-nicola-role": "Profesor de Sonido y Postproducción",
+    "ites-lab-nicola-desc":
+      "Especialista en sonido para medios audiovisuales. Desde enero de 2015 trabaja como diseñador de sonido freelance y productor musical.",
+    "ites-lab-julia-name": "Julia Planas",
+    "ites-lab-julia-role": "Profesora de Dirección y Producción",
+    "ites-lab-julia-desc":
+      "Cineasta y profesora con base en Barcelona, especializada en dirección cinematográfica, guionismo y producción.",
 
-    // Login
-    title: "Acceso ITES Deck",
-    "password-placeholder": "Contraseña",
-    submit: "Entrar",
-    "error-incorrect": "Contraseña incorrecta.",
+    // Download page additional translations
+    "download-hero-subtitle":
+      "Visualiza y descarga la presentación completa de la oportunidad de inversión en el sector audiovisual.",
+    "download-document-title": "Descargar Documento",
+    "download-document-desc":
+      "Descarga el documento de inversión en el formato que prefieras.",
+    "download-pdf": "Descargar PDF",
+    "download-powerpoint": "Descargar PowerPoint",
+    "download-questions-title": "¿Tienes preguntas?",
+    "download-questions-desc":
+      "Nuestro equipo está disponible para resolver cualquier duda sobre la oportunidad de inversión",
+    "download-contact-team": "Contactar con el equipo",
+    "download-success-title": "¡Solicitud enviada!",
+    "download-success-desc":
+      "Hemos enviado los documentos a tu email. Revisa tu bandeja de entrada y la carpeta de spam. También hemos notificado a nuestro equipo.",
+    "download-understood": "Entendido",
+    "download-request-info-modal": "Solicitar información",
+    "download-send-message": "Enviar mensaje a:",
   },
 
   en: {
@@ -497,7 +642,6 @@ const translations = {
     "nav-ites-studio": "ites.studio",
     "nav-ites-productions": "ites.productions",
     "nav-ites-works": "ites.works",
-    "nav-ites-lab": "ites.lab",
     "nav-skola-hub": "skola.hub",
     "nav-presentation": "Presentation",
     "nav-investment-doc": "Investment Document",
@@ -519,6 +663,16 @@ const translations = {
     "hero-50-years": "50 years of experience",
     "hero-3000-m2": "3,000 m²",
 
+    // Loading
+    loading: "Loading...",
+    "error-loading": "Error loading content",
+
+    // Login
+    title: "ITES Deck Access",
+    "password-placeholder": "Password",
+    submit: "Login",
+    "error-incorrect": "Incorrect password.",
+
     // Investment Section
     "investment-title": "Strategic investment opportunity",
     "investment-subtitle":
@@ -529,7 +683,7 @@ const translations = {
     "investment-objective":
       "Objective: Increase revenue from €2M to €5M in 3 fiscal years",
     "investment-goal":
-      "€5 million in revenue in 30 months by maximizing Vocational Training places (€3.2M) and developing other business lines in synergy with the associated production company (€1.8M).",
+      "5 million euros in revenue in 30 months by maximizing Vocational Training places (€3.2M) and developing other business lines in synergy with the associated production company (€1.8M).",
     "investment-phases-title": "49.5% investment in two phases",
     "investment-49-5-percent": "49.5% of ITES",
     "investment-5-million": "5 million euros",
@@ -539,11 +693,11 @@ const translations = {
     "investment-objective-label": "Objective:",
     "investment-60-percent": "60% of total:",
     "investment-40-percent": "40% of total:",
-    "investment-phase1-complete": "Phase 1 complete",
+    "investment-phase1-complete": "1st phase complete",
     "investment-july-dates": "Wednesday 16th and Thursday 17th July",
-    "investment-phase1-amount": "Phase 1: €555,984",
+    "investment-phase1-amount": "1st Phase: €555,984",
     "investment-phase1-equity": "29.7% equity",
-    "investment-phase2-amount": "Phase 2: €370,656",
+    "investment-phase2-amount": "2nd Phase: €370,656",
     "investment-occupancy": "19% occupancy in training places",
     "investment-50-years": "50 years",
     "investment-3000-m2": "3,000 m²",
@@ -551,10 +705,10 @@ const translations = {
     "investment-3-pillars": "3 pillars",
 
     // Investment Phases
-    "phase-1": "Phase 1",
-    "phase-2": "Phase 2",
-    "phase-1-date": "Wednesday, July 16",
-    "phase-2-date": "Wednesday, July 30",
+    "phase-1": "1st Phase",
+    "phase-2": "2nd Phase",
+    "phase-1-date": "Wednesday, July 16th",
+    "phase-2-date": "Wednesday, July 30th",
     investment: "Investment",
     participation: "Participation",
     "final-participation": "Final Participation",
@@ -574,8 +728,8 @@ const translations = {
     "contract-desc":
       "Contract draft ready for review and possible signing between Wednesday 16th and Thursday 17th July",
     "timeline-title": "Investment timeline",
-    "timeline-phase1": "Wednesday July 16",
-    "timeline-phase2": "Wednesday July 30",
+    "timeline-phase1": "Wednesday July 16th",
+    "timeline-phase2": "Wednesday July 30th",
     "timeline-months": "30 months",
     "timeline-goal": "€5M objective reached",
     "timeline-revenue": "Revenue target",
@@ -586,13 +740,13 @@ const translations = {
       "We currently have 19% occupancy in training places, with growth margin and active recruitment of new students.",
     "opportunity-title": "The Opportunity: Intact Potential",
     "opportunity-desc":
-      "Despite the challenges, ITES possesses assets of immense value: a brand with 50 years of history, 3,000 m² in the center of Barcelona and licenses for more than 3,150 students.",
+      "Despite the challenges, ITES has assets of immense value: a brand with 50 years of history, 3,000 m² in the center of Barcelona and licenses for more than 3,150 students.",
 
     // Revitalization Plan
     "revitalization-title": "Revitalization plan in 3 pillars",
     "revitalization-1": "1. Financial restructuring",
     "revitalization-1-desc":
-      "Liquidation of critical debts (salaries, rents, suppliers) to free up cash flow and restore operational stability.",
+      "Liquidation of critical debts (payroll, rent, suppliers) to free up cash flow and restore operational stability.",
     "revitalization-2": "2. Commercial growth",
     "revitalization-2-desc":
       "Launch of an aggressive marketing campaign to triple on-site occupancy and activate the online offering nationwide.",
@@ -627,11 +781,13 @@ const translations = {
     "valuation-amount": "€1,872,000",
     "valuation-desc":
       "Valuation considering assets, infrastructure, brand and market potential",
+    "company-valuation-title": "Company valuation",
 
     // Debt Breakdown
     "debt-breakdown": "Debt breakdown",
+    "debt-breakdown-title": "Debt breakdown",
     "rent-debt": "Rent debt",
-    "salary-debt": "Overdue salaries",
+    "salary-debt": "Outstanding payroll",
     "total-debt": "Total debt",
     "rent-amount": "€210,231.20",
     "salary-amount": "€250,992.62",
@@ -639,12 +795,13 @@ const translations = {
 
     // Growth Strategy
     "growth-strategy": "Growth strategy",
-    "maximize-fp": "Maximize FP Places",
+    "growth-strategy-title": "Growth strategy",
+    "maximize-fp": "Maximization of FP Places",
     "maximize-fp-desc":
-      "Increase on-site occupancy from current 19% to 80%, plus complete activation of 2,430 online places. Target: €3.2M of total €5M.",
+      "Increase on-site occupancy from current 19% to 80%, plus complete activation of 2,430 online places. Objective: €3.2M of the €5M total.",
     "business-development": "Business line development",
     "business-development-desc":
-      "Activation and scaling of ites.studio, ites.productions, ites.works, ites.lab and skola.hub in synergy with the associated production company. Target: €1.8M of total €5M.",
+      "Activation and scaling of ites.studio, ites.productions, ites.works, ites.lab and skola.hub in synergy with the associated production company. Objective: €1.8M of the €5M total.",
     "ecosystem-synergy": "Ecosystem Synergy",
     "ecosystem-synergy-desc":
       "Integration of all divisions into a 360° Audiovisual Hub that maximizes cross-opportunities",
@@ -653,16 +810,27 @@ const translations = {
 
     // Unique Ecosystem
     "unique-ecosystem": "A unique ecosystem",
+    "unique-ecosystem-title": "A unique ecosystem",
+    "unique-ecosystem-unique": "unique",
     "50-years": "50 years of history",
+    "50-years-desc":
+      "Pioneers in Spain in officially certified audiovisual professional training since 1975.",
     "premium-infrastructure": "Premium infrastructure",
+    "premium-infrastructure-desc":
+      "Almost 3,000 m² with TV studios, sound studios, radio, photography and theater in the heart of Barcelona.",
     "cutting-edge-equipment": "Cutting-edge equipment",
+    "cutting-edge-equipment-desc":
+      "More than 6,105 audiovisual assets valued at €1.98M with state-of-the-art technology.",
     "official-recognition": "Official recognition",
+    "official-recognition-desc":
+      "Qualifications endorsed by the Government of Spain and the Generalitat de Catalunya.",
     "strategic-alliances": "Strategic alliances",
+    "strategic-alliances-desc":
+      "Key collaborations with industry leaders that enhance our ecosystem:",
     escac: "ESCAC: Academic collaboration",
     "exito-tv": "ÉxitoTV: Audiovisual production",
     crowdy: "Crowdy.xyz: Professional networking",
     filmo: "Filmo.io: Inventory management",
-    "innovation-future": "Innovation and future",
 
     // About ITES
     "about-ites": "About ITES Hub Audiovisual",
@@ -676,6 +844,8 @@ const translations = {
     "spain-government": "Qualifications endorsed by the Government of Spain",
     "catalonia-government": "Recognition from the Generalitat de Catalunya",
     "strategic-location": "Strategic location",
+    "strategic-location-desc":
+      "Situated in the center of Barcelona, we have nearly 3,000 square meters of specialized infrastructure designed specifically for audiovisual training and production.",
     "tv-studios": "Professional TV studios",
     "sound-studios": "Sound and radio studios",
     "photo-studios": "Photography studios",
@@ -699,6 +869,7 @@ const translations = {
     "management-team": "Our management team",
     "team-subtitle":
       "Professionals with decades of experience leading audiovisual transformation",
+    "management-team-title": "Our management team",
     "management-team-team": "team",
     "director-team": "Management team",
     "daniel-25-years": "25 years of experience",
@@ -716,6 +887,7 @@ const translations = {
     "business-lines": "Our business lines",
     "business-lines-subtitle":
       "Discover each of our specialized divisions and explore the opportunities we offer",
+    "business-lines-title": "Our business lines",
     "business-lines-business-lines": "business lines",
     "business-lines-50-years": "50 years of experience",
     "business-lines-3000-m2": "3,000 m²",
@@ -734,7 +906,7 @@ const translations = {
     "ites-es-100-employability": "100% employability",
     "ites-es-63-1-percent": "63.1%",
     "ites-es-card-desc":
-      "Pioneering private center in Spain for officially certified audiovisual professional training, with 50 years of experience and 3,000 m² of specialized infrastructure.",
+      "Pioneering private center in Spain for officially certified audiovisual training, with 50 years of experience and 3,000 m² of specialized infrastructure.",
     "regulated-training": "Regulated audiovisual training",
     "regulated-training-desc":
       "Pioneering private center in Spain for officially certified audiovisual professional training, with 50 years of experience. Located in the center of Barcelona with nearly 3,000 square meters of specialized infrastructure. Our goal is to guarantee 100% employability for our students.",
@@ -830,81 +1002,52 @@ const translations = {
     "ites-lab-audiovisual-sector": "audiovisual sector",
     "ites-lab-research-development": "Research and Development",
     "ites-lab-research-development-desc":
-      "Innovation laboratory focused on research and development in artificial intelligence and emerging technologies applied to the audiovisual sector.",
+      "Our R&D laboratory where we explore the integration of Artificial Intelligence and other emerging technologies in audiovisual and training processes.",
     "ites-lab-ai-focus": "AI and Emerging Technologies",
     "ites-lab-ai-focus-desc":
-      "Development of cutting-edge solutions in artificial intelligence, virtual reality, and other emerging technologies for the audiovisual industry.",
-    "ites-lab-financial-projection": "Financial Projection",
+      "Development of cutting-edge solutions in artificial intelligence, virtual reality and other emerging technologies for the audiovisual industry.",
+    "ites-lab-financial-projection": "Financial projection",
     "ites-lab-financial-projection-desc":
-      "We project revenue of €25,000 for 2027, establishing the foundation for future innovation projects.",
+      "This line of services and innovation has a revenue projection of €25,000 for 2027.",
 
-    // skola.hub
-    "skola-hub-title": "skola.hub",
-    "skola-hub-subtitle":
-      "Educational operating system in collaboration with Parallax Solutions to revolutionize the educational ecosystem.",
-    "skola-hub-educational-os": "Educational operating system",
-    "skola-hub-parallax-collaboration": "collaboration with Parallax Solutions",
-    "skola-hub-revolutionize-education":
-      "revolutionize the educational ecosystem",
-    "skola-hub-educational-platform": "Educational platform",
-    "skola-hub-educational-platform-desc":
-      "Comprehensive educational operating system designed to revolutionize the learning experience through innovative technology and methodologies.",
-    "skola-hub-parallax-partnership": "Partnership with Parallax Solutions",
-    "skola-hub-parallax-partnership-desc":
-      "Strategic partnership with Parallax Solutions to develop and implement cutting-edge educational technologies and methodologies.",
-    "skola-hub-financial-projection": "Financial Projection",
-    "skola-hub-financial-projection-desc":
-      "We project revenue of €570,300 for 2027, establishing a new standard in educational technology.",
+    // ites.lab Team Members
+    "ites-lab-team-title": "Our Expert Team",
+    "ites-lab-javi-name": "Javi Araguz",
+    "ites-lab-javi-role":
+      "Director of Innovation and AI Applied to Audiovisual",
+    "ites-lab-javi-desc":
+      "Writer, filmmaker, designer and co-founder of Alidra Creative. He specializes in the intersection between creativity and artificial intelligence.",
+    "ites-lab-juanan-name": "Juanan Platas",
+    "ites-lab-juanan-role": "Image and Post-Production Professor",
+    "ites-lab-juanan-desc":
+      "Audiovisual professional with more than 20 years of experience in post-production and education. Founder of Pepperpotts and video editor at Deluxe Spain.",
+    "ites-lab-nicola-name": "Nicola Colusso",
+    "ites-lab-nicola-role": "Sound and Post-Production Professor",
+    "ites-lab-nicola-desc":
+      "Specialist in sound for audiovisual media. Since January 2015 he has worked as a freelance sound designer and music producer.",
+    "ites-lab-julia-name": "Julia Planas",
+    "ites-lab-julia-role": "Direction and Production Professor",
+    "ites-lab-julia-desc":
+      "Filmmaker and professor based in Barcelona, specialized in cinematographic direction, screenwriting and production.",
 
-    // Download page
-    "download-page-title": "Download Document - ITES Hub Audiovisual",
-    "download-back-home": "Back to Home",
-    "download-presentation-investors": "Presentation for Investors",
-    "download-request-sent": "Request sent!",
-    "download-request-info": "Request information",
-    "download-error-loading": "Error loading presentation",
-    "download-error-desc":
-      "The presentation could not be loaded in the browser. This may be due to:",
-    "download-google-slides": "Google Slides Presentation",
-    "download-investment-doc": "ITES Hub Audiovisual Investment Document",
-
-    // Business Line Cards
-    "ites-studio-card-desc":
-      "Space and Equipment Rental. 3,000 m² of premium facilities and more than 6,000 audiovisual assets.",
-    "ites-studio-revenue": "€456,000",
-    "ites-productions-card-desc":
-      "Audiovisual Production Company. Creation of original content and student involvement in real projects.",
-    "ites-productions-revenue": "€120,000",
-    "ites-works-card-desc":
-      "Online job board to connect students with projects. Incubation and networking services for audiovisual startups.",
-    "ites-works-revenue": "€90,000",
-    "ites-lab-card-desc":
-      "Innovation Laboratory. R&D in AI and emerging technologies for the audiovisual sector.",
-    "ites-lab-revenue": "€25,000",
-    "skola-hub-card-desc":
-      "Educational Operating System. Collaboration with Parallax Solutions to revolutionize the educational ecosystem.",
-    "skola-hub-revenue": "€570,300",
-
-    // Download Section
-    "download-title": "View the investor presentation",
-    "download-visualize": "View",
-    "download-presentation": "the investor presentation",
-    "download-desc":
-      "Get access to the complete presentation and detailed document of the investment opportunity. Includes financial projections, market analysis and complete strategic plan.",
-    documents: "Documents",
-    "contact-more-info": "Contact for more information",
-
-    // Footer
-    "footer-excellence":
-      "50 years of excellence in audiovisual training and production",
-    location: "Location",
-    "footer-address":
-      "Carrer de Bailèn, 34, 35, 36 i 37, L'Eixample, 08010 Barcelona",
-    contact: "Contact",
-    copyright: "© 2025 ITES Hub Audiovisual. All rights reserved.",
-    "footer-location": "Location",
-    "footer-contact": "Contact",
-    "footer-rights": "© 2025 ITES Hub Audiovisual. All rights reserved.",
+    // Download page additional translations
+    "download-hero-subtitle":
+      "View and download the complete presentation of the investment opportunity in the audiovisual sector.",
+    "download-document-title": "Download Document",
+    "download-document-desc":
+      "Download the investment document in your preferred format.",
+    "download-pdf": "Download PDF",
+    "download-powerpoint": "Download PowerPoint",
+    "download-questions-title": "Do you have questions?",
+    "download-questions-desc":
+      "Our team is available to answer any questions about the investment opportunity",
+    "download-contact-team": "Contact the team",
+    "download-success-title": "Request sent!",
+    "download-success-desc":
+      "We have sent the documents to your email. Check your inbox and spam folder. We have also notified our team.",
+    "download-understood": "Understood",
+    "download-request-info-modal": "Request information",
+    "download-send-message": "Send message to:",
 
     // Contact Modal
     "contact-modal-title": "Request information",
@@ -917,18 +1060,30 @@ const translations = {
     "contact-sending": "Sending...",
     "contact-sent": "Sent!",
     "contact-error": "Error - Retry",
-
-    // Loading
-    loading: "Loading...",
-    "error-loading": "Error loading content",
-
-    // Login
-    title: "ITES Deck Access",
-    "password-placeholder": "Password",
-    submit: "Login",
-    "error-incorrect": "Incorrect password.",
   },
 };
+
+// Merge tab translations into main translations
+function mergeTranslations() {
+  // Merge ites.productions
+  Object.assign(translations.es, itesProductionsTranslations.es);
+  Object.assign(translations.en, itesProductionsTranslations.en);
+
+  // Merge ites.works
+  Object.assign(translations.es, itesWorksTranslations.es);
+  Object.assign(translations.en, itesWorksTranslations.en);
+
+  // Merge ites.lab
+  Object.assign(translations.es, itesLabTranslations.es);
+  Object.assign(translations.en, itesLabTranslations.en);
+
+  // Merge skola.hub
+  Object.assign(translations.es, skolaHubTranslations.es);
+  Object.assign(translations.en, skolaHubTranslations.en);
+}
+
+// Initialize translations
+mergeTranslations();
 
 // Language management functions
 let currentLang = localStorage.getItem("language") || "es";
