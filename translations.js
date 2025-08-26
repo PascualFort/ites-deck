@@ -250,8 +250,8 @@ const translations = {
     // Investment Phases
     "phase-1": "1ª Fase",
     "phase-2": "2ª Fase",
-    "phase-1-date": "Miércoles, 16 de julio",
-    "phase-2-date": "Miércoles, 30 de julio",
+    "phase-1-date": "Miércoles, 27 de agosto",
+    "phase-2-date": "Miércoles, 2 de septiembre",
     investment: "Inversión",
     participation: "Participación",
     "final-participation": "Participación Final",
@@ -271,8 +271,8 @@ const translations = {
     "contract-desc":
       "Borrador del contrato listo para revisión y posible firma entre el miércoles 16 y jueves 17 de julio",
     "timeline-title": "Cronograma de inversión",
-    "timeline-phase1": "Miércoles 16 julio",
-    "timeline-phase2": "Miércoles 30 julio",
+    "timeline-phase1": "Miércoles 27 de agosto",
+    "timeline-phase2": "Miércoles 2 de septiembre",
     "timeline-months": "30 meses",
     "timeline-goal": "Objetivo €5M alcanzado",
     "timeline-revenue": "Meta de ingresos",
@@ -707,8 +707,8 @@ const translations = {
     // Investment Phases
     "phase-1": "1st Phase",
     "phase-2": "2nd Phase",
-    "phase-1-date": "Wednesday, July 16th",
-    "phase-2-date": "Wednesday, July 30th",
+    "phase-1-date": "Wednesday, August 27th",
+    "phase-2-date": "Wednesday, September 2nd",
     investment: "Investment",
     participation: "Participation",
     "final-participation": "Final Participation",
@@ -728,8 +728,8 @@ const translations = {
     "contract-desc":
       "Contract draft ready for review and possible signing between Wednesday 16th and Thursday 17th July",
     "timeline-title": "Investment timeline",
-    "timeline-phase1": "Wednesday July 16th",
-    "timeline-phase2": "Wednesday July 30th",
+    "timeline-phase1": "Wednesday, 27th of August",
+    "timeline-phase2": "Wednesday, 2nd of September",
     "timeline-months": "30 months",
     "timeline-goal": "€5M objective reached",
     "timeline-revenue": "Revenue target",
