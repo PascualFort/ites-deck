@@ -6,8 +6,10 @@ const itesProductionsTranslations = {
   es: {
     "ites-productions-title": "ites.productions",
     "ites-productions-subtitle":
-      "Productora audiovisual especializada en contenido original y servicios de producción. Involucramos a nuestro alumnado en proyectos reales, conectando formación con la industria profesional.",
+      "Involucramos a nuestro alumnado en proyectos reales, conectando formación con la industria profesional.",
     "ites-productions-audiovisual-producer": "Productora audiovisual",
+    "ites-productions-specialized-in": "especializada en",
+    "ites-productions-and-services": "y servicios de",
     "ites-productions-original-content": "contenido original",
     "ites-productions-real-projects": "proyectos reales",
     "ites-productions-content-creation": "Creación de contenido",
@@ -23,8 +25,10 @@ const itesProductionsTranslations = {
   en: {
     "ites-productions-title": "ites.productions",
     "ites-productions-subtitle":
-      "Audiovisual production company specialized in original content and production services. We involve our students in real projects, connecting training with the professional industry.",
+      "We involve our students in real projects, connecting training with the professional industry.",
     "ites-productions-audiovisual-producer": "Audiovisual production company",
+    "ites-productions-specialized-in": "specialized in",
+    "ites-productions-and-services": "and production services",
     "ites-productions-original-content": "original content",
     "ites-productions-real-projects": "real projects",
     "ites-productions-content-creation": "Content creation",
@@ -45,6 +49,7 @@ const itesWorksTranslations = {
     "ites-works-subtitle":
       "Bolsa de trabajo online para conectar estudiantes con proyectos. Servicios de incubación y networking para startups audiovisuales.",
     "ites-works-job-board": "Bolsa de trabajo online",
+    "ites-works-for": "para",
     "ites-works-connect-students": "conectar estudiantes con proyectos",
     "ites-works-incubation-services": "Servicios de incubación y networking",
     "ites-works-audiovisual-startups": "startups audiovisuales",
@@ -63,6 +68,7 @@ const itesWorksTranslations = {
     "ites-works-subtitle":
       "Online job board to connect students with projects. Incubation and networking services for audiovisual startups.",
     "ites-works-job-board": "Online job board",
+    "ites-works-for": "to",
     "ites-works-connect-students": "connect students with projects",
     "ites-works-incubation-services": "Incubation and networking services",
     "ites-works-audiovisual-startups": "audiovisual startups",
@@ -84,6 +90,8 @@ const itesLabTranslations = {
     "ites-lab-subtitle":
       "Laboratorio de innovación enfocado en I+D en IA y tecnologías emergentes para el sector audiovisual.",
     "ites-lab-innovation-laboratory": "Laboratorio de innovación",
+    "ites-lab-focused-on": "enfocado en",
+    "ites-lab-for": "para el",
     "ites-lab-ai-research": "I+D en IA y tecnologías emergentes",
     "ites-lab-audiovisual-sector": "sector audiovisual",
     "ites-lab-research-development": "Investigación y Desarrollo",
@@ -118,6 +126,8 @@ const itesLabTranslations = {
     "ites-lab-subtitle":
       "Innovation laboratory focused on R&D in AI and emerging technologies for the audiovisual sector.",
     "ites-lab-innovation-laboratory": "Innovation laboratory",
+    "ites-lab-focused-on": "focused on",
+    "ites-lab-for": "for the",
     "ites-lab-ai-research": "R&D in AI and emerging technologies",
     "ites-lab-audiovisual-sector": "audiovisual sector",
     "ites-lab-research-development": "Research and Development",
@@ -140,6 +150,9 @@ const skolaHubTranslations = {
     "skola-hub-educational-os":
       "El sistema operativo para la educación conectada",
     "skola-hub-parallax-collaboration": "colaboración estratégica",
+    "skola-hub-a": "Una",
+    "skola-hub-with": "con",
+    "skola-hub-to": "para",
     "skola-hub-revolutionize-education": "revolucionar el ecosistema educativo",
     "skola-hub-educational-platform": "Plataforma educativa",
     "skola-hub-educational-platform-desc":
@@ -189,6 +202,9 @@ const skolaHubTranslations = {
       "Educational operating system in collaboration with Parallax Solutions to revolutionize the educational ecosystem.",
     "skola-hub-educational-os": "The operating system for connected education",
     "skola-hub-parallax-collaboration": "strategic collaboration",
+    "skola-hub-a": "A",
+    "skola-hub-with": "with",
+    "skola-hub-to": "to",
     "skola-hub-revolutionize-education":
       "revolutionize the educational ecosystem",
     "skola-hub-educational-platform": "Educational platform",
@@ -553,6 +569,10 @@ const translations = {
     "ites-institute-online-courses": "lanzamiento de nuevos cursos online",
     "ites-institute-specialized-training": "Formación especializada",
     "ites-institute-global-professionals": "profesionales globales",
+    "ites-institute-audiovisual-sector": "del sector audiovisual",
+    "ites-institute-international-reach": "con alcance internacional",
+    "ites-institute-for": "para el",
+    "ites-institute-directed-to": "dirigida a",
     "ites-institute-digital-expansion": "Expansión digital",
     "ites-institute-digital-expansion-desc":
       "Plataforma estratégica para el lanzamiento de nuevos cursos online y formación especializada dirigida a profesionales del sector audiovisual. Diseñada para llegar a un público global ofreciendo formación flexible, accesible y de alta calidad.",
@@ -572,6 +592,10 @@ const translations = {
     "ites-studio-3000-premium": "3.000 m² de instalaciones premium",
     "ites-studio-6000-assets": "6.000 activos audiovisuales",
     "ites-studio-professionals": "productoras y profesionales",
+    "ites-studio-and-more": "y más de",
+    "ites-studio-professional-studios":
+      "Platós profesionales, estudios de sonido y equipos de última generación para",
+    "ites-studio-sector": "del sector",
     "ites-studio-infrastructure": "Infraestructura para la industria",
     "ites-studio-infrastructure-desc":
       "Monetizamos nuestros 3.000 m² de instalaciones y nuestro extenso inventario de equipos. Ofrecemos platós, estudios de sonido, salas de postproducción y material técnico para productoras y profesionales.",
@@ -1219,6 +1243,10 @@ const translations = {
     "ites-institute-online-courses": "launching new online courses",
     "ites-institute-specialized-training": "Specialized training",
     "ites-institute-global-professionals": "global professionals",
+    "ites-institute-audiovisual-sector": "in the audiovisual sector",
+    "ites-institute-international-reach": "with international reach",
+    "ites-institute-for": "for",
+    "ites-institute-directed-to": "aimed at",
     "ites-institute-digital-expansion": "Digital expansion",
     "ites-institute-digital-expansion-desc":
       "Strategic platform for launching new online courses and specialized training aimed at audiovisual sector professionals. Designed to reach a global audience offering flexible, accessible and high-quality training.",
@@ -1238,6 +1266,10 @@ const translations = {
     "ites-studio-3000-premium": "3,000 m² of premium facilities",
     "ites-studio-6000-assets": "6,000 audiovisual assets",
     "ites-studio-professionals": "production companies and professionals",
+    "ites-studio-and-more": "and more than",
+    "ites-studio-professional-studios":
+      "Professional studios, sound studios and state-of-the-art equipment for",
+    "ites-studio-sector": "in the sector",
     "ites-studio-infrastructure": "Infrastructure for the industry",
     "ites-studio-infrastructure-desc":
       "We monetize our 3,000 m² of facilities and our extensive equipment inventory. We offer studios, sound studios, post-production rooms and technical material for production companies and professionals.",
@@ -1251,8 +1283,10 @@ const translations = {
     // ites.productions
     "ites-productions-title": "ites.productions",
     "ites-productions-subtitle":
-      "Audiovisual production company specialized in original content and production services. We involve our students in real projects, connecting training with the professional industry.",
+      "We involve our students in real projects, connecting training with the professional industry.",
     "ites-productions-audiovisual-producer": "Audiovisual production company",
+    "ites-productions-specialized-in": "specialized in",
+    "ites-productions-and-services": "and production services",
     "ites-productions-original-content": "original content",
     "ites-productions-real-projects": "real projects",
     "ites-productions-content-creation": "Content creation",
@@ -1270,6 +1304,7 @@ const translations = {
     "ites-works-subtitle":
       "Online job board to connect students with projects. Incubation and networking services for audiovisual startups.",
     "ites-works-job-board": "Online job board",
+    "ites-works-for": "to",
     "ites-works-connect-students": "connect students with projects",
     "ites-works-incubation-services": "Incubation and networking services",
     "ites-works-audiovisual-startups": "audiovisual startups",
@@ -1288,6 +1323,8 @@ const translations = {
     "ites-lab-subtitle":
       "Innovation laboratory focused on R&D in AI and emerging technologies for the audiovisual sector.",
     "ites-lab-innovation-laboratory": "Innovation laboratory",
+    "ites-lab-focused-on": "focused on",
+    "ites-lab-for": "for the",
     "ites-lab-ai-research": "R&D in AI and emerging technologies",
     "ites-lab-audiovisual-sector": "audiovisual sector",
     "ites-lab-research-development": "Research and Development",
