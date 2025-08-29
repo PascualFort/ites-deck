@@ -1358,6 +1358,7 @@ const translations = {
       "Filmmaker and professor based in Barcelona, specialized in cinematographic direction, screenwriting and production.",
 
     // Download page additional translations
+    "download-presentation-investors": "Presentation for Investors",
     "download-hero-subtitle":
       "View and download the complete presentation of the investment opportunity in the audiovisual sector.",
     "download-document-title": "Download Document",
