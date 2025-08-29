@@ -150,6 +150,38 @@ const skolaHubTranslations = {
     "skola-hub-financial-projection": "Proyección Financiera",
     "skola-hub-financial-projection-desc":
       "Proyectamos ingresos de 570.300€ para 2027, estableciendo un nuevo estándar en tecnología educativa.",
+
+    // Additional Skola Hub translations
+    "skola-hub-opportunity-title":
+      "La oportunidad: un mercado preparado para la disrupción",
+    "skola-hub-opportunity-desc":
+      "Skola Hub responde a desafíos críticos del sistema educativo catalán, convirtiendo problemas estructurales en una oportunidad de mercado sin precedentes.",
+    "skola-hub-students-no-fp": "Alumnos sin plaza de FP asignada",
+    "skola-hub-employment-increase": "Mayor inserción laboral en FP dual",
+    "skola-hub-manual-processes": "Procesos administrativos costosos",
+    "skola-hub-solution-title": "La Solución: Un Ecosistema Conectado",
+    "skola-hub-solution-desc":
+      "Una infraestructura estratégica que crea un ecosistema sin fricción para centros, estudiantes y empresas a través de módulos interconectados como:",
+    "skola-hub-alliances-itineraries": "Alianzas e Itinerarios:",
+    "skola-hub-alliances-desc": "Creación de programas multi-institucionales.",
+    "skola-hub-register-validate": "Registrar y ValidaCredit:",
+    "skola-hub-register-desc":
+      "Automatización de matrículas y transferencia de créditos.",
+    "skola-hub-project-hub": "Proyecta hub:",
+    "skola-hub-project-desc":
+      "Conexión de estudiantes con retos empresariales reales.",
+    "skola-hub-talent-fp": "Talento fp:",
+    "skola-hub-talent-desc":
+      "Conexión directa entre empresas y talento cualificado.",
+    "skola-hub-addressable-market": "Mercado direccionable",
+    "skola-hub-market-desc": "Objetivo a 3 años (SOM):",
+    "skola-hub-market-goal":
+      "instituciones clientes para 2026, dominando el mercado potencial de Cataluña.",
+    "skola-hub-financial-projection-title": "Proyección Financiera",
+    "skola-hub-financial-goal": "Objetivo de ingresos trimestrales superior a",
+    "skola-hub-financial-goal-2":
+      "para Q4 2026, validado por métricas SaaS excepcionales.",
+    "skola-hub-cta-button": "Ver Presentación para Inversores",
   },
   en: {
     "skola-hub-title": "skola.hub",
@@ -168,6 +200,37 @@ const skolaHubTranslations = {
     "skola-hub-financial-projection": "Financial Projection",
     "skola-hub-financial-projection-desc":
       "We project revenue of €570,300 for 2027, establishing a new standard in educational technology.",
+
+    // Additional Skola Hub translations
+    "skola-hub-opportunity-title":
+      "The opportunity: a market ready for disruption",
+    "skola-hub-opportunity-desc":
+      "Skola Hub responds to critical challenges in the Catalan educational system, turning structural problems into an unprecedented market opportunity.",
+    "skola-hub-students-no-fp": "Students without assigned FP place",
+    "skola-hub-employment-increase": "Higher employment insertion in dual FP",
+    "skola-hub-manual-processes": "Costly administrative processes",
+    "skola-hub-solution-title": "The Solution: A Connected Ecosystem",
+    "skola-hub-solution-desc":
+      "A strategic infrastructure that creates a frictionless ecosystem for centers, students and companies through interconnected modules such as:",
+    "skola-hub-alliances-itineraries": "Alliances and Itineraries:",
+    "skola-hub-alliances-desc": "Creation of multi-institutional programs.",
+    "skola-hub-register-validate": "Register and ValidaCredit:",
+    "skola-hub-register-desc": "Automation of enrollments and credit transfer.",
+    "skola-hub-project-hub": "Project hub:",
+    "skola-hub-project-desc":
+      "Connection of students with real business challenges.",
+    "skola-hub-talent-fp": "FP Talent:",
+    "skola-hub-talent-desc":
+      "Direct connection between companies and qualified talent.",
+    "skola-hub-addressable-market": "Addressable market",
+    "skola-hub-market-desc": "3-year objective (SOM):",
+    "skola-hub-market-goal":
+      "client institutions for 2026, dominating the potential market of Catalonia.",
+    "skola-hub-financial-projection-title": "Financial Projection",
+    "skola-hub-financial-goal": "Quarterly revenue target above",
+    "skola-hub-financial-goal-2":
+      "for Q4 2026, validated by exceptional SaaS metrics.",
+    "skola-hub-cta-button": "View Investor Presentation",
   },
 };
 
