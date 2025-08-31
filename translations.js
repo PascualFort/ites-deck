@@ -296,7 +296,7 @@ const translations = {
     "error-incorrect": "Contraseña incorrecta.",
 
     // Investment Section
-    "investment-title": "Oportunidad de inversión estratégica",
+    "investment-title": "Oportunidad",
     "investment-subtitle":
       "Una invitación para revitalizar un activo histórico y capitalizar el auge del sector audiovisual en España.",
     "investment-proposal": "Propuesta de Inversión",
@@ -960,7 +960,7 @@ const translations = {
     "error-incorrect": "Incorrect password.",
 
     // Investment Section
-    "investment-title": "Strategic investment opportunity",
+    "investment-title": "Strategic investment",
     "investment-subtitle":
       "An invitation to revitalize a historic asset and capitalize on the boom in the audiovisual sector in Spain.",
     "investment-proposal": "Investment Proposal",
@@ -1480,7 +1480,7 @@ const translations = {
     "hero-subtitle-text":
       "for officially certified audiovisual professional training. The epicenter of educational innovation in Barcelona, with",
     "hero-subtitle-text-2": "of cutting-edge facilities.",
-    "investment-title-text": "strategic investment",
+    "investment-title-text": "opportunity",
     "investment-subtitle-text":
       "An invitation to revitalize a historic asset and capitalize on the",
     "investment-subtitle-text-2": "in Spain.",
