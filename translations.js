@@ -324,7 +324,7 @@ const translations = {
     "investment-50-years": "50 años",
     "investment-3000-m2": "3.000 m²",
     "investment-3150-students": "3.150 alumnos",
-    "investment-3-pillars": "3 pilares",
+    "investment-2-pillars": "2 pilares",
 
     // Investment Phases
     "phase-1": "1ª Fase",
@@ -343,9 +343,6 @@ const translations = {
 
     // Contract and Timeline
     "contract-model": "Modelo de contrato de garantías y carta de intención",
-    "treasury-situation": "Situación de tesorería",
-    "treasury-desc":
-      "La actual situación requiere la 1ª fase completa de la inversión (555.984€)",
     "contract-available": "Contrato disponible",
     "contract-desc":
       "Borrador del contrato listo para revisión y posible firma entre el miércoles 16 y jueves 17 de julio",
@@ -360,20 +357,17 @@ const translations = {
     "diagnosis-title": "Diagnóstico: Impulso inmediato de liquidez",
     "diagnosis-desc":
       "Actualmente contamos con un 19% de ocupación en las plazas de formación, con margen de crecimiento y captación activa de nuevos alumnos.",
-    "opportunity-title": "La Oportunidad: Potencial Intacto",
+    "opportunity-title": "La Oportunidad: Un Futuro Brillante",
     "opportunity-desc":
-      "A pesar de los desafíos, ITES posee activos de inmenso valor: una marca con 50 años de historia, 3.000 m² en el centro de Barcelona y licencias para más de 3.150 alumnos.",
+      "ITES posee activos de inmenso valor: una marca con 50 años de historia, 3.000 m² en el centro de Barcelona y licencias para más de 3.150 alumnos.",
 
     // Revitalization Plan
-    "revitalization-title": "Plan de revitalización en 3 pilares",
-    "revitalization-1": "1. Saneamiento financiero",
+    "revitalization-title": "Plan de revitalización en 2 pilares",
+    "revitalization-1": "1. Crecimiento comercial",
     "revitalization-1-desc":
-      "Liquidación de deudas críticas (nóminas, alquileres, proveedores) para liberar el flujo de caja y restaurar la estabilidad operativa.",
-    "revitalization-2": "2. Crecimiento comercial",
-    "revitalization-2-desc":
       "Lanzamiento de una agresiva campaña de marketing para triplicar la ocupación presencial y activar la oferta online a escala nacional.",
-    "revitalization-3": "3. Modernización",
-    "revitalization-3-desc":
+    "revitalization-2": "2. Modernización",
+    "revitalization-2-desc":
       "Incorporación de tecnología de vanguardia en áreas clave y consolidación de las unidades de negocio para fortalecer un ecosistema audiovisual 360° integrado, eficiente y orientado a la innovación continua.",
 
     // Financial Projections
@@ -405,16 +399,6 @@ const translations = {
     "valuation-desc":
       "Valoración considerando activos, infraestructura, marca y potencial de mercado",
     "company-valuation-title": "Valoración de la empresa",
-
-    // Debt Breakdown
-    "debt-breakdown": "Desglose de deuda",
-    "debt-breakdown-title": "Desglose de deuda",
-    "rent-debt": "Deuda de alquileres",
-    "salary-debt": "Nóminas atrasadas",
-    "total-debt": "Total deuda",
-    "rent-amount": "210.231,20€",
-    "salary-amount": "250.992,62€",
-    "total-amount": "461.223,82€",
 
     // Growth Strategy
     "growth-strategy": "Estrategia de crecimiento",
@@ -739,12 +723,9 @@ const translations = {
     "investment-50-years": "50 años",
     "investment-3000-m2": "3.000 m²",
     "investment-3150-students": "3.150 alumnos",
-    "investment-3-pillars": "3 pilares",
+    "investment-2-pillars": "2 pilares",
     "financial-financial": "financieras",
     "company-valuation-estimated-value": "Valor real estimado",
-    "debt-breakdown-rent-debt": "Deuda de alquileres",
-    "debt-breakdown-salary-debt": "Nóminas atrasadas",
-    "debt-breakdown-total-debt": "Total deuda",
     "growth-strategy-objective-3-2m": "Objetivo: 3,2M€",
     "growth-strategy-objective-1-8m": "Objetivo: 1,8M€",
     "unique-ecosystem-unique": "único",
@@ -791,8 +772,6 @@ const translations = {
       "maximizando las plazas de Formación Profesional (3,2M€) y desarrollando las otras líneas de negocio en sinergia con la productora asociada (1,8M€).",
     "phase-1-desc-text": "Fase principal de la inversión",
     "phase-2-desc-text": "Completar inversión (19,8% equity)",
-    "treasury-desc-text": "La actual situación requiere la",
-    "treasury-desc-text-2": "de la inversión (555.984€)",
     "contract-desc-text":
       "Borrador del contrato listo para revisión y posible firma entre el",
     "timeline-phase1-text": "1ª Fase: 555.984€",
@@ -805,17 +784,15 @@ const translations = {
     "diagnosis-desc-text-2":
       ", con margen de crecimiento y captación activa de nuevos alumnos.",
     "opportunity-desc-text":
-      "A pesar de los desafíos, ITES posee activos de inmenso valor: una marca con",
+      "ITES posee activos de inmenso valor: una marca con",
     "opportunity-desc-text-2": "de historia,",
     "opportunity-desc-text-3":
       "en el centro de Barcelona y licencias para más de",
     "opportunity-desc-text-4": ".",
     "revitalization-title-text": "Plan de revitalización en",
     "revitalization-1-desc-text":
-      "Liquidación de deudas críticas (nóminas, alquileres, proveedores) para liberar el flujo de caja y restaurar la estabilidad operativa.",
-    "revitalization-2-desc-text":
       "Lanzamiento de una agresiva campaña de marketing para triplicar la ocupación presencial y activar la oferta online a escala nacional.",
-    "revitalization-3-desc-text":
+    "revitalization-2-desc-text":
       "Incorporación de tecnología de vanguardia en áreas clave y consolidación de las unidades de negocio para fortalecer un ecosistema audiovisual 360° integrado, eficiente y orientado a la innovación continua.",
     "financial-title-text": "Proyecciones",
     "financial-title-text-2": "y valoración",
@@ -829,9 +806,6 @@ const translations = {
     "objective-reached-text": "Objetivo alcanzado",
     "company-valuation-desc-text":
       "Valoración considerando activos, infraestructura, marca y potencial de mercado",
-    "debt-breakdown-rent-debt-text": "Deuda de alquileres",
-    "debt-breakdown-salary-debt-text": "Nóminas atrasadas",
-    "debt-breakdown-total-debt-text": "Total deuda",
     "growth-strategy-objective-3-2m-text": "Objetivo: 3,2M€",
     "growth-strategy-objective-1-8m-text": "Objetivo: 1,8M€",
     "unique-ecosystem-title-text": "Un ecosistema",
@@ -988,7 +962,7 @@ const translations = {
     "investment-50-years": "50 years",
     "investment-3000-m2": "3,000 m²",
     "investment-3150-students": "3,150 students",
-    "investment-3-pillars": "3 pillars",
+    "investment-2-pillars": "2 pillars",
 
     // Investment Phases
     "phase-1": "1st Phase",
@@ -1007,9 +981,6 @@ const translations = {
 
     // Contract and Timeline
     "contract-model": "Guarantee contract model and letter of intent",
-    "treasury-situation": "Treasury situation",
-    "treasury-desc":
-      "The current situation requires the complete 1st phase of investment (€555,984)",
     "contract-available": "Contract available",
     "contract-desc":
       "Contract draft ready for review and possible signing between Wednesday 16th and Thursday 17th July",
@@ -1024,20 +995,17 @@ const translations = {
     "diagnosis-title": "Diagnosis: Immediate liquidity boost",
     "diagnosis-desc":
       "We currently have 19% occupancy in training places, with growth margin and active recruitment of new students.",
-    "opportunity-title": "The Opportunity: Intact Potential",
+    "opportunity-title": "The Opportunity: A Bright Future",
     "opportunity-desc":
-      "Despite the challenges, ITES has assets of immense value: a brand with 50 years of history, 3,000 m² in the center of Barcelona and licenses for more than 3,150 students.",
+      "ITES has assets of immense value: a brand with 50 years of history, 3,000 m² in the center of Barcelona and licenses for more than 3,150 students.",
 
     // Revitalization Plan
-    "revitalization-title": "Revitalization plan in 3 pillars",
-    "revitalization-1": "1. Financial restructuring",
+    "revitalization-title": "Revitalization plan in 2 pillars",
+    "revitalization-1": "1. Commercial growth",
     "revitalization-1-desc":
-      "Liquidation of critical debts (payroll, rent, suppliers) to free up cash flow and restore operational stability.",
-    "revitalization-2": "2. Commercial growth",
-    "revitalization-2-desc":
       "Launch of an aggressive marketing campaign to triple on-site occupancy and activate the online offering nationwide.",
-    "revitalization-3": "3. Modernization",
-    "revitalization-3-desc":
+    "revitalization-2": "2. Modernization",
+    "revitalization-2-desc":
       "Incorporation of cutting-edge technology in key areas and consolidation of business units to strengthen an integrated, efficient and innovation-oriented 360° audiovisual ecosystem.",
 
     // Financial Projections
@@ -1068,16 +1036,6 @@ const translations = {
     "valuation-desc":
       "Valuation considering assets, infrastructure, brand and market potential",
     "company-valuation-title": "Company valuation",
-
-    // Debt Breakdown
-    "debt-breakdown": "Debt breakdown",
-    "debt-breakdown-title": "Debt breakdown",
-    "rent-debt": "Rent debt",
-    "salary-debt": "Outstanding payroll",
-    "total-debt": "Total debt",
-    "rent-amount": "€210,231.20",
-    "salary-amount": "€250,992.62",
-    "total-amount": "€461,223.82",
 
     // Growth Strategy
     "growth-strategy": "Growth strategy",
@@ -1402,12 +1360,9 @@ const translations = {
     "investment-50-years": "50 years",
     "investment-3000-m2": "3,000 m²",
     "investment-3150-students": "3,150 students",
-    "investment-3-pillars": "3 pillars",
+    "investment-2-pillars": "2 pillars",
     "financial-financial": "financial",
     "company-valuation-estimated-value": "Estimated real value",
-    "debt-breakdown-rent-debt": "Rent debt",
-    "debt-breakdown-salary-debt": "Outstanding payroll",
-    "debt-breakdown-total-debt": "Total debt",
     "growth-strategy-objective-3-2m": "Objective: €3.2M",
     "growth-strategy-objective-1-8m": "Objective: €1.8M",
     "unique-ecosystem-unique": "unique",
@@ -1490,8 +1445,6 @@ const translations = {
       "by maximizing Vocational Training places (€3.2M) and developing other business lines in synergy with the associated production company (€1.8M).",
     "phase-1-desc-text": "Main investment phase",
     "phase-2-desc-text": "Complete investment (19.8% equity)",
-    "treasury-desc-text": "The current situation requires the",
-    "treasury-desc-text-2": "of investment (€555,984)",
     "contract-desc-text":
       "Contract draft ready for review and possible signing between",
     "timeline-phase1-text": "1st Phase: €555,984",
@@ -1503,18 +1456,15 @@ const translations = {
     "diagnosis-desc-text": "We currently have",
     "diagnosis-desc-text-2":
       ", with growth margin and active recruitment of new students.",
-    "opportunity-desc-text":
-      "Despite the challenges, ITES has assets of immense value: a brand with",
+    "opportunity-desc-text": "ITES has assets of immense value: a brand with",
     "opportunity-desc-text-2": "of history,",
     "opportunity-desc-text-3":
       "in the center of Barcelona and licenses for more than",
     "opportunity-desc-text-4": ".",
     "revitalization-title-text": "Revitalization plan in",
     "revitalization-1-desc-text":
-      "Liquidation of critical debts (payroll, rent, suppliers) to free up cash flow and restore operational stability.",
-    "revitalization-2-desc-text":
       "Launch of an aggressive marketing campaign to triple on-site occupancy and activate the online offering nationwide.",
-    "revitalization-3-desc-text":
+    "revitalization-2-desc-text":
       "Incorporation of cutting-edge technology in key areas and consolidation of business units to strengthen an integrated, efficient and innovation-oriented 360° audiovisual ecosystem.",
     "financial-title-text": "Financial projections",
     "financial-title-text-2": "and valuation",
@@ -1528,9 +1478,6 @@ const translations = {
     "objective-reached-text": "Objective reached",
     "company-valuation-desc-text":
       "Valuation considering assets, infrastructure, brand and market potential",
-    "debt-breakdown-rent-debt-text": "Rent debt",
-    "debt-breakdown-salary-debt-text": "Outstanding payroll",
-    "debt-breakdown-total-debt-text": "Total debt",
     "growth-strategy-objective-3-2m-text": "Objective: €3.2M",
     "growth-strategy-objective-1-8m-text": "Objective: €1.8M",
     "unique-ecosystem-title-text": "A unique ecosystem",
