@@ -502,10 +502,6 @@ const translations = {
       "Profesor universitario, periodista y productor independiente. Ex-vicerrector y coordinador de grado en la UAB, ha liderado proyectos interuniversitarios entre España y Latinoamérica. Ganador del Premio Ondas por su trabajo en TVE.",
     "paco-ondas-award": "Ganador del Premio Ondas",
     "paco-tve-work": "por su trabajo en TVE.",
-    "judith-garrigo": "Judith Garrigó",
-    "judith-role": "Method Implementer",
-    "judith-desc":
-      "Graduada en Comunicación Audiovisual por la UPF y Máster en Cinematografía por ESCAC. Actualmente imparte docencia en los programas de Formación Profesional Superior en Dirección y Cinematografía en ITES Barcelona.",
 
     // Business Lines
     "business-lines": "Nuestras líneas de negocio",
@@ -874,8 +870,6 @@ const translations = {
       "Profesor universitario, periodista y productor independiente. Ex-vicerrector y coordinador de grado en la UAB, ha liderado proyectos interuniversitarios entre España y Latinoamérica.",
     "paco-ondas-award-text": "Ganador del Premio Ondas",
     "paco-tve-work-text": "por su trabajo en TVE.",
-    "judith-desc-text":
-      "Graduada en Comunicación Audiovisual por la UPF y Máster en Cinematografía por ESCAC. Actualmente imparte docencia en los programas de Formación Profesional Superior en Dirección y Cinematografía en ITES Barcelona.",
     "business-lines-title-text": "Nuestras",
     "business-lines-business-lines-text": "líneas de negocio",
     "business-lines-title-text-2": "Nuestras",
@@ -1150,10 +1144,6 @@ const translations = {
       "University professor, journalist and independent producer. Former vice-rector and degree coordinator at UAB, he has led inter-university projects between Spain and Latin America. Winner of the Ondas Award for his work on TVE.",
     "paco-ondas-award": "Winner of the Ondas Award",
     "paco-tve-work": "for his work on TVE.",
-    "judith-garrigo": "Judith Garrigó",
-    "judith-role": "Method Implementer",
-    "judith-desc":
-      "Graduate in Audiovisual Communication from UPF and Master in Cinematography from ESCAC. She currently teaches in the Higher Vocational Training programs in Direction and Cinematography at ITES Barcelona.",
 
     // Business Lines
     "business-lines": "Our business lines",
@@ -1547,8 +1537,6 @@ const translations = {
       "University professor, journalist and independent producer. Former vice-rector and degree coordinator at UAB, he has led inter-university projects between Spain and Latin America.",
     "paco-ondas-award-text": "Winner of the Ondas Award",
     "paco-tve-work-text": "for his work on TVE.",
-    "judith-desc-text":
-      "Graduate in Audiovisual Communication from UPF and Master in Cinematography from ESCAC. She currently teaches in the Higher Vocational Training programs in Direction and Cinematography at ITES Barcelona.",
     "business-lines-title-text": "Our",
     "business-lines-business-lines-text": "business lines",
     "business-lines-title-text-2": "Our",
