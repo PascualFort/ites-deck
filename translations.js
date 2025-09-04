@@ -434,7 +434,6 @@ const translations = {
     "strategic-alliances": "Alianzas estratégicas",
     "strategic-alliances-desc":
       "Colaboraciones clave con líderes de la industria que potencian nuestro ecosistema:",
-    escac: "ESCAC: Colaboración académica",
     "exito-tv": "ÉxitoTV: Producción audiovisual",
     crowdy: "Crowdy.xyz: Networking profesional",
     filmo: "Filmo.io: Gestión de inventarios",
@@ -725,7 +724,6 @@ const translations = {
     "growth-strategy-objective-3-2m": "Objetivo: 3,2M€",
     "growth-strategy-objective-1-8m": "Objetivo: 1,8M€",
     "unique-ecosystem-unique": "único",
-    "strategic-alliances-escac": "ESCAC: Colaboración académica",
     "strategic-alliances-exito-tv": "ÉxitoTV: Producción audiovisual",
     "strategic-alliances-crowdy": "Crowdy.xyz: Networking profesional",
     "strategic-alliances-filmo": "Filmo.io: Gestión de inventarios",
@@ -816,7 +814,6 @@ const translations = {
       "Titulaciones avaladas por el Gobierno de España y la Generalitat de Catalunya.",
     "strategic-alliances-desc-text":
       "Colaboraciones clave con líderes de la industria que potencian nuestro ecosistema:",
-    "escac-text": "ESCAC: Colaboración académica",
     "exito-tv-text": "ÉxitoTV: Producción audiovisual",
     "crowdy-text": "Crowdy.xyz: Networking profesional",
     "filmo-text": "Filmo.io: Gestión de inventarios",
@@ -1065,7 +1062,6 @@ const translations = {
     "strategic-alliances": "Strategic alliances",
     "strategic-alliances-desc":
       "Key collaborations with industry leaders that enhance our ecosystem:",
-    escac: "ESCAC: Academic collaboration",
     "exito-tv": "ÉxitoTV: Audiovisual production",
     crowdy: "Crowdy.xyz: Professional networking",
     filmo: "Filmo.io: Inventory management",
@@ -1356,7 +1352,6 @@ const translations = {
     "growth-strategy-objective-3-2m": "Objective: €3.2M",
     "growth-strategy-objective-1-8m": "Objective: €1.8M",
     "unique-ecosystem-unique": "unique",
-    "strategic-alliances-escac": "ESCAC: Academic collaboration",
     "strategic-alliances-exito-tv": "ÉxitoTV: Audiovisual production",
     "strategic-alliances-crowdy": "Crowdy.xyz: Professional networking",
     "strategic-alliances-filmo": "Filmo.io: Inventory management",
@@ -1482,7 +1477,6 @@ const translations = {
       "Qualifications endorsed by the Government of Spain and the Generalitat de Catalunya.",
     "strategic-alliances-desc-text":
       "Key collaborations with industry leaders that enhance our ecosystem:",
-    "escac-text": "ESCAC: Academic collaboration",
     "exito-tv-text": "ÉxitoTV: Audiovisual production",
     "crowdy-text": "Crowdy.xyz: Professional networking",
     "filmo-text": "Filmo.io: Inventory management",
