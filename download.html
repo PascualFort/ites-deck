@@ -119,14 +119,14 @@
             <!-- Language Switcher -->
             <div class="language-switcher flex items-center space-x-2">
               <button
-                onclick="updateLanguage('es')"
+                onclick="switchLang('es')"
                 class="language-btn px-3 py-1 rounded text-sm font-medium transition-colors"
                 data-lang="es"
               >
                 ES
               </button>
               <button
-                onclick="updateLanguage('en')"
+                onclick="switchLang('en')"
                 class="language-btn px-3 py-1 rounded text-sm font-medium transition-colors"
                 data-lang="en"
               >
@@ -202,22 +202,13 @@
             class="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
-              href="docs/Oportunidad de Inversión en ITES Hub Audiovisual.pdf"
+              id="downloadPdfBtn"
+              href="#"
               download
               class="btn-primary text-white font-semibold py-4 px-8 rounded-lg text-lg inline-flex items-center"
             >
               <i class="fas fa-file-pdf mr-2"></i>
               <span data-translate="download-pdf">Descargar PDF</span>
-            </a>
-            <a
-              href="docs/Oportunidad de Inversión en ITES Hub Audiovisual.pptx"
-              download
-              class="glass-effect text-white font-semibold py-4 px-8 rounded-lg text-lg inline-flex items-center hover:bg-white/10 transition-all duration-300"
-            >
-              <i class="fas fa-file-powerpoint mr-2"></i>
-              <span data-translate="download-powerpoint"
-                >Descargar PowerPoint</span
-              >
             </a>
           </div>
         </div>
@@ -375,37 +366,31 @@
       const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
       const WEB3FORMS_ACCESS_KEY = "1a84e45f-7427-47e3-9104-f7697b574a2c"; // You'll get this from web3forms.com
 
-      const googleSlidesUrl =
-        "https://docs.google.com/presentation/d/1PAX6bqOy8mvaKciScck3BtZ4szYAlLx-weTw-ieGxNk/embed?start=false&loop=false&delayms=3000";
-      const documentUrl =
-        "docs/Oportunidad de Inversión en ITES Hub Audiovisual.pptx";
+      // Locale-specific PDF documents
+      const documentUrlEs =
+        "docs/ES Oportunidad de Inversión en ITES Hub Audiovisual.pdf";
+      const documentUrlEn =
+        "docs/EN Oportunidad de Inversión en ITES Hub Audiovisual.pdf";
+      let documentUrl = currentLang === "en" ? documentUrlEn : documentUrlEs;
 
-      // Load presentation using Google Slides
+      // Load presentation as embedded PDF
       async function loadDocument() {
         const container = document.getElementById("viewerContainer");
         container.innerHTML =
           '<div class="flex items-center justify-center h-full"><i class="fas fa-spinner fa-spin text-2xl text-indigo-400"></i></div>';
 
         try {
-          // Try Google Slides first
-          await tryGoogleSlidesViewer(container);
+          await tryPdfViewer(container);
         } catch (error) {
-          console.error("Google Slides failed, trying fallback:", error);
-          try {
-            await tryFallbackViewer(container);
-          } catch (error2) {
-            console.error("All viewers failed:", error2);
-            showErrorFallback();
-          }
+          console.error("PDF viewer failed:", error);
+          showErrorFallback();
         }
       }
 
-      async function tryGoogleSlidesViewer(container) {
+      async function tryPdfViewer(container) {
         return new Promise((resolve, reject) => {
-          console.log("Trying Google Slides viewer:", googleSlidesUrl);
-
           const iframe = document.createElement("iframe");
-          iframe.src = googleSlidesUrl;
+          iframe.src = encodeURI(documentUrl);
           iframe.style.width = "100%";
           iframe.style.height = "100%";
           iframe.style.border = "none";
@@ -414,13 +399,13 @@
           iframe.setAttribute("allow", "fullscreen");
 
           iframe.onload = function () {
-            console.log("Google Slides viewer loaded successfully");
+            console.log("PDF loaded successfully");
             resolve();
           };
 
           iframe.onerror = function () {
-            console.log("Google Slides viewer failed");
-            reject(new Error("Google Slides viewer failed"));
+            console.log("PDF viewer failed");
+            reject(new Error("PDF viewer failed"));
           };
 
           container.innerHTML = "";
@@ -429,77 +414,10 @@
           // Timeout after 10 seconds
           setTimeout(() => {
             if (container.querySelector("iframe")) {
-              console.log("Google Slides viewer timeout");
-              reject(new Error("Google Slides viewer timeout"));
+              console.log("PDF viewer timeout");
+              reject(new Error("PDF viewer timeout"));
             }
           }, 10000);
-        });
-      }
-
-      async function tryFallbackViewer(container) {
-        return new Promise((resolve, reject) => {
-          const encodedUrl = encodeURIComponent(
-            window.location.origin + "/" + documentUrl
-          );
-
-          // Try multiple viewer options
-          const viewerOptions = [
-            {
-              name: "Microsoft Office Online",
-              url: `https://view.officeapps.live.com/op/embed.aspx?src=${encodedUrl}`,
-            },
-            {
-              name: "Google Docs Viewer",
-              url: `https://docs.google.com/viewer?url=${encodedUrl}&embedded=true`,
-            },
-          ];
-
-          let currentOption = 0;
-
-          function tryNextViewer() {
-            if (currentOption >= viewerOptions.length) {
-              reject(new Error("All viewers failed"));
-              return;
-            }
-
-            const option = viewerOptions[currentOption];
-            console.log(`Trying ${option.name} viewer:`, option.url);
-
-            const iframe = document.createElement("iframe");
-            iframe.src = option.url;
-            iframe.style.width = "100%";
-            iframe.style.height = "100%";
-            iframe.style.border = "none";
-            iframe.allowFullscreen = true;
-            iframe.setAttribute("frameborder", "0");
-
-            iframe.onload = function () {
-              console.log(`${option.name} viewer loaded successfully`);
-              resolve();
-            };
-
-            iframe.onerror = function () {
-              console.log(`${option.name} viewer failed, trying next option`);
-              currentOption++;
-              setTimeout(tryNextViewer, 1000);
-            };
-
-            container.innerHTML = "";
-            container.appendChild(iframe);
-
-            // Timeout after 8 seconds for each viewer
-            setTimeout(() => {
-              if (container.querySelector("iframe")) {
-                console.log(
-                  `${option.name} viewer timeout, trying next option`
-                );
-                currentOption++;
-                setTimeout(tryNextViewer, 1000);
-              }
-            }, 8000);
-          }
-
-          tryNextViewer();
         });
       }
 
@@ -517,9 +435,11 @@
                 <li>• Restricciones de CORS</li>
               </ul>
               <div class="space-y-3">
-                <a href="${documentUrl}" target="_blank" class="btn-primary text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center">
+                <a href="${encodeURI(
+                  documentUrl
+                )}" target="_blank" class="btn-primary text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center">
                   <i class="fas fa-download mr-2"></i>
-                  Descargar presentación
+                  Descargar PDF
                 </a>
                 <br>
                 <button onclick="showSimplePreview()" class="glass-effect text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center">
@@ -537,20 +457,17 @@
         container.innerHTML = `
           <div class="flex items-center justify-center h-full text-center">
             <div>
-              <div class="w-32 h-32 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i class="fab fa-google-drive text-5xl text-blue-400"></i>
+              <div class="w-32 h-32 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-file-pdf text-5xl text-red-400"></i>
               </div>
-              <h3 class="text-2xl font-bold text-white mb-4">Presentación Google Slides</h3>
+              <h3 class="text-2xl font-bold text-white mb-4">Documento PDF</h3>
               <p class="text-gray-400 mb-6">Documento de inversión ITES Hub Audiovisual</p>
               <div class="space-y-3">
-                <a href="https://docs.google.com/presentation/d/1PAX6bqOy8mvaKciScck3BtZ4szYAlLx-weTw-ieGxNk/edit?usp=sharing" target="_blank" class="btn-primary text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center">
-                  <i class="fas fa-external-link-alt mr-2"></i>
-                  Abrir en Google Slides
-                </a>
-                <br>
-                <a href="${documentUrl}" download class="glass-effect text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center">
+                <a href="${encodeURI(
+                  documentUrl
+                )}" download class="glass-effect text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center">
                   <i class="fas fa-download mr-2"></i>
-                  Descargar PowerPoint
+                  Descargar PDF
                 </a>
               </div>
             </div>
@@ -628,6 +545,31 @@
         setTimeout(() => {
           loadDocument();
         }, 1000);
+
+        // Update document URL when language changes and set download link
+        function setDocumentForLang() {
+          documentUrl = currentLang === "en" ? documentUrlEn : documentUrlEs;
+          const downloadPdfBtn = document.getElementById("downloadPdfBtn");
+          if (downloadPdfBtn) {
+            downloadPdfBtn.href = encodeURI(documentUrl);
+          }
+          // Reload the document viewer with the new language
+          loadDocument();
+        }
+        setDocumentForLang();
+
+        // Unified language switch handler to keep behavior consistent across pages
+        window.switchLang = function (lang) {
+          updateLanguage(lang);
+          setDocumentForLang();
+          // Update button active states
+          document.querySelectorAll(".language-btn").forEach((btn) => {
+            btn.classList.toggle(
+              "active",
+              btn.getAttribute("data-lang") === lang
+            );
+          });
+        };
 
         // Contact Modal Variables
         let currentRecipient = "dcodina@ites.es";
@@ -752,9 +694,8 @@ Nombre: ${userName}
 Empresa: ${userCompany || "No especificada"}
 
 Documentos disponibles:
-- PDF: https://deck.ites.es/docs/Oportunidad de Inversión en ITES Hub Audiovisual.pdf
-- PowerPoint: https://deck.ites.es/docs/Oportunidad de Inversión en ITES Hub Audiovisual.pptx
-- Google Slides: https://docs.google.com/presentation/d/1PAX6bqOy8mvaKciScck3BtZ4szYAlLx-weTw-ieGxNk/edit?usp=sharing
+- PDF (ES): https://deck.ites.es/${encodeURI(documentUrlEs)}
+- PDF (EN): https://deck.ites.es/${encodeURI(documentUrlEn)}
           `.trim();
 
           formData.append("access_key", WEB3FORMS_ACCESS_KEY);
@@ -829,19 +770,7 @@ Documentos disponibles:
           }
         });
 
-        // Add event listeners for language buttons
-        document.addEventListener("click", function (e) {
-          if (e.target.classList.contains("language-btn")) {
-            const lang = e.target.getAttribute("data-lang");
-            updateLanguage(lang);
-
-            // Update button states
-            document.querySelectorAll(".language-btn").forEach((btn) => {
-              btn.classList.remove("active");
-            });
-            e.target.classList.add("active");
-          }
-        });
+        // Remove redundant global click listener in favor of explicit switchLang
       });
     </script>
   </body>
