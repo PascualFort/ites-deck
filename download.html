@@ -376,8 +376,16 @@
       // Load presentation as embedded PDF
       async function loadDocument() {
         const container = document.getElementById("viewerContainer");
+        const isMobile = isMobileDevice();
+
         container.innerHTML =
           '<div class="flex items-center justify-center h-full"><i class="fas fa-spinner fa-spin text-2xl text-indigo-400"></i></div>';
+
+        // For mobile devices, show a direct view option instead of embedding
+        if (isMobile) {
+          showMobileViewer(container);
+          return;
+        }
 
         try {
           await tryPdfViewer(container);
@@ -387,10 +395,61 @@
         }
       }
 
+      function showMobileViewer(container) {
+        // Properly encode the URL
+        const encodedUrl = documentUrl
+          .split("/")
+          .map((part) => encodeURIComponent(part))
+          .join("/");
+
+        container.innerHTML = `
+          <div class="flex items-center justify-center h-full text-center p-8">
+            <div class="max-w-lg">
+              <div class="w-24 h-24 bg-indigo-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-file-pdf text-4xl text-indigo-400"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-4" data-translate="mobile-pdf-title">Visualizar PDF</h3>
+              <p class="text-gray-400 mb-8" data-translate="mobile-pdf-desc">
+                En dispositivos móviles, la mejor forma de ver la presentación es abriendo el archivo PDF directamente en el navegador.
+              </p>
+              <div class="space-y-3">
+                <a href="${encodedUrl}" target="_blank" 
+                   class="btn-primary text-white font-semibold py-4 px-8 rounded-lg inline-flex items-center justify-center">
+                  <i class="fas fa-external-link-alt mr-2"></i>
+                  <span data-translate="mobile-open-pdf">Abrir en el navegador</span>
+                </a>
+                <br>
+                <a href="${encodedUrl}" download
+                   class="glass-effect text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center justify-center">
+                  <i class="fas fa-download mr-2"></i>
+                  <span data-translate="mobile-download-pdf">Descargar PDF</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Detect mobile devices
+      function isMobileDevice() {
+        return (
+          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          ) || window.innerWidth <= 768
+        );
+      }
+
       async function tryPdfViewer(container) {
         return new Promise((resolve, reject) => {
+          // Properly encode the URL - encode each path segment
+          const encodedUrl = documentUrl
+            .split("/")
+            .map((part) => encodeURIComponent(part))
+            .join("/");
+
+          // For desktop, use iframe
           const iframe = document.createElement("iframe");
-          iframe.src = encodeURI(documentUrl);
+          iframe.src = encodedUrl;
           iframe.style.width = "100%";
           iframe.style.height = "100%";
           iframe.style.border = "none";
@@ -423,6 +482,12 @@
 
       function showErrorFallback() {
         const container = document.getElementById("viewerContainer");
+        // Properly encode the URL - encode each path segment
+        const encodedUrl = documentUrl
+          .split("/")
+          .map((part) => encodeURIComponent(part))
+          .join("/");
+
         container.innerHTML = `
           <div class="flex items-center justify-center h-full text-center">
             <div>
@@ -435,9 +500,7 @@
                 <li>• Restricciones de CORS</li>
               </ul>
               <div class="space-y-3">
-                <a href="${encodeURI(
-                  documentUrl
-                )}" target="_blank" class="btn-primary text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center">
+                <a href="${encodedUrl}" target="_blank" class="btn-primary text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center">
                   <i class="fas fa-download mr-2"></i>
                   Descargar PDF
                 </a>
@@ -454,6 +517,12 @@
 
       function showSimplePreview() {
         const container = document.getElementById("viewerContainer");
+        // Properly encode the URL - encode each path segment
+        const encodedUrl = documentUrl
+          .split("/")
+          .map((part) => encodeURIComponent(part))
+          .join("/");
+
         container.innerHTML = `
           <div class="flex items-center justify-center h-full text-center">
             <div>
@@ -463,9 +532,7 @@
               <h3 class="text-2xl font-bold text-white mb-4">Documento PDF</h3>
               <p class="text-gray-400 mb-6">Documento de inversión ITES Hub Audiovisual</p>
               <div class="space-y-3">
-                <a href="${encodeURI(
-                  documentUrl
-                )}" download class="glass-effect text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center">
+                <a href="${encodedUrl}" download class="glass-effect text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center">
                   <i class="fas fa-download mr-2"></i>
                   Descargar PDF
                 </a>
@@ -551,7 +618,12 @@
           documentUrl = currentLang === "en" ? documentUrlEn : documentUrlEs;
           const downloadPdfBtn = document.getElementById("downloadPdfBtn");
           if (downloadPdfBtn) {
-            downloadPdfBtn.href = encodeURI(documentUrl);
+            // Properly encode the URL for download - encode each path segment
+            const encodedUrl = documentUrl
+              .split("/")
+              .map((part) => encodeURIComponent(part))
+              .join("/");
+            downloadPdfBtn.href = encodedUrl;
           }
           // Reload the document viewer with the new language
           loadDocument();

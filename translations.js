@@ -621,6 +621,11 @@ const translations = {
     "download-understood": "Entendido",
     "download-request-info-modal": "Solicitar información",
     "download-send-message": "Enviar mensaje a:",
+    "mobile-pdf-title": "Visualizar PDF",
+    "mobile-pdf-desc":
+      "En dispositivos móviles, la mejor forma de ver la presentación es abriendo el archivo PDF directamente en el navegador.",
+    "mobile-open-pdf": "Abrir en el navegador",
+    "mobile-download-pdf": "Descargar PDF",
 
     // Business Line Cards
     "ites-studio-card-desc":
@@ -1339,6 +1344,11 @@ const translations = {
     "download-understood": "Understood",
     "download-request-info-modal": "Request information",
     "download-send-message": "Send message to:",
+    "mobile-pdf-title": "View PDF",
+    "mobile-pdf-desc":
+      "On mobile devices, the best way to view the presentation is by opening the PDF file directly in the browser.",
+    "mobile-open-pdf": "Open in browser",
+    "mobile-download-pdf": "Download PDF",
 
     // Contact Modal
     "contact-modal-title": "Request information",
