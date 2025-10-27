@@ -120,14 +120,15 @@
       });
 
       // Login functionality
-      const CORRECT_PASSWORD = "hinnerk"; // Hardcoded password
+      const CORRECT_PASSWORD_1 = "hinnerk"; // Hardcoded password
+      const CORRECT_PASSWORD_2 = "ites-deck-2025";
       const form = document.getElementById("loginForm");
       const errorMsg = document.getElementById("errorMsg");
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         const pwd = document.getElementById("password").value;
-        if (pwd === CORRECT_PASSWORD) {
+        if (pwd === CORRECT_PASSWORD_1 || pwd === CORRECT_PASSWORD_2) {
           localStorage.setItem("loggedIn", "true");
           const params = new URLSearchParams(window.location.search);
           const redirect = params.get("redirect") || "index.html";
